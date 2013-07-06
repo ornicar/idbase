@@ -1,0 +1,9 @@
+conf/application.conf
+conf/local.*
+logs
+project/project
+project/target
+target
+dist/
+play-2*
+RUNNING_PID
