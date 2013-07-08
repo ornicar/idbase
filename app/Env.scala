@@ -1,16 +1,26 @@
-package idbase 
+package idbase
 
 import com.typesafe.config.Config
 import play.api.{ Application, Play }
+import play.modules.reactivemongo.ReactiveMongoPlugin
+import play.modules.reactivemongo.json.collection.JSONCollection
 
-final class Env(config: Config) {
+final class Env(config: Config)(implicit app: Application) {
 
   lazy val lists = new models.Lists(config getConfig "idbase")
+
+  lazy val repo = new Repo(
+    coll = ReactiveMongoPlugin.db.collection[JSONCollection](
+      config getConfig "idbase" getString "doc_collection"
+    )
+  )
 }
 
 object Env {
 
-  lazy val current = new Env(config = appConfig)
+  private implicit def inApp = withApp(identity)
+
+  lazy val current = new Env(appConfig)
 
   private def appConfig: Config = withApp(_.configuration.underlying)
 

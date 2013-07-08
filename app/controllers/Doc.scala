@@ -1,16 +1,27 @@
 package controllers
 
 import play.api._
+import play.api.libs.concurrent.Execution.Implicits._
 import play.api.mvc._
+import scala.concurrent.Future
 
 import idbase._
+import views._
 
 object Doc extends Controller {
 
   private lazy val env = Env.current
-  
+
   def newForm = Action {
-    Ok(views.html.newForm(models.Doc.form, env.lists))
+    Ok(html.newForm(models.Doc.form, env.lists))
   }
-  
+
+  def create = Action.async { implicit req ⇒
+    models.Doc.form.bindFromRequest.fold(
+      err ⇒ Future successful {
+        BadRequest(html.newForm(err, env.lists))
+      },
+      doc ⇒ env.repo insert doc map (_ ⇒ Ok("done"))
+    )
+  }
 }

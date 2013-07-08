@@ -2,9 +2,9 @@ package idbase
 package models
 
 case class Doc(
-    notion: String,
-    niveaux: List[String],
-    methodePedagogiques: List[String],
+    notion: List[String],
+    niveau: List[String],
+    methodePedagogique: List[String],
     annee: Int,
     disciplineInfodoc: Boolean,
     interdisciplinarite: List[String],
@@ -34,8 +34,8 @@ object Doc {
 
   val form = Form(
     mapping(
-      "notion" -> nonEmptyText,
-      "niveaux" -> nonEmptyList(text),
+      "notion" -> nonEmptyList(text),
+      "niveau" -> nonEmptyList(text),
       "methodePedagogique" -> nonEmptyList(text),
       "annee" -> number,
       "disciplineInfodoc" -> boolean,

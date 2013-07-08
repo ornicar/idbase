@@ -1,11 +1,12 @@
-@(form: Form[_], lists: Lists)
+@(form: Form[_], lists: Lists)(implicit lang: Lang)
 
 @import idbase.Helper._
 @import helper.{ form => _, _ }
 @implicitFieldConstructor = @{ FieldConstructor(bootstrapInput.f) }
 
 @main("Ajouter une notice") {
-@helper.form(action = routes.Doc.newForm, 'class -> "form-horizontal") {
+@helper.form(action = routes.Doc.create, 
+'class -> "form-horizontal") {
 
 @select(form("notion"),
 selectable(lists.notion.sorted),
@@ -32,7 +33,7 @@ selectable(yearsToNow),
 
 @checkbox(form("disciplineInfodoc"),
 '_label -> "Discipline Info-doc",
-'class -> "no-help")
+'_help -> "")
 
 @select(form("interdisciplinarite"),
 selectable(lists.interdisciplinarite.sorted),
@@ -92,7 +93,7 @@ selectable(lists.dispositifEducatif.sorted),
 '_label -> "Objectif T3",
 'class -> "input-wide")
 
-@select(form("meta")("demarches"),
+@select(form("meta")("demarche"),
 selectable(lists.demarche.sorted),
 '_label -> "Démarche",
 'multiple -> "multiple",
@@ -106,17 +107,17 @@ selectable(lists.demarche.sorted),
 '_label -> "Tache",
 'class -> "input-wide")
 
-@textarea(form("meta")("materiaux"),
+@textarea(form("meta")("materiau"),
 '_label -> "Matériaux",
 'class -> "input-wide")
 
-@select(form("meta")("evaluations"),
+@select(form("meta")("evaluation"),
 selectable(lists.evaluation.sorted),
 '_label -> "Évaluations",
 'multiple -> "multiple",
 'class -> "input-wide multiselect")
 
-@inputText(form("meta")("outilDidactiques"),
+@textarea(form("meta")("outilDidactique"),
 '_label -> "Outils didactiques",
 'class -> "input-wide")
 

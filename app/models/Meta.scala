@@ -9,12 +9,12 @@ case class Meta(
     objectifT1: Option[Markdown], 
     objectifT2: Option[Markdown], 
     objectifT3: Option[Markdown], 
-    demarches: List[String],
+    demarche: List[String],
     deroulement: Markdown, 
     tache: String, 
-    materiaux: Markdown, 
-    evaluations: List[String],
-    outilDidactiques: List[String],
+    materiau: Markdown, 
+    evaluation: List[String],
+    outilDidactique: String,
     duree: String,
     commentaire: Markdown 
   ) {
@@ -37,12 +37,12 @@ object Meta {
     "objectifT1" -> optional(nonEmptyText),
     "objectifT2" -> optional(nonEmptyText),
     "objectifT3" -> optional(nonEmptyText),
-    "demarches" -> nonEmptyList(text),
+    "demarche" -> nonEmptyList(text),
     "deroulement" -> nonEmptyText,
     "tache" -> nonEmptyText,
-    "materiaux" -> nonEmptyText,
-    "evaluations" -> nonEmptyList(text),
-    "outilDidactiques" -> nonEmptyList(text),
+    "materiau" -> nonEmptyText,
+    "evaluation" -> nonEmptyList(text),
+    "outilDidactique" -> nonEmptyText,
     "duree" -> nonEmptyText,
     "commentaire" -> nonEmptyText
   )(Meta.apply _)(Meta.unapply _)
