@@ -1,23 +1,24 @@
-import sbt._
-import Keys._
 import play.Project._
+import sbt._, Keys._
 
 object ApplicationBuild extends Build {
 
-  val appName         = "idbase"
-  val appVersion      = "1.0-SNAPSHOT"
+  val appName = "idbase"
+  val appVersion = "1.0-SNAPSHOT"
 
   val appDependencies = Seq(
     // Add your project dependencies here,
-    "org.xerial" % "sqlite-jdbc" % "3.7.2",
-    jdbc,
-    anorm
+    "org.reactivemongo" %% "reactivemongo" % "0.10.1-THIB",
+    "org.reactivemongo" %% "play2-reactivemongo" % "0.10-THIB"
   )
 
-
   val main = play.Project(appName, appVersion, appDependencies).settings(
-    scalaVersion := "2.10.2"
-    // Add your own project settings here      
+    scalaVersion := "2.10.2",
+    resolvers ++= Seq(
+      "Sonatype Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots/",
+      "iliaz.com" at "http://scala.iliaz.com/"
+    )
+  // Add your own project settings here      
   )
 
 }

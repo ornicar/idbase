@@ -6,4 +6,5 @@ project/target
 target
 dist/
 play-2*
+doc/.*
 RUNNING_PID
