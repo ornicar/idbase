@@ -42,7 +42,7 @@ object Doc {
       "interdisciplinarite" -> nonEmptyList(text),
       "dispositifPedagogique" -> nonEmptyList(text),
       "dispositifEducatif" -> nonEmptyList(text),
-      "auteur" -> text,
+      "auteur" -> nonEmptyText,
       "source" -> nonEmptyText,
       "production" -> nonEmptyText,
       "meta" -> Meta.formMapping

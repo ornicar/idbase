@@ -7,12 +7,130 @@
 @main("Ajouter une notice") {
 @helper.form(action = routes.Doc.newForm, 'class -> "form-horizontal") {
 
-@select(form("notion"), 
-selectable(lists.notion.sorted), 
+@select(form("notion"),
+selectable(lists.notion.sorted),
 '_label -> "Notions",
-'_multiple -> true)
-@inputText(form("annee"), '_label -> "Année")
+'multiple -> "multiple",
+'class -> "input-wide multiselect")
 
-<button class="btn btn-primary" type="submit">Enregistrer</button>
+@select(form("niveau"),
+selectable(lists.niveau),
+'_label -> "Niveaux",
+'multiple -> "multiple",
+'class -> "input-wide multiselect")
+
+@select(form("methodePedagogique"),
+selectable(lists.methodePedagogique.sorted),
+'_label -> "Méthodes pédagogiques",
+'multiple -> "multiple",
+'class -> "input-wide multiselect")
+
+@select(form("annee"),
+selectable(yearsToNow),
+'_label -> "Année",
+'class -> "input-wide")
+
+@checkbox(form("disciplineInfodoc"),
+'_label -> "Discipline Info-doc",
+'class -> "no-help")
+
+@select(form("interdisciplinarite"),
+selectable(lists.interdisciplinarite.sorted),
+'_label -> "Interdisciplinarité",
+'multiple -> "multiple",
+'class -> "input-wide multiselect")
+
+@select(form("dispositifPedagogique"),
+selectable(lists.dispositifPedagogique.sorted),
+'_label -> "Dispositif pédagogique",
+'multiple -> "multiple",
+'class -> "input-wide multiselect")
+
+@select(form("dispositifEducatif"),
+selectable(lists.dispositifEducatif.sorted),
+'_label -> "Dispositif éducatif",
+'multiple -> "multiple",
+'class -> "input-wide multiselect")
+
+@inputText(form("auteur"),
+'_label -> "Auteur",
+'class -> "input-wide")
+
+@inputText(form("source"),
+'_label -> "Source",
+'class -> "input-wide")
+
+@textarea(form("production"),
+'_label -> "Production",
+'class -> "input-wide")
+
+@inputText(form("meta")("titre"),
+'_label -> "Titre",
+'class -> "input-wide")
+
+@textarea(form("meta")("reference"),
+'_label -> "Référence",
+'class -> "input-wide")
+
+@inputText(form("meta")("url"),
+'_label -> "Titre",
+'class -> "input-wide")
+
+@textarea(form("meta")("scenario"),
+'_label -> "Scénario",
+'class -> "input-wide markdown-long")
+
+@textarea(form("meta")("objectifT1"),
+'_label -> "Objectif T1",
+'class -> "input-wide")
+
+@textarea(form("meta")("objectifT2"),
+'_label -> "Objectif T2",
+'class -> "input-wide")
+
+@textarea(form("meta")("objectifT3"),
+'_label -> "Objectif T3",
+'class -> "input-wide")
+
+@select(form("meta")("demarches"),
+selectable(lists.demarche.sorted),
+'_label -> "Démarche",
+'multiple -> "multiple",
+'class -> "input-wide multiselect")
+
+@textarea(form("meta")("deroulement"),
+'_label -> "Déroulement",
+'class -> "input-wide")
+
+@inputText(form("meta")("tache"),
+'_label -> "Tache",
+'class -> "input-wide")
+
+@textarea(form("meta")("materiaux"),
+'_label -> "Matériaux",
+'class -> "input-wide")
+
+@select(form("meta")("evaluations"),
+selectable(lists.evaluation.sorted),
+'_label -> "Évaluations",
+'multiple -> "multiple",
+'class -> "input-wide multiselect")
+
+@inputText(form("meta")("outilDidactiques"),
+'_label -> "Outils didactiques",
+'class -> "input-wide")
+
+@inputText(form("meta")("duree"),
+'_label -> "Durée",
+'class -> "input-wide")
+
+@textarea(form("meta")("commentaire"),
+'_label -> "Commentaire",
+'class -> "input-wide textarea-long")
+
+<div class="form-actions">
+  <button class="btn btn-primary" type="submit">Enregistrer</button>
+  <a class="btn">Annuler</a>
+</div>
 }
 }

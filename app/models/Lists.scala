@@ -7,7 +7,9 @@ import scala.collection.JavaConversions._
 final class Lists(config: Config) {
 
   val notion = getList("notion")
+  val niveau = getList("niveau")
   val methodePedagogique = getList("methodePedagogique")
+  val interdisciplinarite = getList("interdisciplinarite")
   val dispositifPedagogique = getList("dispositifPedagogique")
   val dispositifEducatif = getList("dispositifEducatif")
   val source = getList("source")

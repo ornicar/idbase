@@ -7,7 +7,7 @@
 <meta charset="utf-8">
 <title>ID Base • @title</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
+<link rel="stylesheet" href="@routes.Assets.at("stylesheets/bootstrap.css")">
 <link rel="stylesheet" href="@routes.Assets.at("stylesheets/main.css")">
 <link rel="stylesheet" href="@routes.Assets.at("stylesheets/bootstrap-responsive.min.css")">
 <!--[if lt IE 9]>
@@ -18,13 +18,17 @@
 
 <body>
 
+<div class="jumbotron">
+  <div class="container">
+    <h1>ID Base</h1>
+    <p>@title</p>
+  </div>
+</div>
+
+
 <div class="container">
-
-  <h1>@title</h1>
-
   @content
-
-</div> 
+</div>
 
 <script src="@routes.Assets.at("javascripts/jquery.min.js")"></script>
 <script src="@routes.Assets.at("javascripts/bootstrap.min.js")"></script>
