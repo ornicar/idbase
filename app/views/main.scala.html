@@ -1,1 +1,30 @@
 @(title: String)(content: Html)
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="utf-8">
+<title>@title</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
+<link rel="stylesheet" href="@routes.Assets.at("stylesheets/main.css")">
+<link rel="stylesheet" href="@routes.Assets.at("stylesheets/bootstrap-responsive.min.css")">
+<!--[if lt IE 9]>
+  <script src="../assets/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>@title</h1>
+
+</div> 
+
+<script src="@routes.Assets.at("javascripts/jquery.min.js")"></script>
+<script src="@routes.Assets.at("javascripts/bootstrap.min.js")"></script>
+<script src="@routes.Assets.at("javascripts/main.js")"></script>
+</body>
+</html>
