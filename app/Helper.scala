@@ -1,6 +1,7 @@
 package idbase
 
 import java.util.Calendar
+import play.api.templates.Html
 
 object Helper {
 
@@ -13,8 +14,21 @@ object Helper {
   def thisYear = Calendar.getInstance().get(Calendar.YEAR)
   def yearsToNow: List[Int] = (thisYear to firstYear by -1).toList
 
-  def row(th: String, td: Any) =
-    "<tr><th>%s</th><td>%s</td></tr>".format(th, td)
+  def row(th: String, td: Any) = rowHtml(th)(Html(td.toString))
+
+  def rowHtml(th: String)(td: Html) = Html {
+    """<tr><th class="muted">%s</th><td>%s</td></tr>""".format(th, td.body)
+  }
+
+  def group(name: String)(content: Html) = Html {
+    """
+<div class="group">
+  <span class="group-title">%s</span>
+  <table class="table">
+    <tbody>%s</tbody>
+  </table>
+</div>""".format(name, content)
+  }
 
   object Random {
 

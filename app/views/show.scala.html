@@ -5,12 +5,55 @@
 
 @main("Notice : " + doc.meta.titre) {
 
-<table>
-  <tbody>
-  @row(N.titre, doc.meta.titre)
-  @row(N.reference, doc.meta.reference)
-  @row(N.url, doc.meta.url)
-  @row(N.annee, doc.annee)
-  </tbody>
-</table>
+<p class="lead">
+Notice <strong class="muted">@doc.annee</strong>
+@doc.meta.titre<br />
+<a href="@doc.meta.url">@doc.meta.url</a>
+</p>
+@group("Cadre") {
+@row(N.niveau, doc.niveau mkString ", ")
+@row(N.interdisciplinarite, doc.interdisciplinarite mkString ", ")
+@row(N.dispositifPedagogique, doc.dispositifPedagogique)
+@row(N.dispositifEducatif, doc.dispositifEducatif)
+@row(N.duree, doc.meta.duree)
+}
+@group("Savoirs") {
+@rowHtml(N.notion) {
+@doc.notion.map { n =>
+<span class="label label-info">@n</span>
+}
+}
+@doc.meta.objectifT1.map { o =>
+  @row(N.objectifT1, o)
+  }
+@doc.meta.objectifT2.map { o =>
+  @row(N.objectifT2, o)
+  }
+@doc.meta.objectifT3.map { o =>
+  @row(N.objectifT3, o)
+  }
+@row(N.evaluation, doc.meta.evaluation mkString ", ")
+}
+@group("Enseignement") {
+@row(N.scenario, doc.meta.scenario)
+@rowHtml(N.methodePedagogique) {
+@doc.methodePedagogique.map { m =>
+<strong>@m</strong>
+}
+}
+@row(N.deroulement, doc.meta.deroulement)
+}
+@group("Apprentissage") {
+@row(N.demarche, doc.meta.demarche mkString ", ")
+@row(N.tache, doc.meta.tache)
+@row(N.materiau, doc.meta.materiau)
+@row(N.production, doc.production)
+@row(N.outilDidactique, doc.meta.outilDidactique)
+}
+@group("Commentaire") {
+@row("", doc.meta.commentaire)
+}
+@group(doc.source) {
+@row("", doc.meta.reference)
+}
 }
