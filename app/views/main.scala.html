@@ -5,7 +5,7 @@
 
 <head>
 <meta charset="utf-8">
-<title>@title</title>
+<title>ID Base • @title</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
 <link rel="stylesheet" href="@routes.Assets.at("stylesheets/main.css")">
@@ -13,6 +13,7 @@
 <!--[if lt IE 9]>
   <script src="../assets/js/html5shiv.js"></script>
 <![endif]-->
+<link rel="shortcut icon" href="@routes.Assets.at("images/favicon.ico")" type="image/x-icon" />
 </head>
 
 <body>
@@ -20,6 +21,8 @@
 <div class="container">
 
   <h1>@title</h1>
+
+  @content
 
 </div> 
 

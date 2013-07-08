@@ -1,3 +1,4 @@
+package idbase
 package models
 
 import com.typesafe.config.Config
@@ -10,7 +11,6 @@ final class Lists(config: Config) {
   val dispositifPedagogique = getList("dispositifPedagogique")
   val dispositifEducatif = getList("dispositifEducatif")
   val source = getList("source")
-  val production = getList("production")
   val demarche = getList("demarche")
   val evaluation = getList("evaluation")
 

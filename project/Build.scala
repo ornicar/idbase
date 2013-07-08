@@ -17,7 +17,9 @@ object ApplicationBuild extends Build {
     resolvers ++= Seq(
       "Sonatype Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots/",
       "iliaz.com" at "http://scala.iliaz.com/"
-    )
+    ),
+    templatesImport ++= Seq(
+      "idbase.models._")
   // Add your own project settings here      
   )
 

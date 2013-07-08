@@ -1,3 +1,4 @@
+package idbase
 package models
 
 case class Doc(
@@ -11,7 +12,7 @@ case class Doc(
     dispositifEducatif: List[String],
     auteur: String,
     source: String,
-    production: List[String],
+    production: Markdown, 
     meta: Meta) {
 }
 
@@ -43,7 +44,7 @@ object Doc {
       "dispositifEducatif" -> nonEmptyList(text),
       "auteur" -> text,
       "source" -> nonEmptyText,
-      "production" -> nonEmptyList(text),
+      "production" -> nonEmptyText,
       "meta" -> Meta.formMapping
     )(Doc.apply _)(Doc.unapply _))
 }

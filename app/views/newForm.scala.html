@@ -1,7 +1,18 @@
-@()
+@(form: Form[_], lists: Lists)
 
-@import helper.twitterBootstrap._
+@import idbase.Helper._
+@import helper.{ form => _, _ }
+@implicitFieldConstructor = @{ FieldConstructor(bootstrapInput.f) }
 
 @main("Ajouter une notice") {
-    
+@helper.form(action = routes.Doc.newForm, 'class -> "form-horizontal") {
+
+@select(form("notion"), 
+selectable(lists.notion.sorted), 
+'_label -> "Notions",
+'_multiple -> true)
+@inputText(form("annee"), '_label -> "Année")
+
+<button class="btn btn-primary" type="submit">Enregistrer</button>
+}
 }

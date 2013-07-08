@@ -1,21 +1,23 @@
+package idbase
 package models
 
 case class Meta(
-    titre: String,
-    reference: String,
-    url: String,
-    scenario: String,
-    objectifT1: String,
-    objectifT2: Option[String],
-    objectifT3: Option[String],
+    titre: String, 
+    reference: Markdown, 
+    url: String, 
+    scenario: Markdown, 
+    objectifT1: Option[Markdown], 
+    objectifT2: Option[Markdown], 
+    objectifT3: Option[Markdown], 
     demarches: List[String],
-    deroulement: String,
-    tache: String,
-    materiaux: String,
+    deroulement: Markdown, 
+    tache: String, 
+    materiaux: Markdown, 
     evaluations: List[String],
     outilDidactiques: List[String],
     duree: String,
-    commentaire: String) {
+    commentaire: Markdown 
+  ) {
 }
 
 object Meta {
@@ -32,7 +34,7 @@ object Meta {
     "reference" -> nonEmptyText,
     "url" -> nonEmptyText,
     "scenario" -> nonEmptyText,
-    "objectifT1" -> nonEmptyText,
+    "objectifT1" -> optional(nonEmptyText),
     "objectifT2" -> optional(nonEmptyText),
     "objectifT3" -> optional(nonEmptyText),
     "demarches" -> nonEmptyList(text),
