@@ -9,7 +9,7 @@ final class Env(config: Config)(implicit app: Application) {
 
   lazy val lists = new models.Lists(config getConfig "idbase")
 
-  lazy val repo = new Repo(
+  lazy val docRepo = new DocRepo(
     coll = ReactiveMongoPlugin.db.collection[JSONCollection](
       config getConfig "idbase" getString "doc_collection"
     )

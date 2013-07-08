@@ -8,14 +8,11 @@ import play.modules.reactivemongo.json.collection.JSONCollection
 import reactivemongo.api._
 import scala.concurrent.Future
 
-private[idbase] final class Repo(coll: JSONCollection) {
+private[idbase] final class DocRepo(coll: JSONCollection) {
 
   import Doc.jsonFormat
 
-  def insert(doc: Doc): Future[Unit] = {
-    val identified = Doc identify doc
-    coll insert identified map (_ ⇒ ())
-  }
+  def insert(doc: Doc): Future[Doc] = coll insert doc map (_ ⇒ doc)
 
   def byId(id: String): Future[Option[Doc]] = 
     coll.find(Json.obj("_id" -> id)).one

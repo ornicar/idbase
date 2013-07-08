@@ -13,22 +13,22 @@ object Doc extends Controller {
   private lazy val env = Env.current
 
   def newForm = Action {
-    Ok(html.newForm(models.Doc.form, env.lists))
+    Ok(html.newForm(Forms.docForm, env.lists))
   }
 
   def create = Action.async { implicit req ⇒
-    models.Doc.form.bindFromRequest.fold(
+    Forms.docForm.bindFromRequest.fold(
       err ⇒ Future successful {
         BadRequest(html.newForm(err, env.lists))
       },
-      doc ⇒ env.repo insert doc map { _ ⇒ 
+      setup ⇒ env.docRepo insert setup.toDoc map { doc ⇒ 
         Redirect(routes.Doc.show(doc.id))
       }
     )
   }
 
   def show(id: String) = Action.async { implicit req ⇒
-    env.repo.byId(id) map {
+    env.docRepo byId id map {
       case Some(doc) ⇒ Ok(html.show(doc))
       case None      ⇒ NotFound
     }
