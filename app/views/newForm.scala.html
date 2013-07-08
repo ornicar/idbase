@@ -21,28 +21,28 @@
 '_label -> N.url,
 'class -> "input-wide")
 
-@select(form("annee"),
+@select2(form("annee"),
 selectable(yearsToNow),
 '_label -> "Année",
 '_default -> "",
 'class -> "input-wide",
 '_help -> "Requis")
 
-@select(form("notion"),
+@select2(form("notion"),
 selectable(lists.notion.sorted),
 '_label -> N.notion,
 '_help -> "Requis",
 'multiple -> "multiple",
 'class -> "input-wide multiselect")
 
-@select(form("niveau"),
+@select2(form("niveau"),
 selectable(lists.niveau),
 '_label -> N.niveau,
 '_help -> "Requis",
 'multiple -> "multiple",
 'class -> "input-wide multiselect")
 
-@select(form("methodePedagogique"),
+@select2(form("methodePedagogique"),
 selectable(lists.methodePedagogique.sorted),
 '_label -> N.methodePedagogique,
 '_help -> "Requis",
@@ -53,19 +53,19 @@ selectable(lists.methodePedagogique.sorted),
 '_label -> N.disciplineInfodoc,
 '_help -> "")
 
-@select(form("interdisciplinarite"),
+@select2(form("interdisciplinarite"),
 selectable(lists.interdisciplinarite.sorted),
 '_label -> N.interdisciplinarite,
 'multiple -> "multiple",
 'class -> "input-wide multiselect")
 
-@select(form("dispositifPedagogique"),
+@select2(form("dispositifPedagogique"),
 selectable(lists.dispositifPedagogique.sorted),
 '_label -> N.dispositifPedagogique,
 '_default -> "",
 'class -> "input-wide")
 
-@select(form("dispositifEducatif"),
+@select2(form("dispositifEducatif"),
 selectable(lists.dispositifEducatif.sorted),
 '_label -> N.dispositifEducatif,
 '_default -> "",
@@ -75,7 +75,7 @@ selectable(lists.dispositifEducatif.sorted),
 '_label -> N.auteur,
 'class -> "input-wide")
 
-@select(form("source"),
+@select2(form("source"),
 selectable(lists.source),
 '_label -> "Source",
 '_default -> "",
@@ -104,7 +104,7 @@ selectable(lists.source),
 'class -> "input-wide",
 '_help -> "")
 
-@select(form("meta")("demarche"),
+@select2(form("meta")("demarche"),
 selectable(lists.demarche.sorted),
 '_label -> N.demarche,
 'multiple -> "multiple",
@@ -122,7 +122,7 @@ selectable(lists.demarche.sorted),
 '_label -> N.materiau,
 'class -> "input-wide")
 
-@select(form("meta")("evaluation"),
+@select2(form("meta")("evaluation"),
 selectable(lists.evaluation),
 '_label -> N.evaluation,
 '_help -> "Requis",

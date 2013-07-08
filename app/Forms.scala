@@ -12,7 +12,7 @@ object Forms {
       if (o.isEmpty) Invalid(ValidationError("error.required")) else Valid
     }
 
-  val docForm = Form(
+  lazy val docForm = Form(
     mapping(
       "notion" -> nonEmptyList(text),
       "niveau" -> nonEmptyList(text),
@@ -28,7 +28,7 @@ object Forms {
       "meta" -> metaMapping
     )(DocSetup.apply _)(DocSetup.unapply _))
 
-  val metaMapping = mapping(
+  lazy val metaMapping = mapping(
     "titre" -> nonEmptyText,
     "reference" -> nonEmptyText,
     "url" -> nonEmptyText,
