@@ -19,6 +19,14 @@ select.multiselect {
 .markdown-long {
   height: 9em;
 }
+
+.control-group.error .checkbox,
+.control-group.error .radio,
+.control-group.error input,
+.control-group.error select,
+.control-group.error textarea {
+  color: inherit;
+}
 .jumbotron {
   position: relative;
   padding: 20px 0;

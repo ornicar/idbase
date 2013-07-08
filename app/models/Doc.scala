@@ -2,14 +2,15 @@ package idbase
 package models
 
 case class Doc(
+    id: String,
     notion: List[String],
     niveau: List[String],
     methodePedagogique: List[String],
     annee: Int,
     disciplineInfodoc: Boolean,
     interdisciplinarite: List[String],
-    dispositifPedagogique: List[String],
-    dispositifEducatif: List[String],
+    dispositifPedagogique: String,
+    dispositifEducatif: String,
     auteur: String,
     source: String,
     production: Markdown, 
@@ -17,6 +18,10 @@ case class Doc(
 }
 
 object Doc {
+
+  val idSize = 8
+
+  def identify(doc: Doc) = doc.copy(id = Helper.Random nextString idSize)
 
   import play.api.libs.json.Json
   import play.api.data._
@@ -34,15 +39,16 @@ object Doc {
 
   val form = Form(
     mapping(
+      "id" -> nonEmptyText,
       "notion" -> nonEmptyList(text),
       "niveau" -> nonEmptyList(text),
       "methodePedagogique" -> nonEmptyList(text),
-      "annee" -> number,
+      "annee" -> number.verifying("Année requise", Helper.yearsToNow contains _),
       "disciplineInfodoc" -> boolean,
       "interdisciplinarite" -> nonEmptyList(text),
-      "dispositifPedagogique" -> nonEmptyList(text),
-      "dispositifEducatif" -> nonEmptyList(text),
-      "auteur" -> nonEmptyText,
+      "dispositifPedagogique" -> nonEmptyText,
+      "dispositifEducatif" -> nonEmptyText,
+      "auteur" -> text,
       "source" -> nonEmptyText,
       "production" -> nonEmptyText,
       "meta" -> Meta.formMapping

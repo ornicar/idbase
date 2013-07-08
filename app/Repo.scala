@@ -10,6 +10,13 @@ import scala.concurrent.Future
 
 private[idbase] final class Repo(coll: JSONCollection) {
 
-  def insert(doc: Doc): Future[Unit] = coll insert doc map (_ ⇒ ())
+  import Doc.jsonFormat
 
+  def insert(doc: Doc): Future[Unit] = {
+    val identified = Doc identify doc
+    coll insert identified map (_ ⇒ ())
+  }
+
+  def byId(id: String): Future[Option[Doc]] = 
+    coll.find(Json.obj("_id" -> id)).one
 }

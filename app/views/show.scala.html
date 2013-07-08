@@ -1,0 +1,16 @@
+@(doc: Doc)
+
+@import idbase.Helper._
+@import idbase.{ Names => N }
+
+@main("Notice : " + doc.meta.titre) {
+
+<table>
+  <tbody>
+  @row(N.titre, doc.meta.titre)
+  @row(N.reference, doc.meta.reference)
+  @row(N.url, doc.meta.url)
+  @row(N.annee, doc.annee)
+  </tbody>
+</table>
+}

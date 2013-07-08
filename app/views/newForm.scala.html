@@ -1,6 +1,7 @@
 @(form: Form[_], lists: Lists)(implicit lang: Lang)
 
 @import idbase.Helper._
+@import idbase.{ Names => N }
 @import helper.{ form => _, _ }
 @implicitFieldConstructor = @{ FieldConstructor(bootstrapInput.f) }
 
@@ -8,126 +9,139 @@
 @helper.form(action = routes.Doc.create, 
 'class -> "form-horizontal") {
 
+@inputText(form("meta")("titre"),
+'_label -> N.titre,
+'class -> "input-wide")
+
+@textarea(form("meta")("reference"),
+'_label -> N.reference,
+'class -> "input-wide")
+
+@inputText(form("meta")("url"),
+'_label -> N.url,
+'class -> "input-wide")
+
+@select(form("annee"),
+selectable(yearsToNow),
+'_label -> "Année",
+'_default -> "",
+'class -> "input-wide",
+'_help -> "Requis")
+
 @select(form("notion"),
 selectable(lists.notion.sorted),
-'_label -> "Notions",
+'_label -> N.notion,
+'_help -> "Requis",
 'multiple -> "multiple",
 'class -> "input-wide multiselect")
 
 @select(form("niveau"),
 selectable(lists.niveau),
-'_label -> "Niveaux",
+'_label -> N.niveau,
+'_help -> "Requis",
 'multiple -> "multiple",
 'class -> "input-wide multiselect")
 
 @select(form("methodePedagogique"),
 selectable(lists.methodePedagogique.sorted),
-'_label -> "Méthodes pédagogiques",
+'_label -> N.methodePedagogique,
+'_help -> "Requis",
 'multiple -> "multiple",
 'class -> "input-wide multiselect")
 
-@select(form("annee"),
-selectable(yearsToNow),
-'_label -> "Année",
-'class -> "input-wide")
-
 @checkbox(form("disciplineInfodoc"),
-'_label -> "Discipline Info-doc",
+'_label -> N.disciplineInfodoc,
 '_help -> "")
 
 @select(form("interdisciplinarite"),
 selectable(lists.interdisciplinarite.sorted),
-'_label -> "Interdisciplinarité",
+'_label -> N.interdisciplinarite,
 'multiple -> "multiple",
 'class -> "input-wide multiselect")
 
 @select(form("dispositifPedagogique"),
 selectable(lists.dispositifPedagogique.sorted),
-'_label -> "Dispositif pédagogique",
-'multiple -> "multiple",
-'class -> "input-wide multiselect")
+'_label -> N.dispositifPedagogique,
+'_default -> "",
+'class -> "input-wide")
 
 @select(form("dispositifEducatif"),
 selectable(lists.dispositifEducatif.sorted),
-'_label -> "Dispositif éducatif",
-'multiple -> "multiple",
-'class -> "input-wide multiselect")
-
-@inputText(form("auteur"),
-'_label -> "Auteur",
+'_label -> N.dispositifEducatif,
+'_default -> "",
 'class -> "input-wide")
 
-@inputText(form("source"),
+@inputText(form("auteur"),
+'_label -> N.auteur,
+'class -> "input-wide")
+
+@select(form("source"),
+selectable(lists.source),
 '_label -> "Source",
+'_default -> "",
 'class -> "input-wide")
 
 @textarea(form("production"),
-'_label -> "Production",
-'class -> "input-wide")
-
-@inputText(form("meta")("titre"),
-'_label -> "Titre",
-'class -> "input-wide")
-
-@textarea(form("meta")("reference"),
-'_label -> "Référence",
-'class -> "input-wide")
-
-@inputText(form("meta")("url"),
-'_label -> "Titre",
+'_label -> N.production,
 'class -> "input-wide")
 
 @textarea(form("meta")("scenario"),
-'_label -> "Scénario",
+'_label -> N.scenario,
 'class -> "input-wide markdown-long")
 
 @textarea(form("meta")("objectifT1"),
-'_label -> "Objectif T1",
-'class -> "input-wide")
+'_label -> N.objectifT1,
+'class -> "input-wide",
+'_help -> "")
 
 @textarea(form("meta")("objectifT2"),
-'_label -> "Objectif T2",
-'class -> "input-wide")
+'_label -> N.objectifT2,
+'class -> "input-wide",
+'_help -> "")
 
 @textarea(form("meta")("objectifT3"),
-'_label -> "Objectif T3",
-'class -> "input-wide")
+'_label -> N.objectifT3,
+'class -> "input-wide",
+'_help -> "")
 
 @select(form("meta")("demarche"),
 selectable(lists.demarche.sorted),
-'_label -> "Démarche",
+'_label -> N.demarche,
 'multiple -> "multiple",
 'class -> "input-wide multiselect")
 
 @textarea(form("meta")("deroulement"),
-'_label -> "Déroulement",
+'_label -> N.deroulement,
 'class -> "input-wide")
 
 @inputText(form("meta")("tache"),
-'_label -> "Tache",
+'_label -> N.tache,
 'class -> "input-wide")
 
 @textarea(form("meta")("materiau"),
-'_label -> "Matériaux",
+'_label -> N.materiau,
 'class -> "input-wide")
 
 @select(form("meta")("evaluation"),
-selectable(lists.evaluation.sorted),
-'_label -> "Évaluations",
+selectable(lists.evaluation),
+'_label -> N.evaluation,
+'_help -> "Requis",
 'multiple -> "multiple",
 'class -> "input-wide multiselect")
 
 @textarea(form("meta")("outilDidactique"),
-'_label -> "Outils didactiques",
+'_label -> N.outilDidactique,
 'class -> "input-wide")
 
 @inputText(form("meta")("duree"),
-'_label -> "Durée",
+'_label -> N.duree,
 'class -> "input-wide")
 
 @textarea(form("meta")("commentaire"),
-'_label -> "Commentaire",
+'_label -> N.commentaire,
 'class -> "input-wide textarea-long")
+
+<input type="hidden" value="@form("id").value" name="@form("id").id" />
 
 <div class="form-actions">
   <button class="btn btn-primary" type="submit">Enregistrer</button>
