@@ -37,4 +37,12 @@ object Doc extends Controller {
       }
     }
   }
+
+  def list = Action { implicit req =>
+    Async {
+      env.docRepo.list map { l =>
+        Ok(html.list(l))
+      }
+    }
+  }
 }

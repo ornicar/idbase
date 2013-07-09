@@ -1,4 +1,4 @@
-@(message: String)
+@(docs: List[Doc])
 
 @main("ID Base", bodyClass = "index") {
 
@@ -8,4 +8,16 @@
     <p>Fiches pédagogiques à l'usage des professeurs documentalistes</p>
   </div>
 </div>
+
+<table class="table">
+  <tbody>
+  @docs.map { doc =>
+  <tr>
+    <td><a href="@routes.Doc.show(doc.id)">@doc.meta.titre</a></td>
+    <td>@doc.annee</td>
+  </tr>
+  }
+  </tbody>
+</table>
+
 }

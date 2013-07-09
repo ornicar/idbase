@@ -1,5 +1,5 @@
 # Home page
-GET     /                           controllers.Application.index
+GET     /                           controllers.Doc.list
 
 GET     /new                        controllers.Doc.newForm
 POST    /create                     controllers.Doc.create
