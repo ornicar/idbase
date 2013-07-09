@@ -18,6 +18,7 @@ object ApplicationBuild extends Build {
       "Sonatype Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots/",
       "iliaz.com" at "http://scala.iliaz.com/"
     ),
+    sources in doc in Compile := List(),
     scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature", "-language:_"),
     templatesImport ++= Seq(
       "idbase.models._")

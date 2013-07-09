@@ -17,7 +17,8 @@ object Helper {
   def row(th: String, td: Any) = rowHtml(th)(Html(td.toString))
 
   def rowHtml(th: String)(td: Html) = Html {
-    """<tr><th class="muted">%s</th><td>%s</td></tr>""".format(th, td.body)
+    if (td.body.trim.isEmpty) ""
+    else """<tr><th class="muted">%s</th><td>%s</td></tr>""".format(th, td.body)
   }
 
   def group(name: String)(content: Html) = Html {

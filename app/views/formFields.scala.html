@@ -37,11 +37,13 @@
 
 @select2(form("dispositifPedagogique"), selectable(lists.dispositifPedagogique.sorted),
 '_label -> N.dispositifPedagogique,
+'_help -> "",
 '_default -> "",
 'class -> "input-wide")
 
 @select2(form("dispositifEducatif"), selectable(lists.dispositifEducatif.sorted),
 '_label -> N.dispositifEducatif,
+'_help -> "",
 '_default -> "",
 'class -> "input-wide")
 
@@ -78,6 +80,11 @@
 '_help -> "Requis",
 'multiple -> "multiple",
 'class -> "input-wide multiselect")
+
+@textarea(form("meta")("outilEvaluation"),
+'_label -> N.outilEvaluation,
+'class -> "input-wide",
+'_help -> "")
 }
 
 @group("Enseignement") {
@@ -94,6 +101,11 @@
 
 @textarea(form("meta")("deroulement"),
 '_label -> N.deroulement,
+'class -> "input-wide")
+
+@textarea(form("meta")("outilDidactique"),
+'_label -> N.outilDidactique,
+'_help -> "",
 'class -> "input-wide")
 }
 
@@ -116,8 +128,9 @@
 '_label -> N.production,
 'class -> "input-wide")
 
-@textarea(form("meta")("outilDidactique"),
-'_label -> N.outilDidactique,
+@textarea(form("meta")("ficheEleve"),
+'_label -> N.ficheEleve,
+'_help -> "",
 'class -> "input-wide")
 }
 

@@ -14,7 +14,9 @@ case class Meta(
     tache: String, 
     materiau: Markdown, 
     evaluation: List[String],
-    outilDidactique: String,
+    outilEvaluation: Option[Markdown],
+    outilDidactique: Option[Markdown],
+    ficheEleve: Option[Markdown],
     duree: String,
     commentaire: Markdown 
   ) {

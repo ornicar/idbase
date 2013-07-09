@@ -19,8 +19,8 @@ object Forms {
       "methodePedagogique" -> nonEmptyList(text),
       "annee" -> number.verifying("Année requise", Helper.yearsToNow contains _),
       "interdisciplinarite" -> nonEmptyList(text),
-      "dispositifPedagogique" -> text,
-      "dispositifEducatif" -> text,
+      "dispositifPedagogique" -> optional(nonEmptyText),
+      "dispositifEducatif" -> optional(nonEmptyText),
       "source" -> nonEmptyText,
       "production" -> nonEmptyText,
       "meta" -> metaMapping
@@ -39,7 +39,9 @@ object Forms {
     "tache" -> nonEmptyText,
     "materiau" -> nonEmptyText,
     "evaluation" -> nonEmptyList(text),
-    "outilDidactique" -> nonEmptyText,
+    "outilEvaluation" -> optional(nonEmptyText),
+    "outilDidactique" -> optional(nonEmptyText),
+    "ficheEleve" -> optional(nonEmptyText),
     "duree" -> nonEmptyText,
     "commentaire" -> nonEmptyText
   )(MetaSetup.apply _)(MetaSetup.unapply _)
@@ -50,8 +52,8 @@ object Forms {
       methodePedagogique: List[String],
       annee: Int,
       interdisciplinarite: List[String],
-      dispositifPedagogique: String,
-      dispositifEducatif: String,
+      dispositifPedagogique: Option[Markdown],
+      dispositifEducatif: Option[Markdown],
       source: String,
       production: Markdown,
       meta: MetaSetup) {
@@ -95,7 +97,9 @@ object Forms {
       tache: String,
       materiau: Markdown,
       evaluation: List[String],
-      outilDidactique: String,
+      outilEvaluation: Option[Markdown],
+      outilDidactique: Option[Markdown],
+      ficheEleve: Option[Markdown],
       duree: String,
       commentaire: Markdown) {
 
@@ -112,7 +116,9 @@ object Forms {
       tache = tache,
       materiau = materiau,
       evaluation = evaluation,
+      outilEvaluation = outilEvaluation,
       outilDidactique = outilDidactique,
+      ficheEleve = ficheEleve,
       duree = duree,
       commentaire = commentaire)
   }
@@ -130,7 +136,9 @@ object Forms {
       tache = meta.tache,
       materiau = meta.materiau,
       evaluation = meta.evaluation,
+      outilEvaluation = meta.outilEvaluation,
       outilDidactique = meta.outilDidactique,
+      ficheEleve = meta.ficheEleve,
       duree = meta.duree,
       commentaire = meta.commentaire)
 }

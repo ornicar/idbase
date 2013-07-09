@@ -8,8 +8,8 @@ case class Doc(
     methodePedagogique: List[String],
     annee: Int,
     interdisciplinarite: List[String],
-    dispositifPedagogique: String,
-    dispositifEducatif: String,
+    dispositifPedagogique: Option[Markdown],
+    dispositifEducatif: Option[Markdown],
     source: String,
     production: Markdown, 
     meta: Meta) {

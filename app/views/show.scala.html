@@ -35,22 +35,26 @@
   @row(N.objectifT3, o)
   }
   @row(N.evaluation, doc.meta.evaluation mkString ", ")
+  @doc.meta.outilEvaluation.map { o =>
+  @row(N.outilEvaluation, o)
+  }
   }
   @tableGroup("Enseignement") {
   @row(N.scenario, doc.meta.scenario)
   @rowHtml(N.methodePedagogique) {
-  @doc.methodePedagogique.map { m =>
-  <strong>@m</strong>
+  @doc.methodePedagogique.map { n =>
+  <span class="label label-success">@n</span>
   }
   }
   @row(N.deroulement, doc.meta.deroulement)
+  @row(N.outilDidactique, doc.meta.outilDidactique)
   }
   @tableGroup("Apprentissage") {
   @row(N.demarche, doc.meta.demarche mkString ", ")
   @row(N.tache, doc.meta.tache)
   @row(N.materiau, doc.meta.materiau)
   @row(N.production, doc.production)
-  @row(N.outilDidactique, doc.meta.outilDidactique)
+  @row(N.ficheEleve, doc.meta.ficheEleve)
   }
   @tableGroup("Commentaire") {
   @row("", doc.meta.commentaire)

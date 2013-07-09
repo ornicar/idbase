@@ -1,0 +1,46 @@
+#!/bin/sh
+. bin/idbaserc
+
+REMOTE="paul"
+REMOTE_DIR="/home/idbase"
+
+log "Deploy to $REMOTE:$REMOTE_DIR"
+
+APP_NAME=idbase-1.0
+
+bin/play compile stage
+if [ $? != 0 ]; then
+  log "Deploy canceled"
+  exit 1
+fi
+
+RSYNC_OPTIONS=" \
+  --archive \
+  --force \
+  --delete \
+  --progress \
+  --compress \
+  --checksum \
+  --verbose \
+  --exclude application.conf \
+  --exclude logs \
+  --exclude RUNNING_PID \
+  --exclude target/resolution-cache \
+  --exclude target/native_libraries \
+  --exclude target/scala-* \
+  --exclude target/.history \
+  --exclude target/streams";
+
+log "Rsync scripts, binaries and assets"
+rsync_command="rsync $RSYNC_OPTIONS bin target public $REMOTE:$REMOTE_DIR"
+echo "$rsync_command"
+$rsync_command
+
+log "Restart idbase"
+ssh $REMOTE "service idbase restart"
+
+log "Deploy complete"
+
+sleep 2
+
+curl_prod

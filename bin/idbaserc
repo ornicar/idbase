@@ -1,0 +1,17 @@
+#!/bin/sh
+
+PLAY_VERSION="2.1.2"
+PROD_URL="http://idbase.esmeree.fr"
+JVM_OPTIONS="-Dhttp.port=9000 -Dscalac.patmat.analysisBudget=off"
+
+log () {
+  echo -e "\x1b[7m[idbase]\x1b[0m $1"
+}
+
+curl_prod () {
+  log "Test $PROD_URL"
+  curl -sL -w "%{http_code}" -o /dev/null "$PROD_URL"
+}
+
+# load local config
+[ -f bin/idbaserc.local ] && . bin/idbaserc.local
