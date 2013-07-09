@@ -6,7 +6,11 @@
 @implicitFieldConstructor = @{ FieldConstructor(bootstrapInput.f) }
 
 @main("Ajouter une notice") {
-@helper.form(action = routes.Doc.create, 
+
+<div class="container">
+<h2>Ajouter une notice</h2>
+
+@helper.form(action = routes.Doc.create,
 'class -> "form-horizontal") {
 
 @group("Fiche") {
@@ -149,4 +153,5 @@
   <a class="btn">Annuler</a>
 </div>
 }
+</div>
 }

@@ -5,6 +5,7 @@
 
 @main("Notice : " + doc.meta.titre) {
 
+<div class="container">
 <p class="lead">
 Notice <strong class="muted">@doc.annee</strong>
 @doc.meta.titre<br />
@@ -56,4 +57,5 @@ Notice <strong class="muted">@doc.annee</strong>
 @group(doc.source) {
 @row("", doc.meta.reference)
 }
+</div>
 }

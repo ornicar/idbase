@@ -1,4 +1,4 @@
-@(title: String)(content: Html)
+@(title: String, bodyClass: String = "")(content: Html)
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -16,18 +16,27 @@
 <link rel="shortcut icon" href="@routes.Assets.at("images/favicon.ico")" type="image/x-icon" />
 </head>
 
-<body>
-
-<div class="jumbotron">
-  <div class="container">
-    <h1>ID Base</h1>
-    <p>Fiches pédagogiques à l'usage des professeurs documentalistes</p>
+<body class="@bodyClass">
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="brand" href="@routes.Application.index()">ID Base</a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
-
-
-<div class="container">
-  @content
+@content
 </div>
 
 <script src="@routes.Assets.at("javascripts/jquery.min.js")"></script>
