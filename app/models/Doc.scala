@@ -7,7 +7,6 @@ case class Doc(
     niveau: List[String],
     methodePedagogique: List[String],
     annee: Int,
-    disciplineInfodoc: Boolean,
     interdisciplinarite: List[String],
     dispositifPedagogique: String,
     dispositifEducatif: String,

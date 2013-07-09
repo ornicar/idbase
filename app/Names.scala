@@ -8,7 +8,6 @@ object Names {
   val notion = "Notions"
   val niveau = "Niveaux"
   val methodePedagogique = "Méthodes pédagogiques"
-  val disciplineInfodoc = "Discipline Information-documentation"
   val interdisciplinarite = "Interdisciplinarité"
   val dispositifPedagogique = "Dispositif pédagogique"
   val dispositifEducatif = "Dispositif éducatif"
