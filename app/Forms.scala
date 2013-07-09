@@ -21,7 +21,6 @@ object Forms {
       "interdisciplinarite" -> nonEmptyList(text),
       "dispositifPedagogique" -> text,
       "dispositifEducatif" -> text,
-      "auteur" -> text,
       "source" -> nonEmptyText,
       "production" -> nonEmptyText,
       "meta" -> metaMapping
@@ -53,7 +52,6 @@ object Forms {
       interdisciplinarite: List[String],
       dispositifPedagogique: String,
       dispositifEducatif: String,
-      auteur: String,
       source: String,
       production: Markdown,
       meta: MetaSetup) {
@@ -67,7 +65,6 @@ object Forms {
       interdisciplinarite = interdisciplinarite,
       dispositifPedagogique = dispositifPedagogique,
       dispositifEducatif = dispositifEducatif,
-      auteur = auteur,
       source = source,
       production = production,
       meta = meta.toMeta)

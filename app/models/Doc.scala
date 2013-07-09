@@ -10,7 +10,6 @@ case class Doc(
     interdisciplinarite: List[String],
     dispositifPedagogique: String,
     dispositifEducatif: String,
-    auteur: String,
     source: String,
     production: Markdown, 
     meta: Meta) {

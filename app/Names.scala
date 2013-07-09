@@ -11,7 +11,6 @@ object Names {
   val interdisciplinarite = "Interdisciplinarité"
   val dispositifPedagogique = "Dispositif pédagogique"
   val dispositifEducatif = "Dispositif éducatif"
-  val auteur = "Auteur"
   val source = "Source"
   val production = "Production"
   val scenario = "Scénario"
