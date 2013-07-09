@@ -15,8 +15,12 @@
   @tableGroup("Cadre") {
   @row(N.niveau, doc.niveau mkString ", ")
   @row(N.interdisciplinarite, doc.interdisciplinarite mkString ", ")
-  @row(N.dispositifPedagogique, doc.dispositifPedagogique)
-  @row(N.dispositifEducatif, doc.dispositifEducatif)
+  @doc.dispositifPedagogique.map { o =>
+  @row(N.dispositifPedagogique, Markdown(o))
+  }
+  @doc.dispositifEducatif.map { o =>
+  @row(N.dispositifEducatif, Markdown(o))
+  }
   @row(N.duree, doc.meta.duree)
   }
   @tableGroup("Savoirs") {
