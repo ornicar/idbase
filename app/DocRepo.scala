@@ -10,22 +10,21 @@ import scala.concurrent.Future
 
 private[idbase] final class DocRepo(coll: JSONCollection) {
 
+  private implicit def format: OFormat[Doc] = OFormat({
+    case o: JsObject ⇒ Doc.jsonTube.fromMongo(o)
+    case x           ⇒ throw new Exception("Not a JsObject: " + x)
+  },
+    doc ⇒ Doc.jsonTube.toMongo(doc).fold(
+      e ⇒ throw new Exception(e.toString),
+      identity)
+  )
+
   def insert(doc: Doc): Future[Doc] =
-    Doc.jsonTube.toMongo(doc).fold(
-      e ⇒ Future.failed(new Exception(e.toString)),
-      coll.insert
-    ) map (_ ⇒ doc)
+    coll insert doc map (_ ⇒ doc)
 
   def byId(id: String): Future[Option[Doc]] =
-    coll.find(Json.obj("_id" -> id)).one[JsObject] map {
-      _ flatMap { js ⇒
-        Doc.jsonTube.fromMongo(js) match {
-          case JsSuccess(v, _) ⇒ Some(v)
-          case e ⇒ {
-            println("[tube] Cannot read %s\n%s".format(js, e))
-            None
-          }
-        }
-      }
-    }
+    coll.find(Json.obj("_id" -> id)).one[Doc]
+
+  def list: Future[List[Doc]] =
+    coll.find(Json.obj()).cursor[Doc].toList
 }
