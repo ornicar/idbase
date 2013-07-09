@@ -26,41 +26,45 @@
   }
   }
   @doc.meta.objectifT1.map { o =>
-  @row(N.objectifT1, o)
+  @row(N.objectifT1, Markdown(o))
   }
   @doc.meta.objectifT2.map { o =>
-  @row(N.objectifT2, o)
+  @row(N.objectifT2, Markdown(o))
   }
   @doc.meta.objectifT3.map { o =>
-  @row(N.objectifT3, o)
+  @row(N.objectifT3, Markdown(o))
   }
   @row(N.evaluation, doc.meta.evaluation mkString ", ")
   @doc.meta.outilEvaluation.map { o =>
-  @row(N.outilEvaluation, o)
+  @row(N.outilEvaluation, Markdown(o))
   }
   }
   @tableGroup("Enseignement") {
-  @row(N.scenario, doc.meta.scenario)
+  @row(N.scenario, Markdown(doc.meta.scenario))
   @rowHtml(N.methodePedagogique) {
   @doc.methodePedagogique.map { n =>
   <span class="label label-success">@n</span>
   }
   }
-  @row(N.deroulement, doc.meta.deroulement)
-  @row(N.outilDidactique, doc.meta.outilDidactique)
+  @row(N.deroulement, Markdown(doc.meta.deroulement))
+  @doc.meta.outilDidactique.map { o =>
+  @row(N.outilDidactique, Markdown(o))
+  }
   }
   @tableGroup("Apprentissage") {
   @row(N.demarche, doc.meta.demarche mkString ", ")
   @row(N.tache, doc.meta.tache)
-  @row(N.materiau, doc.meta.materiau)
-  @row(N.production, doc.production)
-  @row(N.ficheEleve, doc.meta.ficheEleve)
+  @row(N.materiau, Markdown(doc.meta.materiau))
+  @row(N.production, Markdown(doc.production))
+  @doc.meta.ficheEleve.map { o =>
+  @row(N.ficheEleve, Markdown(o))
+  }
   }
   @tableGroup("Commentaire") {
-  @row("", doc.meta.commentaire)
+  @row("", Markdown(doc.meta.commentaire))
   }
   @tableGroup(doc.source) {
-  @row("", doc.meta.reference)
+  @row("", Markdown(doc.meta.reference))
   }
 
   <div class="form-actions">

@@ -9,7 +9,8 @@ object ApplicationBuild extends Build {
   val appDependencies = Seq(
     // Add your project dependencies here,
     "org.reactivemongo" %% "reactivemongo" % "0.10.1-THIB",
-    "org.reactivemongo" %% "play2-reactivemongo" % "0.10-THIB"
+    "org.reactivemongo" %% "play2-reactivemongo" % "0.10-THIB",
+    "org.pegdown" % "pegdown" % "1.4.0"
   )
 
   val main = play.Project(appName, appVersion, appDependencies).settings(

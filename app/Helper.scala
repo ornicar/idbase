@@ -1,6 +1,7 @@
 package idbase
 
 import java.util.Calendar
+
 import play.api.templates.Html
 
 object Helper {
@@ -41,5 +42,18 @@ object Helper {
 
     def nextString(len: Int) = List.fill(len)(nextChar) mkString
     def nextChar = chars(scala.util.Random nextInt nbChars)
+  }
+
+  object Markdown {
+
+    import org.pegdown._, Extensions._
+
+    private val transformer = new PegDownProcessor(HARDWRAPS | AUTOLINKS | QUOTES)
+
+    def apply(text: String): Html = Html {
+      transformer.markdownToHtml(text)
+    }
+
+    def apply(text: Html): Html = apply(text.toString)
   }
 }
