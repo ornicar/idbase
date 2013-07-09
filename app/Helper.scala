@@ -21,13 +21,16 @@ object Helper {
   }
 
   def group(name: String)(content: Html) = Html {
-    """
-<div class="group">
+    """<div class="group">
   <span class="group-title">%s</span>
-  <table class="table">
-    <tbody>%s</tbody>
-  </table>
+  %s
 </div>""".format(name, content)
+  }
+
+  def tableGroup(name: String)(content: Html) = group(name) {
+    Html {
+      """<table class="table"><tbody>%s</tbody></table>""".format(content)
+    }
   }
 
   object Random {

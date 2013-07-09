@@ -1,0 +1,141 @@
+@(form: Form[_], lists: Lists)(implicit lang: Lang)
+
+@import idbase.Helper._
+@import idbase.{ Names => N }
+@import helper.{ form => _, _ }
+@implicitFieldConstructor = @{ FieldConstructor(bootstrapInput.f) }
+
+@group("Fiche") {
+
+@inputText(form("meta")("titre"),
+'_label -> N.titre,
+'class -> "input-wide")
+
+@select2(form("annee"), selectable(yearsToNow),
+'_label -> "Année",
+'_default -> "",
+'class -> "input-wide",
+'_help -> "Requis")
+
+@inputText(form("meta")("url"),
+'_label -> N.url,
+'class -> "input-wide")
+}
+
+@group("Cadre") {
+
+@select2(form("niveau"), selectable(lists.niveau),
+'_label -> N.niveau,
+'_help -> "Requis",
+'multiple -> "multiple",
+'class -> "input-wide multiselect")
+
+@select2(form("interdisciplinarite"), selectable(lists.interdisciplinarite.sorted),
+'_label -> N.interdisciplinarite,
+'multiple -> "multiple",
+'class -> "input-wide multiselect")
+
+@select2(form("dispositifPedagogique"), selectable(lists.dispositifPedagogique.sorted),
+'_label -> N.dispositifPedagogique,
+'_default -> "",
+'class -> "input-wide")
+
+@select2(form("dispositifEducatif"), selectable(lists.dispositifEducatif.sorted),
+'_label -> N.dispositifEducatif,
+'_default -> "",
+'class -> "input-wide")
+
+@inputText(form("meta")("duree"),
+'_label -> N.duree,
+'class -> "input-wide")
+}
+
+@group("Savoirs") {
+
+@select2(form("notion"), selectable(lists.notion.sorted),
+'_label -> N.notion,
+'_help -> "Requis",
+'multiple -> "multiple",
+'class -> "input-wide multiselect")
+
+@textarea(form("meta")("objectifT1"),
+'_label -> N.objectifT1,
+'class -> "input-wide",
+'_help -> "")
+
+@textarea(form("meta")("objectifT2"),
+'_label -> N.objectifT2,
+'class -> "input-wide",
+'_help -> "")
+
+@textarea(form("meta")("objectifT3"),
+'_label -> N.objectifT3,
+'class -> "input-wide",
+'_help -> "")
+
+@select2(form("meta")("evaluation"), selectable(lists.evaluation),
+'_label -> N.evaluation,
+'_help -> "Requis",
+'multiple -> "multiple",
+'class -> "input-wide multiselect")
+}
+
+@group("Enseignement") {
+
+@textarea(form("meta")("scenario"),
+'_label -> N.scenario,
+'class -> "input-wide markdown-long")
+
+@select2(form("methodePedagogique"), selectable(lists.methodePedagogique.sorted),
+'_label -> N.methodePedagogique,
+'_help -> "Requis",
+'multiple -> "multiple",
+'class -> "input-wide multiselect")
+
+@textarea(form("meta")("deroulement"),
+'_label -> N.deroulement,
+'class -> "input-wide")
+}
+
+@group("Apprentissage") {
+
+@select2(form("meta")("demarche"), selectable(lists.demarche.sorted),
+'_label -> N.demarche,
+'multiple -> "multiple",
+'class -> "input-wide multiselect")
+
+@inputText(form("meta")("tache"),
+'_label -> N.tache,
+'class -> "input-wide")
+
+@textarea(form("meta")("materiau"),
+'_label -> N.materiau,
+'class -> "input-wide")
+
+@textarea(form("production"),
+'_label -> N.production,
+'class -> "input-wide")
+
+@textarea(form("meta")("outilDidactique"),
+'_label -> N.outilDidactique,
+'class -> "input-wide")
+}
+
+@group("Commentaire") {
+
+@textarea(form("meta")("commentaire"),
+'_label -> N.commentaire,
+'class -> "input-wide textarea-long")
+}
+
+@group("Référence") {
+
+@select2(form("source"), selectable(lists.source),
+'_label -> "Source",
+'_default -> "",
+'class -> "input-wide")
+
+@textarea(form("meta")("reference"),
+'_label -> N.reference,
+'class -> "input-wide")
+}

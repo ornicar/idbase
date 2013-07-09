@@ -1,5 +1,7 @@
 @(docs: List[Doc])
 
+@import idbase.Helper._
+
 @main("ID Base", bodyClass = "index") {
 
 <div class="jumbotron">
@@ -9,15 +11,18 @@
   </div>
 </div>
 
-<table class="table">
-  <tbody>
-  @docs.map { doc =>
-  <tr>
-    <td><a href="@routes.Doc.show(doc.id)">@doc.meta.titre</a></td>
-    <td>@doc.annee</td>
-  </tr>
+<div class="container">
+  @group(docs.size + " notices") {
+  <table class="table">
+    <tbody>
+    @docs.map { doc =>
+    <tr>
+      <td><a href="@routes.Doc.show(doc.id)">@doc.meta.titre</a></td>
+      <td>@doc.annee</td>
+    </tr>
+    }
+    </tbody>
+  </table>
   }
-  </tbody>
-</table>
-
+</div>
 }

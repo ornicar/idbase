@@ -56,8 +56,8 @@ object Forms {
       production: Markdown,
       meta: MetaSetup) {
 
-    def toDoc = Doc(
-      id = Helper.Random nextString Doc.idSize,
+    def toDoc(doc: Option[Doc]) = Doc(
+      id = doc.fold(Helper.Random nextString Doc.idSize)(_.id),
       notion = notion,
       niveau = niveau,
       methodePedagogique = methodePedagogique,
@@ -69,6 +69,18 @@ object Forms {
       production = production,
       meta = meta.toMeta)
   }
+
+  def DocToSetup(doc: Doc) = DocSetup(
+      notion = doc.notion,
+      niveau = doc.niveau,
+      methodePedagogique = doc.methodePedagogique,
+      annee = doc.annee,
+      interdisciplinarite = doc.interdisciplinarite,
+      dispositifPedagogique = doc.dispositifPedagogique,
+      dispositifEducatif = doc.dispositifEducatif,
+      source = doc.source,
+      production = doc.production,
+      meta = MetaToSetup(doc.meta))
 
   case class MetaSetup(
       titre: String,
@@ -104,4 +116,21 @@ object Forms {
       duree = duree,
       commentaire = commentaire)
   }
+
+  def MetaToSetup(meta: Meta) = MetaSetup(
+      titre = meta.titre,
+      reference = meta.reference,
+      url = meta.url,
+      scenario = meta.scenario,
+      objectifT1 = meta.objectifT1,
+      objectifT2 = meta.objectifT2,
+      objectifT3 = meta.objectifT3,
+      demarche = meta.demarche,
+      deroulement = meta.deroulement,
+      tache = meta.tache,
+      materiau = meta.materiau,
+      evaluation = meta.evaluation,
+      outilDidactique = meta.outilDidactique,
+      duree = meta.duree,
+      commentaire = meta.commentaire)
 }

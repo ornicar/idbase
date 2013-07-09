@@ -22,8 +22,10 @@ object Doc extends Controller {
         err ⇒ Future successful {
           BadRequest(html.newForm(err, env.lists))
         },
-        setup ⇒ env.docRepo insert setup.toDoc map { doc ⇒
-          Redirect(routes.Doc.show(doc.id))
+        setup ⇒ env.docRepo insert setup.toDoc(None) map { doc ⇒
+          Redirect(routes.Doc.show(doc.id)).flashing(
+            "success" -> "La notice a été ajoutée"
+          )
         }
       )
     }
@@ -38,9 +40,40 @@ object Doc extends Controller {
     }
   }
 
-  def list = Action { implicit req =>
+  def editForm(id: String) = Action { implicit req ⇒
     Async {
-      env.docRepo.list map { l =>
+      env.docRepo byId id map {
+        case Some(doc) ⇒ Ok(html.editForm(
+          doc,
+          Forms.docForm fill Forms.DocToSetup(doc),
+          env.lists))
+        case None ⇒ NotFound
+      }
+    }
+  }
+
+  def update(id: String) = Action { implicit req ⇒
+    Async {
+      env.docRepo byId id flatMap {
+        case Some(doc) ⇒
+          Forms.docForm.bindFromRequest.fold(
+            err ⇒ Future successful {
+              BadRequest(html.editForm(doc, err, env.lists))
+            },
+            setup ⇒ env.docRepo update setup.toDoc(Some(doc)) map { doc2 ⇒
+              Redirect(routes.Doc.show(doc2.id)).flashing(
+                "success" -> "La notice a été modifiée"
+              )
+            }
+          )
+        case None ⇒ Future successful NotFound
+      }
+    }
+  }
+
+  def list = Action { implicit req ⇒
+    Async {
+      env.docRepo.list map { l ⇒
         Ok(html.list(l))
       }
     }

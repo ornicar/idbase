@@ -1,0 +1,19 @@
+@(doc: Doc, form: Form[_], lists: Lists)(implicit lang: Lang)
+
+@main("Modifier la notice") {
+
+<div class="container">
+<h2>Modifier la notice</h2>
+
+@helper.form(action = routes.Doc.update(doc.id),
+'class -> "form-horizontal") {
+
+@formFields(form, lists)
+
+<div class="form-actions">
+  <button class="btn btn-primary" type="submit">Enregistrer</button>
+  <a class="btn" href="@routes.Doc.show(doc.id)">Annuler</a>
+</div>
+}
+</div>
+}

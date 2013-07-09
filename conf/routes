@@ -1,10 +1,13 @@
 # Home page
 GET     /                           controllers.Doc.list
 
-GET     /new                        controllers.Doc.newForm
-POST    /create                     controllers.Doc.create
+GET     /ajouter                    controllers.Doc.newForm
+POST    /ajouter                    controllers.Doc.create
 
 GET     /notice/:id                 controllers.Doc.show(id: String)
+
+GET     /notice/:id/modifier        controllers.Doc.editForm(id: String)
+POST    /notice/:id/modifier        controllers.Doc.update(id: String)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
