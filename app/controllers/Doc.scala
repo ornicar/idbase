@@ -71,6 +71,19 @@ object Doc extends Controller {
     }
   }
 
+  def delete(id: String) = Action { implicit req ⇒
+    Async {
+      env.docRepo byId id flatMap {
+        case Some(doc) ⇒ env.docRepo delete doc map { _ ⇒
+          Redirect(routes.Doc.list).flashing(
+            "success" -> "La notice a été supprimée"
+          )
+        }
+        case None ⇒ Future successful NotFound
+      }
+    }
+  }
+
   def list = Action { implicit req ⇒
     Async {
       env.docRepo.list map { l ⇒

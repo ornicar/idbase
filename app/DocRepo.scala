@@ -25,6 +25,9 @@ private[idbase] final class DocRepo(coll: JSONCollection) {
   def update(doc: Doc): Future[Doc] =
     coll.update(Json.obj("_id" -> doc.id), doc) map (_ ⇒ doc)
 
+  def delete(doc: Doc): Future[Unit] =
+    coll.remove(Json.obj("_id" -> doc.id)) map (_ ⇒ ())
+
   def byId(id: String): Future[Option[Doc]] =
     coll.find(Json.obj("_id" -> id)).one[Doc]
 

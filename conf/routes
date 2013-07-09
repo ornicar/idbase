@@ -9,5 +9,7 @@ GET     /notice/:id                 controllers.Doc.show(id: String)
 GET     /notice/:id/modifier        controllers.Doc.editForm(id: String)
 POST    /notice/:id/modifier        controllers.Doc.update(id: String)
 
+POST    /notice/:id/supprimer       controllers.Doc.delete(id: String)
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

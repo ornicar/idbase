@@ -61,7 +61,14 @@
 
   <div class="form-actions">
     <a class="btn" href="@routes.Doc.editForm(doc.id)">Modifier</a>
-    <a class="btn btn-danger">Supprimer</a>
+    <form 
+      class="delete" 
+      style="display: inline" 
+      action="@routes.Doc.delete(doc.id)" 
+      method="post" 
+      title="Supprimer la fiche @doc.meta.titre">
+      <button class="btn btn-danger" href="@routes.Doc.delete(doc.id)">Supprimer</button>
+    </form>
   </div>
 </div>
 }

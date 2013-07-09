@@ -1,4 +1,4 @@
-@(docs: List[Doc])
+@(docs: List[Doc])(implicit flash: Flash)
 
 @import idbase.Helper._
 
@@ -12,6 +12,7 @@
 </div>
 
 <div class="container">
+  @flashes()
   @group(docs.size + " notices") {
   <table class="table">
     <tbody>
