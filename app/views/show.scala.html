@@ -1,4 +1,4 @@
-@(doc: Doc)(implicit flash: Flash)
+@(doc: Doc)(implicit flash: Flash, user: Option[User])
 
 @import idbase.Helper._
 @import idbase.{ Names => N }
@@ -71,16 +71,18 @@
   @row("", Markdown(doc.meta.reference))
   }
 
+  @if(user.isDefined) {
   <div class="form-actions">
-    <a class="btn" href="@routes.Doc.editForm(doc.id)">Modifier</a>
-    <form 
-      class="delete" 
-      style="display: inline" 
-      action="@routes.Doc.delete(doc.id)" 
-      method="post" 
+    <a class="btn" href="@routes.DocAdmin.editForm(doc.id)">Modifier</a>
+    <form
+      class="delete"
+      style="display: inline"
+      action="@routes.DocAdmin.delete(doc.id)"
+      method="post"
       title="Supprimer la fiche @doc.meta.titre">
-      <button class="btn btn-danger" href="@routes.Doc.delete(doc.id)">Supprimer</button>
+      <button class="btn btn-danger">Supprimer</button>
     </form>
   </div>
+  }
 </div>
 }

@@ -1,15 +1,18 @@
 # Home page
 GET     /                           controllers.Doc.list
 
-GET     /ajouter                    controllers.Doc.newForm
-POST    /ajouter                    controllers.Doc.create
+GET     /ajouter                    controllers.DocAdmin.newForm
+POST    /ajouter                    controllers.DocAdmin.create
 
 GET     /notice/:id                 controllers.Doc.show(id: String)
 
-GET     /notice/:id/modifier        controllers.Doc.editForm(id: String)
-POST    /notice/:id/modifier        controllers.Doc.update(id: String)
+GET     /notice/:id/modifier        controllers.DocAdmin.editForm(id: String)
+POST    /notice/:id/modifier        controllers.DocAdmin.update(id: String)
 
-POST    /notice/:id/supprimer       controllers.Doc.delete(id: String)
+POST    /notice/:id/supprimer       controllers.DocAdmin.delete(id: String)
 
-# Map static resources from the /public folder to the /assets URL path
+GET     /connexion                  controllers.Application.login
+POST    /connexion                  controllers.Application.authenticate
+GET     /deconnexion                controllers.Application.logout
+
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

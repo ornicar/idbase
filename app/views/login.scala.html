@@ -1,0 +1,28 @@
+@(form: Form[_])(implicit flash: Flash, lang: Lang, user: Option[User])
+
+@main("Connexion") {
+
+@helper.form(routes.Application.authenticate) {
+
+<div class="container text-center">
+
+<h1>Connexion</h1>
+
+<br />
+@form.globalError.map { error =>
+<p class="error">@error.message</p>
+}
+<p>
+<input type="text" name="name" placeholder="Nom d'utilisateur" value="@form("name").value">
+</p>
+<p>
+<input type="password" name="password" placeholder="Mot de passe">
+</p>
+<p>
+<button class="btn btn-large btn-primary" type="submit">Et hop !</button>
+</p>
+
+
+<div class="container">
+}
+}

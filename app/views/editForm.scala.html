@@ -1,11 +1,11 @@
-@(doc: Doc, form: Form[_], lists: Lists)(implicit lang: Lang)
+@(doc: Doc, form: Form[_], lists: Lists)(implicit lang: Lang, user: User)
 
-@main("Modifier la notice") {
+@mainAuth("Modifier la notice") {
 
 <div class="container">
 <h2>Modifier la notice</h2>
 
-@helper.form(action = routes.Doc.update(doc.id),
+@helper.form(action = routes.DocAdmin.update(doc.id),
 'class -> "form-horizontal") {
 
 @formFields(form, lists)

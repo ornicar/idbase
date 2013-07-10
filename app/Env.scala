@@ -2,12 +2,17 @@ package idbase
 
 import com.typesafe.config.Config
 import play.api.{ Application, Play }
-import play.modules.reactivemongo.ReactiveMongoPlugin
 import play.modules.reactivemongo.json.collection.JSONCollection
+import play.modules.reactivemongo.ReactiveMongoPlugin
+import scala.collection.JavaConversions._
 
 final class Env(config: Config)(implicit app: Application) {
 
   lazy val lists = new models.Lists(config getConfig "idbase")
+
+  lazy val userRepo = new UserRepo(
+    config.getConfig("idbase").getStringList("users").toList
+  )
 
   lazy val docRepo = new DocRepo(
     coll = ReactiveMongoPlugin.db.collection[JSONCollection](

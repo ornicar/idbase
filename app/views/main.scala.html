@@ -1,4 +1,4 @@
-@(title: String, bodyClass: String = "")(content: Html)
+@(title: String, bodyClass: String = "")(content: Html)(implicit user: Option[User])
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -13,7 +13,7 @@
 <!--[if lt IE 9]>
   <script src="../assets/js/html5shiv.js"></script>
 <![endif]-->
-<link rel="shortcut icon" href="@routes.Assets.at("images/favicon.ico")" type="image/x-icon" />
+<link rel="shortcut icon" href="@routes.Assets.at("img/favicon.ico")" type="image/x-icon" />
 </head>
 
 <body class="@bodyClass">
@@ -22,9 +22,25 @@
     <div class="container">
       <a class="brand" href="@routes.Doc.list()">ID Base</a>
       <div class="nav-collapse collapse">
+        @user.map { u =>
         <ul class="nav">
-          <li><a href="@routes.Doc.newForm">Ajouter une notice</a></li>
+          <li><a href="@routes.DocAdmin.newForm">Ajouter une notice</a></li>
         </ul>
+        <ul class="nav pull-right">
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            @u.name
+            <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="@routes.Application.logout"><i class="icon-off"></i> Déconnexion</a></li>
+          </ul>
+        </ul>
+        }.getOrElse {
+        <ul class="nav pull-right">
+          <li><a href="@routes.Application.login" class="pull-right">Connexion</a></li>
+        </ul>
+        }
       </div>
     </div>
   </div>
