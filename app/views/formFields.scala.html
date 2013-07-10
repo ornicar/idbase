@@ -54,11 +54,10 @@
 
 @group("Savoirs visés") {
 
-@select2(form("notion"), selectable(lists.notion.sorted),
+@inputText(form("notion"), 
 '_label -> N.notion,
 '_help -> "Requis",
-'multiple -> "multiple",
-'class -> "input-wide multiselect")
+'class -> "tm-input")
 
 @textarea(form("meta")("objectifT1"),
 '_label -> N.objectifT1,

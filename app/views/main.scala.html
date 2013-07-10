@@ -12,6 +12,9 @@
 <link rel="stylesheet" href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
 <link rel="stylesheet" href="@routes.Assets.at("stylesheets/main.css")?v=@version">
 <link rel="stylesheet" href="@routes.Assets.at("stylesheets/bootstrap-responsive.min.css")">
+@if(user.isDefined) {
+<link rel="stylesheet" href="@routes.Assets.at("stylesheets/bootstrap-tagmanager.css")">
+}
 <!--[if lt IE 9]>
   <script src="../assets/js/html5shiv.js"></script>
 <![endif]-->
@@ -52,6 +55,9 @@
 
 <script src="@routes.Assets.at("javascripts/jquery.min.js")"></script>
 <script src="@routes.Assets.at("javascripts/bootstrap.min.js")"></script>
+@if(user.isDefined) {
+<script src="@routes.Assets.at("javascripts/bootstrap-tagmanager.js")"></script>
+}
 <script src="@routes.Assets.at("javascripts/main.js")?v=@version"></script>
 </body>
 </html>

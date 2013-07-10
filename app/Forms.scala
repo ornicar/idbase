@@ -14,7 +14,8 @@ object Forms {
 
   lazy val docForm = Form(
     mapping(
-      "notion" -> nonEmptyList(text),
+      "notion" -> text,
+      "hidden-notion" -> text,
       "niveau" -> nonEmptyList(text),
       "methodePedagogique" -> nonEmptyList(text),
       "annee" -> number.verifying("Année requise", Helper.yearsToNow contains _),
@@ -47,7 +48,8 @@ object Forms {
   )(MetaSetup.apply _)(MetaSetup.unapply _)
 
   case class DocSetup(
-      notion: List[String],
+      notion: String,
+      `hidden-notion`: String,
       niveau: List[String],
       methodePedagogique: List[String],
       annee: Int,
@@ -60,7 +62,7 @@ object Forms {
 
     def toDoc(doc: Option[Doc]) = Doc(
       id = doc.fold(Helper.Random nextString Doc.idSize)(_.id),
-      notion = notion,
+      notion = `hidden-notion`.split(',').toList.map(_.trim).filter(_.nonEmpty).distinct,
       niveau = niveau,
       methodePedagogique = methodePedagogique,
       annee = annee,
@@ -73,7 +75,8 @@ object Forms {
   }
 
   def DocToSetup(doc: Doc) = DocSetup(
-      notion = doc.notion,
+      notion = doc.notion mkString ",",
+      `hidden-notion` = "",
       niveau = doc.niveau,
       methodePedagogique = doc.methodePedagogique,
       annee = doc.annee,
