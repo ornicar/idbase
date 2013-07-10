@@ -18,7 +18,7 @@ object Forms {
       "niveau" -> nonEmptyList(text),
       "methodePedagogique" -> nonEmptyList(text),
       "annee" -> number.verifying("Année requise", Helper.yearsToNow contains _),
-      "interdisciplinarite" -> nonEmptyList(text),
+      "interdisciplinarite" -> list(text),
       "dispositifPedagogique" -> optional(nonEmptyText),
       "dispositifEducatif" -> optional(nonEmptyText),
       "source" -> nonEmptyText,

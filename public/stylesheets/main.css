@@ -22,8 +22,11 @@ input.input-wide, textarea.input-wide {
 select.multiselect {
   height: 9em;
 }
-.markdown-long {
+textarea {
   height: 9em;
+}
+textarea.markdown-long {
+  height: 12em;
 }
 .control-group.error .checkbox, .control-group.error .radio, .control-group.error input, .control-group.error select, .control-group.error textarea {
   color: inherit;
