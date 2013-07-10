@@ -6,7 +6,7 @@ import play.api.templates.Html
 
 object Helper {
 
-  val version = 1
+  val version = 4
 
   def selectable(seq: Seq[_]): Seq[(String, String)] = {
     val x = seq.map(_.toString.capitalize)

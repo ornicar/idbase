@@ -14,14 +14,18 @@ object DocAdmin extends Controller with AuthElement with AuthConfigImpl {
   def userRepo = env.userRepo
 
   def newForm = StackAction(AuthorityKey -> NormalUser) { implicit req ⇒
-    Ok(html.newForm(Forms.docForm, env.lists))
+    Async {
+      env.docRepo.notions map { notions ⇒
+        Ok(html.newForm(Forms.docForm, env.lists withNotions notions))
+      }
+    }
   }
 
   def create = StackAction(AuthorityKey -> NormalUser) { implicit req ⇒
     Async {
       Forms.docForm.bindFromRequest.fold(
-        err ⇒ Future successful {
-          BadRequest(html.newForm(err, env.lists))
+        err ⇒ env.docRepo.notions map { notions ⇒
+          BadRequest(html.newForm(err, env.lists withNotions notions))
         },
         setup ⇒ env.docRepo insert setup.toDoc(None) map { doc ⇒
           Redirect(routes.Doc.show(doc.id)).flashing(
@@ -34,12 +38,14 @@ object DocAdmin extends Controller with AuthElement with AuthConfigImpl {
 
   def editForm(id: String) = StackAction(AuthorityKey -> NormalUser) { implicit req ⇒
     Async {
-      env.docRepo byId id map {
-        case Some(doc) ⇒ Ok(html.editForm(
-          doc,
-          Forms.docForm fill Forms.DocToSetup(doc),
-          env.lists))
-        case None ⇒ NotFound
+      env.docRepo.notions flatMap { notions ⇒
+        env.docRepo byId id map {
+          case Some(doc) ⇒ Ok(html.editForm(
+            doc,
+            Forms.docForm fill Forms.DocToSetup(doc),
+            env.lists withNotions notions))
+          case None ⇒ NotFound
+        }
       }
     }
   }
@@ -49,8 +55,8 @@ object DocAdmin extends Controller with AuthElement with AuthConfigImpl {
       env.docRepo byId id flatMap {
         case Some(doc) ⇒
           Forms.docForm.bindFromRequest.fold(
-            err ⇒ Future successful {
-              BadRequest(html.editForm(doc, err, env.lists))
+            err ⇒ env.docRepo.notions map { notions ⇒
+              BadRequest(html.editForm(doc, err, env.lists withNotions notions))
             },
             setup ⇒ env.docRepo update setup.toDoc(Some(doc)) map { doc2 ⇒
               Redirect(routes.Doc.show(doc2.id)).flashing(

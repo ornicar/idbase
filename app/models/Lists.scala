@@ -4,9 +4,8 @@ package models
 import com.typesafe.config.Config
 import scala.collection.JavaConversions._
 
-final class Lists(config: Config) {
+final class Lists(config: Config, val notions: List[String] = Nil) {
 
-  val notion = getList("notion")
   val niveau = getList("niveau")
   val methodePedagogique = getList("methodePedagogique")
   val interdisciplinarite = getList("interdisciplinarite")
@@ -15,6 +14,8 @@ final class Lists(config: Config) {
   val source = getList("source")
   val demarche = getList("demarche")
   val evaluation = getList("evaluation")
+
+  def withNotions(ns: List[String]) = new Lists(config, notions = ns)
 
   private def getList(key: String) = config.getStringList(key).toList
 }

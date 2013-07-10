@@ -5,10 +5,17 @@ $(function() {
     return confirm($(this).attr('title') + " ? ");
   });
 
-  $("input.tm-input").each(function() {
-    var input = $(this);
-    input.tagsManager({
-      prefilled: input.val()
+  if ($.fn.tagsManager) {
+    $("input.tm-input").each(function() {
+      var input = $(this);
+      if (input.val() == "") input.val(input.closest('form').find('.prefill-notions').val());
+      var source = input.closest('form').find('.notions').val().split(',');
+      input.tagsManager({
+        prefilled: input.val(),
+        typeahead: true,
+        typeaheadSource: source,
+        backspace: false
+      });
     });
-  });
+  }
 });

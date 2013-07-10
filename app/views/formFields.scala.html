@@ -54,6 +54,8 @@
 
 @group("Savoirs visés") {
 
+<textarea class="notions" style="display:none">@Html(lists.notions.mkString(","))</textarea>
+<textarea class="prefill-notions" style="display:none">@form("hidden-notion").value</textarea>
 @inputText(form("notion"), 
 '_label -> N.notion,
 '_help -> "Requis",

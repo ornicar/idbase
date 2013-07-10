@@ -19,6 +19,15 @@ private[idbase] final class DocRepo(coll: JSONCollection) {
       identity)
   )
 
+  def notions: Future[List[String]] =
+    coll.find(Json.obj(), Json.obj("notion" -> true)).cursor[JsValue].toList map { res ⇒
+      (res collect {
+        case JsObject(fields) ⇒ (fields collect {
+          case ("notion", v) ⇒ v.asOpt[List[String]]
+        }).headOption.flatten
+      }).flatten.flatten
+    }
+
   def insert(doc: Doc): Future[Doc] =
     coll insert doc map (_ ⇒ doc)
 
