@@ -62,6 +62,13 @@ table th {
 table tr:first-child th, table tr:first-child td {
   border: none;
 }
+.doc-show h3 {
+  font-size: 14px;
+  line-height: inherit;
+}
+.doc-show .lead a {
+  font-size: 14px;
+}
 .jumbotron {
   position: relative;
   padding: 20px 0;

@@ -5,7 +5,7 @@
 
 @main("Notice : " + doc.meta.titre) {
 
-<div class="container">
+<div class="container doc-show">
   @flashes()
   <p class="lead">
   Notice <strong class="muted">@doc.annee</strong>
@@ -25,7 +25,7 @@
   }
   @row(N.duree, doc.meta.duree)
   }
-  @tableGroup("Savoirs") {
+  @tableGroup("Savoirs visés") {
   @rowHtml(N.notion) {
   @doc.notion.map { n =>
   <span class="label label-info">@n</span>
