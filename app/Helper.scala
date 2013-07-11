@@ -25,10 +25,10 @@ object Helper {
   }
 
   def group(name: String)(content: Html) = Html {
-    """<div class="group">
-  <span class="group-title">%s</span>
+    """<section class="group">
+  <h2 class="group-title">%s</h2>
   %s
-</div>""".format(name, content)
+</section>""".format(name, content)
   }
 
   def tableGroup(name: String)(content: Html) = group(name) {
