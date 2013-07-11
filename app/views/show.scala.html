@@ -16,7 +16,7 @@
   @tableGroup("Cadre") {
   @row(N.niveau, doc.niveau mkString ", ")
   @if(doc.interdisciplinarite.nonEmpty) {
-  @row(N.interdisciplinarite, doc.interdisciplinarite mkString ", ")
+  @row(N.interdisciplinarite, "Information-documentation, " + doc.interdisciplinarite.mkString(", "))
   }
   @doc.dispositifPedagogique.map { o =>
   @row(N.dispositifPedagogique, Markdown(o))
