@@ -76,14 +76,14 @@
 
   @if(user.isDefined) {
   <div class="form-actions">
-    <a class="btn" href="@routes.DocAdmin.editForm(doc.id)">Modifier</a>
+    <a class="btn" href="@routes.DocAdmin.editForm(doc.id)"><i class="icon-edit"></i> Modifier</a>
     <form
       class="delete"
       style="display: inline"
       action="@routes.DocAdmin.delete(doc.id)"
       method="post"
       title="Supprimer la fiche @doc.meta.titre">
-      <button class="btn btn-danger">Supprimer</button>
+      <button class="btn btn-danger pull-right"><i class="icon-remove"></i> Supprimer</button>
     </form>
   </div>
   }
