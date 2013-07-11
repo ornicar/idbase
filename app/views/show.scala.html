@@ -14,9 +14,13 @@
     <a href="@doc.meta.url">@doc.meta.url</a>
   </header>
   @tableGroup("Cadre") {
-  @row(N.niveau, doc.niveau mkString ", ")
+  @rowHtml(N.niveau) {
+  @Link(doc.niveau, Link.niveau)
+  }
   @if(doc.interdisciplinarite.nonEmpty) {
-  @row(N.interdisciplinarite, "Information-documentation, " + doc.interdisciplinarite.mkString(", "))
+  @rowHtml(N.interdisciplinarite) {
+  @Link("Information-documentation" :: doc.interdisciplinarite, Link.interdisciplinarite)
+  }
   }
   @doc.dispositifPedagogique.map { o =>
   @row(N.dispositifPedagogique, Markdown(o))
@@ -28,9 +32,7 @@
   }
   @tableGroup("Savoirs visés") {
   @rowHtml(N.notion) {
-  @doc.notion.map { n =>
-  <span class="label label-info">@n</span>
-  }
+  @Link(doc.notion, Link.notion, sep = " ")
   }
   @doc.meta.objectifT1.map { o =>
   @row(N.objectifT1, Markdown(o))
@@ -49,9 +51,7 @@
   @tableGroup("Enseignement") {
   @row(N.scenario, Markdown(doc.meta.scenario))
   @rowHtml(N.methodePedagogique) {
-  @doc.methodePedagogique.map { n =>
-  <span class="label label-success">@n</span>
-  }
+  @Link(doc.methodePedagogique, Link.methodePedagogique)
   }
   @row(N.deroulement, Markdown(doc.meta.deroulement))
   @doc.meta.outilDidactique.map { o =>

@@ -1,4 +1,4 @@
-@(form: Form[_], lists: Lists, nb: Int)(implicit flash: Flash, user: Option[User])
+@(form: Form[_], lists: Lists, nb: Int, docs: List[Doc])(implicit flash: Flash, user: Option[User])
 
 @import idbase.Helper._
 @import idbase.{ Names => N }
@@ -20,17 +20,70 @@
   @helper.form(action = routes.Doc.search,
   'class -> "form-horizontal") {
 
-  @group("Recherche dans " + nb + " notices") {
+  @select2(form("notion"), selectable(lists.notions.sorted),
+  '_label -> N.notion,
+  'multiple -> "multiple",
+  'class -> "input-wide")
+
+  @select2(form("niveau"), selectable(lists.niveau.sorted),
+  '_label -> N.niveau,
+  'multiple -> "multiple",
+  'class -> "input-wide")
 
   @select2(form("methodePedagogique"), selectable(lists.methodePedagogique.sorted),
   '_label -> N.methodePedagogique,
   'multiple -> "multiple",
-  'class -> "input-wide multiselect")
+  'class -> "input-wide")
+
+  @select2(form("interdisciplinarite"), selectable(lists.interdisciplinarite.sorted),
+  '_label -> N.interdisciplinarite,
+  'multiple -> "multiple",
+  'class -> "input-wide")
+
+  @select2(form("source"), selectable(lists.source),
+  '_label -> N.source,
+  'multiple -> "multiple",
+  'class -> "input-wide")
+
+  <div class="control-group">
+    <div class="controls">
+      <button class="btn btn-primary btn-large" type="submit">Recherche dans @nb notices</button>
+    </div>
+  </div>
   }
 
-  <div class="form-actions">
-    <button class="btn btn-primary" type="submit">Rechercher</button>
-  </div>
+  <p class="lead">
+  @if(docs.size == 0) {
+  Aucune notice trouvée.
+  }
+  @if(docs.size == 1) {
+  Une notice trouvée :
+  }
+  @if(docs.size > 1) {
+  @docs.size notices trouvées :
+  }
+  @docs.map { doc =>
+  <section class="doc-found">
+    <h2><a href="@routes.Doc.show(doc.id)">@doc.meta.titre (@doc.annee)</a></h2>
+    <table class="table table-condensed">
+      <tbody>
+      @rowHtml(N.notion) {
+      @Link(doc.notion, Link.notion, " ")
+      }
+      @rowHtml(N.niveau) {
+      @Link(doc.niveau, Link.niveau)
+      }
+      @rowHtml(N.methodePedagogique) {
+      @Link(doc.methodePedagogique, Link.methodePedagogique)
+      }
+      @if(doc.interdisciplinarite.nonEmpty) {
+      @rowHtml(N.interdisciplinarite) {
+      @Link("Information-documentation" :: doc.interdisciplinarite, Link.interdisciplinarite)
+      }
+      }
+      </tbody>
+    </table>
+  </section>
   }
 </div>
 }

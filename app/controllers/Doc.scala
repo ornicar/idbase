@@ -15,12 +15,26 @@ object Doc extends Controller with OptionalAuthElement with AuthConfigImpl {
 
   def search = StackAction { implicit req ⇒
     Async {
-      env.docRepo.count map { nb ⇒
-        Ok(html.search(
-          form = env.search.form,
-          lists = env.lists,
-          nb = nb))
-      }
+      for {
+        notions ← env.docRepo.notions
+        nb ← env.docRepo.count
+        res ← env.search.form.bindFromRequest.fold(
+          err ⇒ env.docRepo.list map { docs ⇒
+            BadRequest(html.search(
+              form = err,
+              lists = env.lists withNotions notions,
+              nb = nb,
+              docs = docs))
+          },
+          setup ⇒ env.search(setup) map { docs ⇒
+            Ok(html.search(
+              form = env.search.form fill setup,
+              lists = env.lists withNotions notions,
+              nb = nb,
+              docs = docs))
+          }
+        )
+      } yield res
     }
   }
 

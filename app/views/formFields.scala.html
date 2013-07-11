@@ -5,6 +5,13 @@
 @import helper.{ form => _, _ }
 @implicitFieldConstructor = @{ FieldConstructor(bootstrapInput.f) }
 
+@if(form.hasErrors) {
+<div class="alert">
+  <a class="close" data-dismiss="alert" href="#">&times;</a>
+  <strong>Erreur !</strong> Le formulaire n'est pas valide. La notice n'a pas été enregistrée.
+</div>
+}
+
 @group("Fiche") {
 
 @inputText(form("meta")("titre"),
@@ -28,12 +35,12 @@
 '_label -> N.niveau,
 '_help -> "Requis",
 'multiple -> "multiple",
-'class -> "input-wide multiselect")
+'class -> "input-wide")
 
 @select2(form("interdisciplinarite"), selectable(lists.interdisciplinarite.sorted),
 '_label -> N.interdisciplinarite,
 'multiple -> "multiple",
-'class -> "input-wide multiselect")
+'class -> "input-wide")
 
 @select2(form("dispositifPedagogique"), selectable(lists.dispositifPedagogique.sorted),
 '_label -> N.dispositifPedagogique,
@@ -81,7 +88,7 @@
 '_label -> N.evaluation,
 '_help -> "Requis",
 'multiple -> "multiple",
-'class -> "input-wide multiselect")
+'class -> "input-wide")
 
 @textarea(form("meta")("outilEvaluation"),
 '_label -> N.outilEvaluation,
@@ -99,7 +106,7 @@
 '_label -> N.methodePedagogique,
 '_help -> "Requis",
 'multiple -> "multiple",
-'class -> "input-wide multiselect")
+'class -> "input-wide")
 
 @textarea(form("meta")("deroulement"),
 '_label -> N.deroulement,
@@ -117,7 +124,7 @@
 '_label -> N.demarche,
 '_help -> "Requis",
 'multiple -> "multiple",
-'class -> "input-wide multiselect")
+'class -> "input-wide")
 
 @inputText(form("meta")("tache"),
 '_label -> N.tache,
@@ -147,7 +154,7 @@
 @group("Référence") {
 
 @select2(form("source"), selectable(lists.source),
-'_label -> "Source",
+'_label -> N.source,
 '_default -> "",
 'class -> "input-wide")
 

@@ -1,8 +1,8 @@
-body {
-  padding-top: 60px;
+.navbar-static-top {
+  margin-bottom: 20px;
 }
-body.index {
-  padding-top: 40px;
+body.index .navbar-static-top {
+  margin-bottom: 0;
 }
 .form-horizontal .control-label {
   width: 240px;
@@ -18,9 +18,6 @@ body.index {
 }
 input.input-wide, textarea.input-wide {
   width: 516px;
-}
-select.multiselect {
-  height: 9em;
 }
 textarea {
   height: 9em;
@@ -77,6 +74,25 @@ table tr:first-child th, table tr:first-child td {
   font-size: inherit;
   line-height: inherit;
 }
+a.label-link:hover {
+  text-decoration: none;
+}
+a.label-link:hover span.label {
+  text-decoration: underline;
+}
+.doc-found {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0 19px 4px 19px;
+  margin-bottom: 19px;
+}
+.doc-found table {
+  margin-bottom: 0;
+}
+.doc-found h2 {
+  font-size: 14px;
+  line-height: inherit;
+}
 .jumbotron {
   position: relative;
   padding: 20px 0;
@@ -113,8 +129,8 @@ table tr:first-child th, table tr:first-child td {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url(../images/bs-docs-masthead-pattern.png) repeat center center;
-  opacity: 0.4;
+  background: url(../img/bs-docs-masthead-pattern.png) repeat center center;
+  opacity: 0.5;
 }
 .jumbotron h1 {
   font-size: 50px;
@@ -127,4 +143,15 @@ table tr:first-child th, table tr:first-child td {
   font-weight: 300;
   line-height: 1.25;
   margin-bottom: 30px;
+}
+.footer {
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 70px;
+  border-top: 1px solid #e5e5e5;
+  background-color: #f5f5f5;
+}
+.footer p {
+  margin-bottom: 0;
+  color: #777;
 }

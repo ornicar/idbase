@@ -28,7 +28,7 @@ private[idbase] final class DocRepo(db: DB, collName: String) {
         case JsObject(fields) ⇒ (fields collect {
           case ("notion", v) ⇒ v.asOpt[List[String]]
         }).headOption.flatten
-      }).flatten.flatten
+      }).flatten.flatten.distinct
     }
 
   def count: Future[Int] = db.command(Count(collName))
@@ -45,6 +45,8 @@ private[idbase] final class DocRepo(db: DB, collName: String) {
   def byId(id: String): Future[Option[Doc]] =
     coll.find(Json.obj("_id" -> id)).one[Doc]
 
-  def list: Future[List[Doc]] =
-    coll.find(Json.obj()).cursor[Doc].toList
+  def list: Future[List[Doc]] = find(Json.obj())
+
+  def find(query: JsObject): Future[List[Doc]] =
+    coll.find(query).cursor[Doc].toList
 }

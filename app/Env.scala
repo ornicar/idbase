@@ -10,7 +10,7 @@ final class Env(config: Config)(implicit app: Application) {
 
   lazy val lists = new models.Lists(config getConfig "idbase")
 
-  lazy val search = new Search(lists)
+  lazy val search = new Search(docRepo)
 
   lazy val userRepo = new UserRepo(
     config.getConfig("idbase").getStringList("users").toList

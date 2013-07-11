@@ -22,7 +22,7 @@
 </head>
 
 <body class="@bodyClass">
-<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-static-top">
   <div class="navbar-inner">
     <div class="container">
       <a class="brand" href="@routes.Doc.search()">ID Base</a>
@@ -51,7 +51,13 @@
   </div>
 </div>
 @content
-</div>
+<footer class="footer">
+  <div class="container">
+    <p>ID Base - © 2013 Pascal Duplessis</p>
+    <p><a href="mailto:pascalDuplessis@@aol.com">pascalDuplessis@@aol.com</a></p>
+    <p>Ce site est OpenSource : <a href="http://github.com/ornicar/idbase">Voir le code</a></p>
+  </div>
+</footer>
 
 <script src="@routes.Assets.at("javascripts/jquery.min.js")"></script>
 <script src="@routes.Assets.at("javascripts/bootstrap.min.js")"></script>
