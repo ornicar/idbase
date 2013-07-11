@@ -14,6 +14,11 @@ $(function() {
         prefilled: input.val(),
         typeahead: true,
         typeaheadSource: source,
+        typeaheadDelegate: {
+          matcher: function(item) {
+            return item.toLowerCase().indexOf(this.query.toLowerCase()) == 0
+          }
+        },
         backspace: false
       });
     });
