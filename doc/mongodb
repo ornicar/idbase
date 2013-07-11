@@ -1,1 +1,1 @@
-db.doc.ensureIndex({"$**":"text"},{name:"searchable",default_language:"french"})
+db.doc.ensureIndex({"$**":"text"},{default_language:"french"})

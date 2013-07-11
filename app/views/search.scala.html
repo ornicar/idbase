@@ -40,19 +40,20 @@
   'multiple -> "multiple",
   'class -> "input-wide")
 
-  @select2(form("evaluation"), selectable(lists.evaluation),
-  '_label -> N.evaluation,
-  'multiple -> "multiple",
-  'class -> "input-wide")
-
   @select2(form("source"), selectable(lists.source),
   '_label -> N.source,
   'multiple -> "multiple",
   'class -> "input-wide")
 
+  @inputText(form("texte"),
+  '_label -> "Plein texte",
+  '_help -> "",
+  'class -> "input-wide")
+
   <div class="control-group">
     <div class="controls">
       <button class="btn btn-primary btn-large" type="submit">Recherche dans @nb notices</button>
+      <a class="btn" href="@routes.Doc.search"><i class="icon-remove"></i> Réinitialiser</a>
     </div>
   </div>
   }
@@ -73,21 +74,18 @@
     <table class="table table-condensed">
       <tbody>
       @rowHtml(N.notion) {
-      @Link(doc.notion, Link.notion, " ")
+      @Link(doc.notion, Link.notion, sep = " ")
       }
       @rowHtml(N.niveau) {
       @Link(doc.niveau, Link.niveau)
       }
       @rowHtml(N.methodePedagogique) {
-      @Link(doc.methodePedagogique, Link.methodePedagogique)
+      @Link(doc.methodePedagogique, Link.methodePedagogique, sep = " ")
       }
       @if(doc.interdisciplinarite.nonEmpty) {
       @rowHtml(N.interdisciplinarite) {
       @Link("Information-documentation" :: doc.interdisciplinarite, Link.interdisciplinarite)
       }
-      }
-      @rowHtml(N.evaluation) {
-      @Link(doc.meta.evaluation, Link.evaluation)
       }
       </tbody>
     </table>

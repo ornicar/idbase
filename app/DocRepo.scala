@@ -9,18 +9,19 @@ import reactivemongo.api._
 import reactivemongo.core.commands.Count
 import scala.concurrent.Future
 
-private[idbase] final class DocRepo(db: DB, collName: String) {
+private[idbase] final class DocRepo(db: DB, val collName: String) {
+
+  import DocRepo.format
 
   private val coll: JSONCollection = db.collection[JSONCollection](collName)
 
-  private implicit def format: OFormat[Doc] = OFormat({
-    case o: JsObject ⇒ Doc.jsonTube.fromMongo(o)
-    case x           ⇒ throw new Exception("Not a JsObject: " + x)
-  },
-    doc ⇒ Doc.jsonTube.toMongo(doc).fold(
-      e ⇒ throw new Exception(e.toString),
-      identity)
-  )
+  def search(terms: String, filter: JsObject): Future[List[Doc]] = {
+    val command = Mongodb.Text(
+      collectionName = collName,
+      terms = terms,
+      filter = filter)
+    db.command(command)
+  }
 
   def notions: Future[List[String]] =
     coll.find(Json.obj(), Json.obj("notion" -> true)).cursor[JsValue].toList map { res ⇒
@@ -49,4 +50,16 @@ private[idbase] final class DocRepo(db: DB, collName: String) {
 
   def find(query: JsObject): Future[List[Doc]] =
     coll.find(query).cursor[Doc].toList
+}
+
+object DocRepo {
+
+  implicit def format: OFormat[Doc] = OFormat({
+    case o: JsObject ⇒ Doc.jsonTube.fromMongo(o)
+    case x           ⇒ throw new Exception("Not a JsObject: " + x)
+  },
+    doc ⇒ Doc.jsonTube.toMongo(doc).fold(
+      e ⇒ throw new Exception(e.toString),
+      identity)
+  )
 }

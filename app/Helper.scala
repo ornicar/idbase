@@ -7,7 +7,7 @@ import play.api.templates.Html
 
 object Helper {
 
-  val version = 9
+  val version = 11
 
   def selectable(seq: Seq[_]): Seq[(String, String)] = {
     val x = seq.map(_.toString)
@@ -41,7 +41,7 @@ object Helper {
   object Link {
 
     def apply(ns: List[String], f: String ⇒ Any, sep: String = ", ") =
-      Html { ns map f mkString ", " }
+      Html { ns map f mkString sep }
 
     private val search = routes.Doc.search()
 

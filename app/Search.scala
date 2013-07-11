@@ -20,7 +20,6 @@ final class Search(repo: DocRepo) {
       Field("notion", setup.notion, false, true),
       Field("methodePedagogique", setup.methodePedagogique, false, true),
       Field("interdisciplinarite", setup.interdisciplinarite filter ("Information-documentation"!=), false, true),
-      Field("meta.evaluation", setup.evaluation, false, true),
       Field("source", setup.source, false, false)
     ) map {
         case Field(_, Nil, _, _) ⇒ Json.obj()
@@ -29,8 +28,10 @@ final class Search(repo: DocRepo) {
         case Field(key, values, false, _) ⇒
           Json.obj(key -> Json.obj("$in" -> values))
       }
-    val req = parts.foldLeft(Json.obj())(_++_)
-    repo find req
+    val req = parts.foldLeft(Json.obj())(_ ++ _)
+    setup.texte.fold(repo find req) { texte ⇒
+      repo.search(texte, req)
+    }
   }
 
   val form = Form(
@@ -39,8 +40,8 @@ final class Search(repo: DocRepo) {
       "niveau" -> list(text),
       "methodePedagogique" -> list(text),
       "interdisciplinarite" -> list(text),
-      "evaluation" -> list(text),
-      "source" -> list(text)
+      "source" -> list(text),
+      "texte" -> optional(nonEmptyText)
     )(Setup.apply _)(Setup.unapply _))
 
   case class Setup(
@@ -48,6 +49,6 @@ final class Search(repo: DocRepo) {
     niveau: List[String],
     methodePedagogique: List[String],
     interdisciplinarite: List[String],
-    evaluation: List[String],
-    source: List[String])
+    source: List[String],
+    texte: Option[String])
 }

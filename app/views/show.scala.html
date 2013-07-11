@@ -43,9 +43,7 @@
   @doc.meta.objectifT3.map { o =>
   @row(N.objectifT3, Markdown(o))
   }
-  @rowHtml(N.evaluation) {
-  @Link(doc.meta.evaluation, Link.evaluation)
-  }
+  @row(N.evaluation, doc.meta.evaluation mkString ", ")
   @doc.meta.outilEvaluation.map { o =>
   @row(N.outilEvaluation, Markdown(o))
   }
@@ -53,7 +51,7 @@
   @tableGroup("Enseignement") {
   @row(N.scenario, Markdown(doc.meta.scenario))
   @rowHtml(N.methodePedagogique) {
-  @Link(doc.methodePedagogique, Link.methodePedagogique)
+  @Link(doc.methodePedagogique, Link.methodePedagogique, sep = " ")
   }
   @row(N.deroulement, Markdown(doc.meta.deroulement))
   @doc.meta.outilDidactique.map { o =>
