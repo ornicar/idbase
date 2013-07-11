@@ -56,6 +56,9 @@ object Helper {
 
     def interdisciplinarite(n: String) =
       """<a href="%s?interdisciplinarite[]=%s">%s</a>""".format(search, n, n)
+
+    def evaluation(n: String) =
+      """<a href="%s?evaluation[]=%s">%s</a>""".format(search, n, n)
   }
 
   object Random {

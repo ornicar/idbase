@@ -43,7 +43,9 @@
   @doc.meta.objectifT3.map { o =>
   @row(N.objectifT3, Markdown(o))
   }
-  @row(N.evaluation, doc.meta.evaluation mkString ", ")
+  @rowHtml(N.evaluation) {
+  @Link(doc.meta.evaluation, Link.evaluation)
+  }
   @doc.meta.outilEvaluation.map { o =>
   @row(N.outilEvaluation, Markdown(o))
   }

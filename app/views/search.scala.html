@@ -40,6 +40,11 @@
   'multiple -> "multiple",
   'class -> "input-wide")
 
+  @select2(form("evaluation"), selectable(lists.evaluation),
+  '_label -> N.evaluation,
+  'multiple -> "multiple",
+  'class -> "input-wide")
+
   @select2(form("source"), selectable(lists.source),
   '_label -> N.source,
   'multiple -> "multiple",
@@ -80,6 +85,9 @@
       @rowHtml(N.interdisciplinarite) {
       @Link("Information-documentation" :: doc.interdisciplinarite, Link.interdisciplinarite)
       }
+      }
+      @rowHtml(N.evaluation) {
+      @Link(doc.meta.evaluation, Link.evaluation)
       }
       </tbody>
     </table>
