@@ -13,9 +13,16 @@ object Doc extends Controller with OptionalAuthElement with AuthConfigImpl {
   private lazy val env = Env.current
   def userRepo = env.userRepo
 
-  def search = TODO
-  // StackAction { implicit req =>
-  // }
+  def search = StackAction { implicit req ⇒
+    Async {
+      env.docRepo.count map { nb ⇒
+        Ok(html.search(
+          form = env.search.form,
+          lists = env.lists,
+          nb = nb))
+      }
+    }
+  }
 
   def show(id: String) = StackAction { implicit req ⇒
     Async {

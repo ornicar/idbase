@@ -1,0 +1,36 @@
+@(form: Form[_], lists: Lists, nb: Int)(implicit flash: Flash, user: Option[User])
+
+@import idbase.Helper._
+@import idbase.{ Names => N }
+@import helper.{ form => _, _ }
+@implicitFieldConstructor = @{ FieldConstructor(bootstrapInput.f) }
+
+@main("Recherche", bodyClass = "index") {
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>ID Base</h1>
+    <p>Fiches pédagogiques à l'usage des professeurs documentalistes</p>
+  </div>
+</div>
+
+<div class="container">
+  @flashes()
+
+  @helper.form(action = routes.Doc.search,
+  'class -> "form-horizontal") {
+
+  @group("Recherche dans " + nb + " notices") {
+
+  @select2(form("methodePedagogique"), selectable(lists.methodePedagogique.sorted),
+  '_label -> N.methodePedagogique,
+  'multiple -> "multiple",
+  'class -> "input-wide multiselect")
+  }
+
+  <div class="form-actions">
+    <button class="btn btn-primary" type="submit">Rechercher</button>
+  </div>
+  }
+</div>
+}

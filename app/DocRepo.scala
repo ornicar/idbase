@@ -6,9 +6,12 @@ import play.api.libs.json._
 import play.modules.reactivemongo._
 import play.modules.reactivemongo.json.collection.JSONCollection
 import reactivemongo.api._
+import reactivemongo.core.commands.Count
 import scala.concurrent.Future
 
-private[idbase] final class DocRepo(coll: JSONCollection) {
+private[idbase] final class DocRepo(db: DB, collName: String) {
+
+  private val coll: JSONCollection = db.collection[JSONCollection](collName)
 
   private implicit def format: OFormat[Doc] = OFormat({
     case o: JsObject ⇒ Doc.jsonTube.fromMongo(o)
@@ -27,6 +30,8 @@ private[idbase] final class DocRepo(coll: JSONCollection) {
         }).headOption.flatten
       }).flatten.flatten
     }
+
+  def count: Future[Int] = db.command(Count(collName))
 
   def insert(doc: Doc): Future[Doc] =
     coll insert doc map (_ ⇒ doc)

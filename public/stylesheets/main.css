@@ -13,7 +13,7 @@ body.index {
 .form-horizontal .form-actions {
   padding-left: 260px;
 }
-.input-wide {
+.input-wide, div.bootstrap-select.input-wide {
   width: 530px;
 }
 input.input-wide, textarea.input-wide {

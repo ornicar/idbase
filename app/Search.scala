@@ -4,7 +4,7 @@ import models._
 import play.api.data._
 import play.api.data.Forms._
 
-object Search {
+final class Search(lists: Lists) {
 
   val form = Form(
     mapping(

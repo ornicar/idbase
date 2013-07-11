@@ -10,14 +10,15 @@ final class Env(config: Config)(implicit app: Application) {
 
   lazy val lists = new models.Lists(config getConfig "idbase")
 
+  lazy val search = new Search(lists)
+
   lazy val userRepo = new UserRepo(
     config.getConfig("idbase").getStringList("users").toList
   )
 
   lazy val docRepo = new DocRepo(
-    coll = ReactiveMongoPlugin.db.collection[JSONCollection](
-      config getConfig "idbase" getString "doc_collection"
-    )
+    db = ReactiveMongoPlugin.db,
+    collName = config getConfig "idbase" getString "doc_collection"
   )
 }
 

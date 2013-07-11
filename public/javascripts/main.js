@@ -5,6 +5,11 @@ $(function() {
     return confirm($(this).attr('title') + " ? ");
   });
 
+  $('select')
+  .attr('title', '-')
+  .addClass('show-tick show-menu-arrow')
+  .selectpicker();
+
   if ($.fn.tagsManager) {
     $("input.tm-input").each(function() {
       var input = $(this);
