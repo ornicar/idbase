@@ -73,7 +73,7 @@ object DocAdmin extends Controller with AuthElement with AuthConfigImpl {
     Async {
       env.docRepo byId id flatMap {
         case Some(doc) ⇒ env.docRepo delete doc map { _ ⇒
-          Redirect(routes.Doc.list).flashing(
+          Redirect(routes.Doc.search).flashing(
             "success" -> "La notice a été supprimée"
           )
         }

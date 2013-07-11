@@ -29,13 +29,13 @@ trait AuthConfigImpl extends AuthConfig {
   /**
    * Where to redirect the user after logging out
    */
-  def logoutSucceeded(request: RequestHeader): Result = Redirect(routes.Doc.list)
+  def logoutSucceeded(request: RequestHeader): Result = Redirect(routes.Doc.search)
 
   def authenticationFailed(request: RequestHeader): Result =
     Redirect(routes.Application.login).withSession("access_uri" -> request.uri)
 
   def loginSucceeded(request: RequestHeader): Result = {
-    val uri = request.session.get("access_uri").getOrElse(routes.Doc.list.url.toString)
+    val uri = request.session.get("access_uri").getOrElse(routes.Doc.search.url.toString)
     Redirect(uri).withSession(request.session - "access_uri").flashing(
       "success" -> "Connexion réussie"
     )

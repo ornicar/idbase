@@ -69,6 +69,12 @@ table tr:first-child th, table tr:first-child td {
 .doc-show .lead a {
   font-size: 14px;
 }
+.doc-show .lead h1 {
+  display: block;
+  font-weight: bold;
+  font-size: inherit;
+  line-height: inherit;
+}
 .jumbotron {
   position: relative;
   padding: 20px 0;

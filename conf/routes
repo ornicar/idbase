@@ -1,5 +1,5 @@
 # Home page
-GET     /                           controllers.Doc.list
+GET     /                           controllers.Doc.search
 
 GET     /ajouter                    controllers.DocAdmin.newForm
 POST    /ajouter                    controllers.DocAdmin.create

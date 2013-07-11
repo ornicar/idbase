@@ -7,11 +7,12 @@
 
 <div class="container doc-show">
   @flashes()
-  <p class="lead">
-  Notice <strong class="muted">@doc.annee</strong>
-  @doc.meta.titre<br />
-  <a href="@doc.meta.url">@doc.meta.url</a>
-  </p>
+  <header class="lead">
+    <h1 class="titre">
+      <span class="muted">Analyse de "</span>@doc.meta.titre<span class="muted">" (@doc.annee)</span>
+    </h1>
+    <a href="@doc.meta.url">@doc.meta.url</a>
+  </header>
   @tableGroup("Cadre") {
   @row(N.niveau, doc.niveau mkString ", ")
   @if(doc.interdisciplinarite.nonEmpty) {
