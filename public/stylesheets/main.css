@@ -55,10 +55,13 @@ textarea.markdown-long {
   -moz-border-radius: 4px 0 4px 0;
   border-radius: 4px 0 4px 0;
 }
-table th {
+table.table {
+  margin-bottom: 10px;
+}
+table.table th {
   width: 260px;
 }
-table tr:first-child th, table tr:first-child td {
+table.table tr:first-child th, table.table tr:first-child td {
   border: none;
 }
 .doc-show h3 {
@@ -74,6 +77,13 @@ table tr:first-child th, table tr:first-child td {
   font-size: inherit;
   line-height: inherit;
 }
+.doc-show td > *:last-child {
+  margin-bottom: 0;
+}
+.doc-show ol > li {
+  padding: 5px 0;
+}
+
 a.label-link:hover {
   text-decoration: none;
 }
