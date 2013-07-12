@@ -18,6 +18,7 @@ final class Search(repo: DocRepo) {
   def apply(setup: Setup): Future[List[Doc]] = {
     val parts = List(
       Field("notion", setup.notion, false, true),
+      Field("niveau", setup.niveau, false, true),
       Field("methodePedagogique", setup.methodePedagogique, false, true),
       Field("interdisciplinarite", setup.interdisciplinarite filter ("Information-documentation"!=), false, true),
       Field("source", setup.source, false, false)
