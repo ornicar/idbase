@@ -67,11 +67,11 @@
   @row(N.ficheEleve, Markdown(o))
   }
   }
-  @tableGroup("Commentaire") {
-  @row("", Markdown(doc.meta.commentaire))
+  @group("Commentaire") {
+  @Markdown(doc.meta.commentaire)
   }
-  @tableGroup(doc.source) {
-  @row("", Markdown(doc.meta.reference))
+  @group(doc.source) {
+  @Markdown(doc.meta.reference)
   }
 
   @if(user.isDefined) {
