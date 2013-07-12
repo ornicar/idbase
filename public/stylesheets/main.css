@@ -31,12 +31,8 @@ textarea.markdown-long {
 .group {
   position: relative;
   margin: 15px 0;
-  padding: 39px 19px 0px 19px;
-  *padding-top: 19px;
-  background-color: #fff;
+  padding: 29px 19px 0px 19px;
   border: 1px solid #ddd;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   border-radius: 4px;
 }
 .group-title {
@@ -50,16 +46,18 @@ textarea.markdown-long {
   font-weight: bold;
   background-color: #f5f5f5;
   border: 1px solid #ddd;
-  color: #9da0a4;
-  -webkit-border-radius: 4px 0 4px 0;
-  -moz-border-radius: 4px 0 4px 0;
+  color: #8d9094;
   border-radius: 4px 0 4px 0;
 }
 table.table {
   margin-bottom: 10px;
 }
+.group table.table {
+  margin-bottom: 0;
+}
 table.table th {
   width: 260px;
+  padding-left: 0;
 }
 table.table tr:first-child th, table.table tr:first-child td {
   border: none;
@@ -105,7 +103,7 @@ a.label-link:hover span.label {
 }
 .jumbotron {
   position: relative;
-  padding: 20px 0;
+  padding: 20px 0 0 0;
   color: #fff;
   text-align: left;
   border-bottom: 1px solid #ddd;

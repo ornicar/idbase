@@ -70,7 +70,10 @@
   }
   @docs.map { doc =>
   <section class="doc-found">
-    <h2><a href="@routes.Doc.show(doc.id)">@doc.meta.titre (@doc.annee)</a></h2>
+    <h2>
+      <a href="@routes.Doc.show(doc.id)">@doc.meta.titre</a>
+      <span class="muted">(@doc.annee)</span>
+    </h2>
     <table class="table table-condensed">
       <tbody>
       @rowHtml(N.notion) {
