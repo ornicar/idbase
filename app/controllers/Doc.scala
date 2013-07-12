@@ -66,4 +66,27 @@ object Doc extends Controller with OptionalAuthElement with AuthConfigImpl {
       } yield Ok(html.tableDiscipline(notions, disciplines, docs))
     }
   }
+
+  def rss = Action { implicit req ⇒
+    import java.net.URL
+    import com.tlorrain.ssu.rss._
+    val baseUrl = "http://idbase.esmeree.fr/"
+    val authorEmail = "pascalDuplessis@aol.com"
+    Async {
+      env.docRepo.list map { docs ⇒
+        Ok {
+          val items = docs map { doc ⇒
+            (doc.meta.titre, Helper.Markdown(doc.meta.scenario).body, new URL(baseUrl + routes.Doc.show(doc.id)), authorEmail)
+          }
+          (RssFeed("ID Base", new URL(baseUrl), "Fiches pédagogiques à l'usage des professeurs documentalistes")
+            withWebMaster authorEmail
+            withItems (items map (item ⇒ RssItem
+              withTitle item._1
+              withDescription item._2
+              withLink item._3
+              withAuthor item._4))).toXml
+        } as XML
+      }
+    }
+  }
 }

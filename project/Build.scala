@@ -11,7 +11,8 @@ object ApplicationBuild extends Build {
     "org.reactivemongo" %% "reactivemongo" % "0.10.1-THIB",
     "org.reactivemongo" %% "play2-reactivemongo" % "0.10-THIB",
     "org.pegdown" % "pegdown" % "1.4.0",
-    "jp.t2v" %% "play2.auth" % "0.9"
+    "jp.t2v" %% "play2.auth" % "0.9",
+    "ssu" %% "ssu" % "0.1-SNAPSHOT"
   )
 
   val main = play.Project(appName, appVersion, appDependencies).settings(

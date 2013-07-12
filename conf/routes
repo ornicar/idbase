@@ -1,5 +1,6 @@
 # Home page
 GET     /                           controllers.Doc.search
+GET     /rss                        controllers.Doc.rss
 
 GET     /ajouter                    controllers.DocAdmin.newForm
 POST    /ajouter                    controllers.DocAdmin.create
