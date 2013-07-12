@@ -33,9 +33,7 @@ object Mongodb {
     def apply(document: BSONDocument) =
       CommandError.checkOk(document, Some("text")) toLeft {
         val results = ((JsObjectReader read document) \ "results")
-        println(results)
         val objs = results.asOpt[List[JsObject]] getOrElse Nil
-        println(objs)
         (objs map { o ⇒ (o \ "obj").asOpt[Doc] }).flatten
       }
   }
