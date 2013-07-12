@@ -88,6 +88,9 @@ a.label-link:hover {
 a.label-link:hover span.label {
   text-decoration: underline;
 }
+.form-search .control-group {
+  margin-bottom: 10px;
+}
 .doc-found {
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -107,7 +110,7 @@ a.label-link:hover span.label {
   color: #fff;
   text-align: left;
   border-bottom: 1px solid #ddd;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
   background: #020031;
   /* Old browsers */

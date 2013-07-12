@@ -18,7 +18,7 @@
   @flashes()
 
   @helper.form(action = routes.Doc.search,
-  'class -> "form-horizontal") {
+  'class -> "form-horizontal form-search") {
 
   @select2(form("notion"), selectable(lists.notions.sorted),
   '_label -> N.notion,
