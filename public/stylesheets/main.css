@@ -1,7 +1,7 @@
 .navbar-static-top {
   margin-bottom: 20px;
 }
-body.search .navbar-static-top {
+body.home .navbar-static-top {
   margin-bottom: 0;
 }
 .form-horizontal .control-label {
@@ -68,7 +68,7 @@ table.table-doc tr:first-child th, table.table-doc tr:first-child td {
 }
 .doc-show .lead h1 {
   display: block;
-  font-weight: bold;
+  font-weight: inherit;
   font-size: inherit;
   line-height: inherit;
 }

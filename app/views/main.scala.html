@@ -1,4 +1,4 @@
-@(title: String, page: String)(content: Html)(implicit user: Option[User])
+@(title: String, page: String, bodyClass: String = "")(content: Html)(implicit user: Option[User])
 
 @import idbase.Helper.version
 
@@ -21,7 +21,7 @@
 <link rel="shortcut icon" href="@routes.Assets.at("img/favicon.ico")" type="image/x-icon" />
 </head>
 
-<body class="@page">
+<body class="@page @bodyClass">
 <div class="navbar navbar-inverse navbar-static-top">
   <div class="navbar-inner">
     <div class="container">
