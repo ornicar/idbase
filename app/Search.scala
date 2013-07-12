@@ -20,8 +20,7 @@ final class Search(repo: DocRepo) {
       Field("notion", setup.notion, false, true),
       Field("niveau", setup.niveau, false, true),
       Field("methodePedagogique", setup.methodePedagogique, false, true),
-      Field("interdisciplinarite", setup.interdisciplinarite filter ("Information-documentation"!=), false, true),
-      Field("source", setup.source, false, false)
+      Field("interdisciplinarite", setup.interdisciplinarite filter ("Information-documentation"!=), false, true)
     ) map {
         case Field(_, Nil, _, _) ⇒ Json.obj()
         case Field(key, values, true, _) ⇒
@@ -41,7 +40,6 @@ final class Search(repo: DocRepo) {
       "niveau" -> list(text),
       "methodePedagogique" -> list(text),
       "interdisciplinarite" -> list(text),
-      "source" -> list(text),
       "texte" -> optional(nonEmptyText)
     )(Setup.apply _)(Setup.unapply _))
 
@@ -50,6 +48,5 @@ final class Search(repo: DocRepo) {
     niveau: List[String],
     methodePedagogique: List[String],
     interdisciplinarite: List[String],
-    source: List[String],
     texte: Option[String])
 }
