@@ -49,17 +49,14 @@ textarea.markdown-long {
   color: #8d9094;
   border-radius: 4px 0 4px 0;
 }
-table.table {
-  margin-bottom: 10px;
-}
-.group table.table {
+table.table-doc {
   margin-bottom: 0;
 }
-table.table th {
+table.table-doc th {
   width: 260px;
   padding-left: 0;
 }
-table.table tr:first-child th, table.table tr:first-child td {
+table.table-doc tr:first-child th, table.table-doc tr:first-child td {
   border: none;
 }
 .doc-show h3 {
@@ -80,6 +77,13 @@ table.table tr:first-child th, table.table tr:first-child td {
 }
 .doc-show ol > li {
   padding: 5px 0;
+}
+
+table.table-cross td, table.table-cross th {
+  text-align: center;
+}
+table.table-cross tbody th {
+  text-align: right;
 }
 
 a.label-link:hover {

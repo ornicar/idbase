@@ -47,11 +47,13 @@ object Doc extends Controller with OptionalAuthElement with AuthConfigImpl {
     }
   }
 
-  def list = StackAction { implicit req ⇒
+  def table = StackAction { implicit req ⇒
     Async {
-      env.docRepo.list map { l ⇒
-        Ok(html.list(l))
-      }
+      for {
+        notions ← env.docRepo.notions
+        methodes ← env.docRepo.methodePedagogiques
+        docs ← env.docRepo.list
+      } yield Ok(html.table(notions, methodes, docs))
     }
   }
 }

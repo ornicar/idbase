@@ -11,6 +11,8 @@ $(function() {
     select.addClass('show-tick show-menu-arrow').selectpicker();
   });
 
+  $('.tooltip-me').tooltip();
+
   var error = $('.control-group.error');
   if (error.length) {
     setTimeout(function() {

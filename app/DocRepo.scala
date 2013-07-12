@@ -24,10 +24,16 @@ private[idbase] final class DocRepo(db: DB, val collName: String) {
   }
 
   def notions: Future[List[String]] =
-    coll.find(Json.obj(), Json.obj("notion" -> true)).cursor[JsValue].toList map { res ⇒
+    distinctProjection("notion")
+
+  def methodePedagogiques: Future[List[String]] =
+    distinctProjection("methodePedagogique")
+
+  private def distinctProjection(field: String): Future[List[String]] =
+    coll.find(Json.obj(), Json.obj(field -> true)).cursor[JsValue].toList map { res ⇒
       (res collect {
         case JsObject(fields) ⇒ (fields collect {
-          case ("notion", v) ⇒ v.asOpt[List[String]]
+          case (field, v) ⇒ v.asOpt[List[String]]
         }).headOption.flatten
       }).flatten.flatten.distinct
     }

@@ -1,0 +1,36 @@
+@(notions: List[String], methodes: List[String], docs: List[Doc])(implicit user: Option[User])
+
+@import idbase.Helper._
+
+@main("Table") {
+
+<div class="container">
+  <h1 class="lead">Notices par notions et méthodes pédagogiques</h1>
+  <table class="table table-cross table-bordered">
+    <thead>
+      <tr>
+        <th>Notion / Méthode pédagogique</th>
+        @methodes.map { methode =>
+        <th>@Html(Link.methodePedagogique(methode))</th>
+        }
+      </tr>
+    </thead>
+    <tbody>
+    @notions.map { notion =>
+    <tr>
+      <th>@Html(Link.notion(notion))</th>
+      @methodes.map { methode =>
+      <td>
+        @docs.filter(d => d.notion.contains(notion) && d.methodePedagogique.contains(methode)).map { doc =>
+        <a title="@doc.meta.titre" class="tooltip-me" href="@routes.Doc.show(doc.id)">
+          <img src="@routes.Assets.at("img/doc32.png")" />
+        </a>
+        }
+      </td>
+      }
+    </tr>
+    }
+    </tbody>
+  </table>
+</div>
+}

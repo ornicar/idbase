@@ -7,7 +7,7 @@ import play.api.templates.Html
 
 object Helper {
 
-  val version = 13
+  val version = 14
 
   def selectable(seq: Seq[_]): Seq[(String, String)] = {
     val x = seq.map(_.toString)
@@ -34,7 +34,7 @@ object Helper {
 
   def tableGroup(name: String)(content: Html) = group(name) {
     Html {
-      """<table class="table"><tbody>%s</tbody></table>""".format(content)
+      """<table class="table table-doc"><tbody>%s</tbody></table>""".format(content)
     }
   }
 
