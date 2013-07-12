@@ -1,0 +1,34 @@
+@(notions: List[String], disciplines: List[String], docs: List[Doc])(implicit user: Option[User])
+
+@import idbase.Helper._
+
+@main("Table des interdisciplinarités", "table-discipline") {
+
+<div class="container">
+  <h1 class="lead">Notices par notions et interdisciplinarité</h1>
+  <table class="table table-cross table-bordered">
+    <thead>
+      <tr>
+        <th>#</th>
+        @disciplines.map { discipline =>
+        <th>@Html(Link.interdisciplinarite(discipline))</th>
+        }
+      </tr>
+    </thead>
+    <tbody>
+    @notions.filter(n => docs.exists(_ hasNotionAndDiscipline n)).map { notion =>
+    <tr>
+      <th>@Html(Link.notion(notion))</th>
+      @disciplines.map { discipline =>
+      <td>
+        @docs.filter(d => d.notion.contains(notion) && d.interdisciplinarite.contains(discipline)).map(_.niveau).flatten.distinct.map { n =>
+        <a href="@routes.Doc.search?notion[]=@notion&interdisciplinarite[]=@discipline&niveau[]=@n">@n</a>
+        }
+      </td>
+      }
+    </tr>
+    }
+    </tbody>
+  </table>
+</div>
+}

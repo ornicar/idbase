@@ -2,14 +2,14 @@
 
 @import idbase.Helper._
 
-@main("Table") {
+@main("Table des méthodes pédagogiques", "table-methode") {
 
 <div class="container">
   <h1 class="lead">Notices par notions et méthodes pédagogiques</h1>
   <table class="table table-cross table-bordered">
     <thead>
       <tr>
-        <th>Notion / Méthode pédagogique</th>
+        <th>#</th>
         @methodes.map { methode =>
         <th>@Html(Link.methodePedagogique(methode))</th>
         }
@@ -21,10 +21,8 @@
       <th>@Html(Link.notion(notion))</th>
       @methodes.map { methode =>
       <td>
-        @docs.filter(d => d.notion.contains(notion) && d.methodePedagogique.contains(methode)).map { doc =>
-        <a title="@doc.meta.titre" class="tooltip-me" href="@routes.Doc.show(doc.id)">
-          <img src="@routes.Assets.at("img/doc32.png")" />
-        </a>
+        @docs.filter(d => d.notion.contains(notion) && d.methodePedagogique.contains(methode)).map(_.niveau).flatten.distinct.map { n =>
+        <a href="@routes.Doc.search?notion[]=@notion&methodePedagogique[]=@methode&niveau[]=@n">@n</a>
         }
       </td>
       }

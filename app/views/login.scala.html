@@ -1,6 +1,6 @@
 @(form: Form[_])(implicit flash: Flash, lang: Lang, user: Option[User])
 
-@main("Connexion") {
+@main("Connexion", "login") {
 
 @helper.form(routes.Application.authenticate) {
 

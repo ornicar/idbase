@@ -29,6 +29,9 @@ private[idbase] final class DocRepo(db: DB, val collName: String) {
   def methodePedagogiques: Future[List[String]] =
     distinctProjection("methodePedagogique")
 
+  def disciplines: Future[List[String]] =
+    distinctProjection("interdisciplinarite")
+
   private def distinctProjection(field: String): Future[List[String]] =
     coll.find(Json.obj(), Json.obj(field -> true)).cursor[JsValue].toList map { res ⇒
       (res collect {

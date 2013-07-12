@@ -1,4 +1,4 @@
-@(title: String, bodyClass: String = "")(content: Html)(implicit user: Option[User])
+@(title: String, page: String)(content: Html)(implicit user: Option[User])
 
 @import idbase.Helper.version
 
@@ -21,17 +21,26 @@
 <link rel="shortcut icon" href="@routes.Assets.at("img/favicon.ico")" type="image/x-icon" />
 </head>
 
-<body class="@bodyClass">
+<body class="@page">
 <div class="navbar navbar-inverse navbar-static-top">
   <div class="navbar-inner">
     <div class="container">
       <a class="brand" href="@routes.Doc.search()">ID Base</a>
       <div class="nav-collapse collapse">
-        @user.map { u =>
         <ul class="nav">
-          <li><a href="@routes.DocAdmin.newForm">Ajouter une notice</a></li>
+          <li class="@{"active".when(page == "search")}">
+          <a href="@routes.Doc.search">Recherche</a>
+          </li>
+          <li class="@{"active".when(page == "table-methode")}">
+          <a href="@routes.Doc.tableMethode">Méthodes pédagogiques</a>
+          </li>
+          <li class="@{"active".when(page == "table-discipline")}">
+          <a href="@routes.Doc.tableDiscipline">Interdisciplinarité</a>
+          </li>
         </ul>
+        @user.map { u =>
         <ul class="nav pull-right">
+          <li><a href="@routes.DocAdmin.newForm">Ajouter une notice</a></li>
           <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             @u.name

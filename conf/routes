@@ -11,7 +11,8 @@ POST    /notice/:id/modifier        controllers.DocAdmin.update(id: String)
 
 POST    /notice/:id/supprimer       controllers.DocAdmin.delete(id: String)
 
-GET     /table                      controllers.Doc.table
+GET     /table/methode              controllers.Doc.tableMethode
+GET     /table/discipline           controllers.Doc.tableDiscipline
 
 GET     /connexion                  controllers.Application.login
 POST    /connexion                  controllers.Application.authenticate

@@ -11,8 +11,11 @@ case class Doc(
     dispositifPedagogique: Option[Markdown],
     dispositifEducatif: Option[Markdown],
     source: String,
-    production: Markdown, 
+    production: Markdown,
     meta: Meta) {
+
+  def hasNotionAndDiscipline(n: String) =
+    interdisciplinarite.nonEmpty && notion.contains(n)
 }
 
 object Doc {

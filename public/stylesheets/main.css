@@ -1,7 +1,7 @@
 .navbar-static-top {
   margin-bottom: 20px;
 }
-body.index .navbar-static-top {
+body.search .navbar-static-top {
   margin-bottom: 0;
 }
 .form-horizontal .control-label {
@@ -84,6 +84,9 @@ table.table-cross td, table.table-cross th {
 }
 table.table-cross tbody th {
   text-align: right;
+}
+table.table-cross a.notice {
+  display: inline-block;
 }
 
 a.label-link:hover {
