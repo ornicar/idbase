@@ -38,7 +38,7 @@ private[idbase] final class DocRepo(db: DB, val collName: String) {
         case JsObject(fields) ⇒ (fields collect {
           case (field, v) ⇒ v.asOpt[List[String]]
         }).headOption.flatten
-      }).flatten.flatten.distinct
+      }).flatten.flatten.distinct.sorted
     }
 
   def count: Future[Int] = db.command(Count(collName))
@@ -58,7 +58,7 @@ private[idbase] final class DocRepo(db: DB, val collName: String) {
   def list: Future[List[Doc]] = find(Json.obj())
 
   def find(query: JsObject): Future[List[Doc]] =
-    coll.find(query).cursor[Doc].toList
+    coll.find(query).sort(Json.obj("$natural" -> -1)).cursor[Doc].toList
 }
 
 object DocRepo {
