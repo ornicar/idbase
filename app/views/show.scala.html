@@ -62,7 +62,7 @@
   @if(doc.meta.demarche.nonEmpty) {
   @row(N.demarche, doc.meta.demarche mkString ", ")
   }
-  @row(N.tache, doc.meta.tache)
+  @row(N.tache, Markdown(doc.meta.tache))
   @row(N.materiau, Markdown(doc.meta.materiau))
   @doc.production.map { p =>
   @row(N.production, Markdown(p))

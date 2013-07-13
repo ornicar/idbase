@@ -11,7 +11,7 @@ case class Meta(
     objectifT3: Option[Markdown], 
     demarche: List[String],
     deroulement: Markdown, 
-    tache: String, 
+    tache: Markdown, 
     materiau: Markdown, 
     evaluation: List[String],
     outilEvaluation: Option[Markdown],

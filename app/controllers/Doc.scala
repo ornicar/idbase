@@ -76,7 +76,12 @@ object Doc extends Controller with OptionalAuthElement with AuthConfigImpl {
       env.docRepo.list map { docs ⇒
         Ok {
           val items = docs map { doc ⇒
-            (doc.meta.titre, Helper.Markdown(doc.meta.scenario).body, new URL(baseUrl + routes.Doc.show(doc.id)), authorEmail)
+            (doc.meta.titre, 
+              """<p>Notion(s) : %s</p><p>Méthode(s) pédagogique(s) : %s</p>%s""".format(
+                doc.notion mkString ", ",
+                doc.methodePedagogique mkString ", ",
+                Helper.Markdown(doc.meta.scenario).body), 
+              new URL(baseUrl + routes.Doc.show(doc.id)), authorEmail)
           }
           (RssFeed("ID Base", new URL(baseUrl), "Fiches pédagogiques à l'usage des professeurs documentalistes")
             withWebMaster authorEmail
