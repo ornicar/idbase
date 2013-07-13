@@ -12,7 +12,7 @@ case class Meta(
     demarche: List[String],
     deroulement: Markdown, 
     tache: Markdown, 
-    materiau: Markdown, 
+    materiau: Option[Markdown], 
     evaluation: List[String],
     outilEvaluation: Option[Markdown],
     outilDidactique: Option[Markdown],

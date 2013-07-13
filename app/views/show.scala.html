@@ -63,7 +63,9 @@
   @row(N.demarche, doc.meta.demarche mkString ", ")
   }
   @row(N.tache, Markdown(doc.meta.tache))
-  @row(N.materiau, Markdown(doc.meta.materiau))
+  @doc.meta.materiau.map { m =>
+  @row(N.materiau, Markdown(m))
+  }
   @doc.production.map { p =>
   @row(N.production, Markdown(p))
   }
