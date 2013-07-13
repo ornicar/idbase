@@ -11,7 +11,7 @@ case class Doc(
     dispositifPedagogique: Option[Markdown],
     dispositifEducatif: Option[Markdown],
     source: String,
-    production: Markdown,
+    production: Option[Markdown],
     meta: Meta) {
 
   def hasNotionAndDiscipline(n: String) =

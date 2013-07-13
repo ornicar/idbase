@@ -59,10 +59,14 @@
   }
   }
   @tableGroup("Apprentissage") {
+  @if(doc.meta.demarche.nonEmpty) {
   @row(N.demarche, doc.meta.demarche mkString ", ")
+  }
   @row(N.tache, doc.meta.tache)
   @row(N.materiau, Markdown(doc.meta.materiau))
-  @row(N.production, Markdown(doc.production))
+  @doc.production.map { p =>
+  @row(N.production, Markdown(p))
+  }
   @doc.meta.ficheEleve.map { o =>
   @row(N.ficheEleve, Markdown(o))
   }

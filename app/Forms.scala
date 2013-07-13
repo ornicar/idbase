@@ -23,7 +23,7 @@ object Forms {
       "dispositifPedagogique" -> optional(nonEmptyText),
       "dispositifEducatif" -> optional(nonEmptyText),
       "source" -> nonEmptyText,
-      "production" -> nonEmptyText,
+      "production" -> optional(nonEmptyText),
       "meta" -> metaMapping
     )(DocSetup.apply _)(DocSetup.unapply _))
 
@@ -35,7 +35,7 @@ object Forms {
     "objectifT1" -> optional(nonEmptyText),
     "objectifT2" -> optional(nonEmptyText),
     "objectifT3" -> optional(nonEmptyText),
-    "demarche" -> nonEmptyList(text),
+    "demarche" -> list(text),
     "deroulement" -> nonEmptyText,
     "tache" -> nonEmptyText,
     "materiau" -> nonEmptyText,
@@ -57,7 +57,7 @@ object Forms {
       dispositifPedagogique: Option[Markdown],
       dispositifEducatif: Option[Markdown],
       source: String,
-      production: Markdown,
+      production: Option[Markdown],
       meta: MetaSetup) {
 
     def toDoc(doc: Option[Doc]) = Doc(

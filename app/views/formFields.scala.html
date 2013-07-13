@@ -122,7 +122,6 @@
 
 @select2(form("meta")("demarche"), selectable(lists.demarche.sorted),
 '_label -> N.demarche,
-'_help -> "Requis",
 'multiple -> "multiple",
 'class -> "input-wide")
 
@@ -136,6 +135,7 @@
 
 @textarea(form("production"),
 '_label -> N.production,
+'_help -> "",
 'class -> "input-wide")
 
 @textarea(form("meta")("ficheEleve"),
