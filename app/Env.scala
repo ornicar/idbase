@@ -13,13 +13,21 @@ final class Env(config: Config)(implicit app: Application) {
   lazy val search = new Search(docRepo)
 
   lazy val userRepo = new UserRepo(
-    config.getConfig("idbase").getStringList("users").toList
+    idbaseConfig.getStringList("users").toList
   )
 
   lazy val docRepo = new DocRepo(
     db = ReactiveMongoPlugin.db,
-    collName = config getConfig "idbase" getString "doc_collection"
+    collName = idbaseConfig getString "doc_collection"
   )
+
+  private lazy val idbaseConfig = config getConfig "idbase"
+
+  lazy val aboutText = {
+    val file = play.api.Play.getFile("conf/apropos.md")
+    val src = scala.io.Source fromFile file
+    src.getLines mkString "\n"
+  }
 }
 
 object Env {

@@ -17,6 +17,10 @@ object Application extends Controller with LoginLogout with OptionalAuthElement 
 
   def userRepo = env.userRepo
 
+  def about = StackAction { implicit req =>
+    Ok(html.about(env.aboutText))
+  }
+
   /** Your application's login form.  Alter it to fit your application */
   val loginForm = Form {
     mapping("name" -> nonEmptyText, "password" -> nonEmptyText)(userRepo.authenticate)(_.map(u ⇒ (u.name, "")))
@@ -24,7 +28,7 @@ object Application extends Controller with LoginLogout with OptionalAuthElement 
   }
 
   /** Alter the login page action to suit your application. */
-  def login = StackAction { implicit request ⇒
+  def login = StackAction { implicit req ⇒
     Ok(html.login(loginForm))
   }
 
