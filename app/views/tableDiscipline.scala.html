@@ -7,18 +7,19 @@
 <div class="container">
   <h1 class="lead">Croisez notions et interdisciplinarité !</h1>
   <table class="table table-cross table-bordered">
-    <thead>
-      <tr>
-        <th>#</th>
-        @disciplines.map { discipline =>
-        <th>@Html(Link.interdisciplinarite(discipline))</th>
-        }
-      </tr>
-    </thead>
     <tbody>
-    @notions.filter(n => docs.exists(_ hasNotionAndDiscipline n)).map { notion =>
+    @notions.filter(n => docs.exists(_ hasNotionAndDiscipline n)).zipWithIndex.map {
+    case (notion, index) => {
+    @if(index % 12 == 0) {
     <tr>
-      <th>@Html(Link.notion(notion))</th>
+      <th></th>
+      @disciplines.map { discipline =>
+      <th class="discipline">@Html(Link.interdisciplinarite(discipline))</th>
+      }
+    </tr>
+    }
+    <tr>
+      <th class="notion">@Html(Link.notion(notion))</th>
       @disciplines.map { discipline =>
       <td>
         @docs.filter(d => d.notion.contains(notion) && d.interdisciplinarite.contains(discipline)).map(_.niveau).flatten.distinct.map { n =>
@@ -27,6 +28,7 @@
       </td>
       }
     </tr>
+    }
     }
     </tbody>
   </table>
