@@ -32,7 +32,7 @@ RSYNC_OPTIONS=" \
   --exclude target/streams";
 
 log "Rsync scripts, binaries and assets"
-rsync_command="rsync $RSYNC_OPTIONS bin target public $REMOTE:$REMOTE_DIR"
+rsync_command="rsync $RSYNC_OPTIONS bin target public conf $REMOTE:$REMOTE_DIR"
 echo "$rsync_command"
 $rsync_command
 
