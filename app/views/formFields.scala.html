@@ -145,11 +145,19 @@
 'class -> "input-wide")
 }
 
-@group("Commentaire") {
+@group(N.commentaire) {
 
 @textarea(form("meta")("commentaire"),
 '_label -> N.commentaire,
 'class -> "input-wide markdown-long")
+}
+
+@group(N.ressource) {
+
+@textarea(form("meta")("ressource"),
+'_label -> N.ressource,
+'class -> "input-wide",
+'_help -> "")
 }
 
 @group("Référence") {

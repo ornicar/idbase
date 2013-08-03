@@ -44,7 +44,8 @@ object Forms {
     "outilDidactique" -> optional(nonEmptyText),
     "ficheEleve" -> optional(nonEmptyText),
     "duree" -> nonEmptyText,
-    "commentaire" -> nonEmptyText
+    "commentaire" -> nonEmptyText,
+    "ressource" -> optional(nonEmptyText)
   )(MetaSetup.apply _)(MetaSetup.unapply _)
 
   case class DocSetup(
@@ -104,7 +105,8 @@ object Forms {
       outilDidactique: Option[Markdown],
       ficheEleve: Option[Markdown],
       duree: String,
-      commentaire: Markdown) {
+      commentaire: Markdown,
+      ressource: Option[Markdown]) {
 
     def toMeta = Meta(
       titre = titre,
@@ -123,7 +125,8 @@ object Forms {
       outilDidactique = outilDidactique,
       ficheEleve = ficheEleve,
       duree = duree,
-      commentaire = commentaire)
+      commentaire = commentaire,
+      ressource = ressource)
   }
 
   def MetaToSetup(meta: Meta) = MetaSetup(
@@ -143,5 +146,6 @@ object Forms {
       outilDidactique = meta.outilDidactique,
       ficheEleve = meta.ficheEleve,
       duree = meta.duree,
-      commentaire = meta.commentaire)
+      commentaire = meta.commentaire,
+      ressource = meta.ressource)
 }

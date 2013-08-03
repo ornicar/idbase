@@ -27,4 +27,5 @@ object Names {
   val ficheEleve = "Fiche(s) élève(s)"
   val duree = "Durée"
   val commentaire = "Commentaire"
+  val ressource = "Ressource(s)"
 }

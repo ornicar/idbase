@@ -18,8 +18,8 @@ case class Meta(
     outilDidactique: Option[Markdown],
     ficheEleve: Option[Markdown],
     duree: String,
-    commentaire: Markdown 
-  ) {
+    commentaire: Markdown,
+    ressource: Option[Markdown]) {
 }
 
 object Meta {
