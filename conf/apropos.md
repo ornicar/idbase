@@ -1,9 +1,9 @@
-ID Base
-Base de séquences pédagogiques en Information-Documentation
+#ID Base
+##Base de séquences pédagogiques en Information-Documentation
 
 
 
-Le projet ID Base
+###Le projet ID Base
   
 Le projet ID Base est né de la volonté de contribuer à la didactique de l’information-documentation en mettant en lumière un axe peu sollicité, celui des séquences pédagogiques expérimentées sur le terrain par les professeurs documentalistes. La construction des savoirs scolaires de l’information-documentation résulte de l’articulation d’une triple transposition didactique : les savoirs scientifiques (SIC et sciences de l’éducation), les savoirs de référence (documentation, journalisme) et les savoirs professionnels (enseignement). Il semble que les chercheurs et les institutionnels s’intéressent peu à cette dernière dimension. De son côté, les enseignants documentalistes ne cessent de rôder leurs gestes professionnels et de travailler la matière scolaire : information, Internet, veille informationnelle, identité numérique, information journalistique, source, auteur, évaluation de l’information ne sont que quelques unes des nombreuses notions info-documentaires enseignées. Ils cherchent, ils expérimentent, ils publient, ils échangent, si bien qu’aujourd’hui, plus d’un millier de fiches pédagogiques, témoins de ces travaux déposés depuis plus de 15 ans, sont disponibles en ligne ou ont déjà été englouties dans les oubliettes du web. Cette matière pédagogique, disparate dans sa forme comme dans son contenu, est trop peu estimée hors de la sphère professionnelle. Le projet d’ID Base est d’en rendre l’accès plus efficace et plus lisible pour chacun, de permettre aux professeurs documentalistes d’en tirer profit plus facilement, de contribuer à l’amélioration des séquences pédagogiques, de l’utiliser pour tracer les contours  concrets d’un programme d’enseignement et de la valoriser aux yeux de nos partenaires chercheurs et institutionnels.
 
@@ -15,12 +15,12 @@ Pour ne prendre que le seul exemple des savoirs, un rapide examen d’Edu’base
 		 
 Le point de vue proposé par ID Base est, on le voit, bien distinct : la perspective s’y affirme didactique et disciplinaire, insistant sur la spécificité des savoirs plutôt que sur leur transversalité. L’expertise pédagogique y est partout et toujours valorisée, centrée sur la recherche des meilleures modalités de l’enseignement et de l’apprentissage. La formation continue des professeurs documentalistes, enfin, est un objectif auquel ID Base souhaite contribuer en présentant des fiches d’analyse structurées à partir d’éléments pédagogiques et didactiques essentiels.
 
-L’enjeu didactique
+###L’enjeu didactique
 	- quelles notions ?
 	- quels méthodes d’apprentissage : se pencher sur les situations d’enseignement-apprentissage
 	- les fiches analytiques d’ID Base se déclinent en 3 volets : savoir, enseignement, apprentissage
 
-L’enjeu pédagogique
+###L’enjeu pédagogique
 	- peut-on parler d’une « pédagogie documentaire » ?
 	- au travers des exemples
 	- l’inventaire des méthodes pédagogiques
@@ -32,7 +32,7 @@ L’enjeu pédagogique
 		- les éléments d’un dispositif pédagogique (outil, matériaux, activité, tâche, consigne, etc.)
 		- les fiches outils
 
-La méthodologie
+###La méthodologie
 	- Sélection des séquences
 		. les SP paraissent nb sur le web, mais peu st véritablement exploitables 
 			. soit formellement : déroulement succinct, tâche peu explicite, fiche péda absente et publi des seules fiches élèves
@@ -44,7 +44,7 @@ La méthodologie
 		. une fiche pédagogique structurée comportant au moins la liste des objectifs, un déroulement permettant de saisir le scénario sans ambigüité et quelques outils didactiques.
 		. l’accessibilité des ressources : il est bien évidemment nécessaire que les fiches sélectionnées dans ID Base soient accessibles en ligne. Mais l’obsolescence programmée des ressources, la refonte de certains sites et les liens brisés constituent des obstacles bien connus et considérables. Si l’actualité doit suivre le renouvellement permanent des outils numériques, elle ne saurait imposer sa logique à la réflexion pédagogique qui obéit aux lois de la langue durée. Les principes pédagogiques résistent beaucoup plus facilement aux lois de l’actualité que les impératifs économiques (innovations, remplacement des matériels, modes). Nous appelons dès lors au maintien de l’accessibilité en ligne des fiches pédagogiques.
 
-La fiche d’analyse
+###La fiche d’analyse
    . la présentation de la notice
 	- par la structuration de la notice, faire ressortir la stratégie pédagogique de la fiche
 		. le cadre institutionnel et temporel
@@ -69,7 +69,7 @@ La fiche d’analyse
 
 
 
-Conclusion
+###Conclusion
 	. vœux :
 		. mettre à disposition des profs docs 
 			. un outil pratique : disposer d’exemples concrets et expérimentés pour travailler des notions
