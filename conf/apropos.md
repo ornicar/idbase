@@ -44,34 +44,34 @@ Les critères retenus pour la sélection des propositions dans ID Base sont :
 
 #### La présentation de la notice
 Par sa structuration, la notice fait ressortir la stratégie pédagogique de la fiche :
-	1. le cadre institutionnel et temporel
-	2. les trois axes de toute situation didactique :
-		- le savoir scolaire visé, ou savoir didactisé
-		- l’enseignement, ou le dispositif proposé par l’enseignant
-		- l’apprentissage, ou l’activité de l’élève
-	3. les deux entrées suivantes présentent des éléments d’analyse de la fiche et des pistes pour poursuivre la réflexion :
-			. commentaire 
-			. prolongement(s)
-	- la dernière entrée donne la référence complète de la fiche pédagogique qui a fait l’objet de l’analyse.
+   1. le cadre institutionnel et temporel
+   2. les trois axes de toute situation didactique :
+      - le savoir scolaire visé, ou savoir didactisé
+      - l’enseignement, ou le dispositif proposé par l’enseignant
+      - l’apprentissage, ou l’activité de l’élève
+   3. les deux entrées suivantes présentent des éléments d’analyse de la fiche et des pistes pour poursuivre la réflexion :
+      - commentaire 
+      - prolongement(s)
+   4. la dernière entrée donne la référence complète de la fiche pédagogique qui a fait l’objet de l’analyse.
 
 ####Le traitement de la fiche pédagogique
 
 Comme toute élaboration d’un document secondaire, la notice, qui est une représentation de la fiche pédagogique originelle, est d’abord une reconstruction. Cette reconstruction  revêt trois dimensions :
-	1. **une dimension descriptive** : il s’agit de rendre compte au mieux du dispositif pédagogique de la fiche en la recentrant sur ses éléments essentiels (cadre, objectifs, enseignement, apprentissage)
-	2. **une dimension normative** : il s’agit de dépasser les fortes disparités de présentation et de dénomination rencontrées dans les fiches pour tendre vers une cohérence et une harmonisation de la réflexion, de la terminologie et des pratiques. Ce travail de normalisation se concentre principalement sur la présentation des objectifs (les savoirs), sur la catégorisation des phases du déroulement de la séquence (l’enseignement), sur la reformulation de la tâche (l’apprentissage) et sur la catégorisation des outils didactiques mis à disposition dans les annexes. Ces derniers, par exemple, sont répartis en trois types :
+   1. **une dimension descriptive** : il s’agit de rendre compte au mieux du dispositif pédagogique de la fiche en la recentrant sur ses éléments essentiels (cadre, objectifs, enseignement, apprentissage)
+   2. **une dimension normative** : il s’agit de dépasser les fortes disparités de présentation et de dénomination rencontrées dans les fiches pour tendre vers une cohérence et une harmonisation de la réflexion, de la terminologie et des pratiques. Ce travail de normalisation se concentre principalement sur la présentation des objectifs (les savoirs), sur la catégorisation des phases du déroulement de la séquence (l’enseignement), sur la reformulation de la tâche (l’apprentissage) et sur la catégorisation des outils didactiques mis à disposition dans les annexes. Ces derniers, par exemple, sont répartis en trois types :
 		- outils relatifs au savoir : les fiches d’évaluation
 		- outils relatifs à l’enseignement : les supports de cours (diaporama, affiches, cartes conceptuelles, etc.) et les ressources pour l’enseignant
 		- outils relatifs à l’apprentissage : les fiches guides, les fiches d’analyse guidée ou non, les conseils méthodologiques, les guides opératoires, etc.
-	3. **une dimension formative** : il s’agit d’accompagner la formation continue des professionnels en leur proposant, selon les fiches analysées,  des pistes pour faire évoluer la séquence et une reformulation des objectifs. Cette reformulation peut, dans certains cas, se révéler importante. En effet, certaines fiches, bien qu’orientées vers la construction d’une ou de plusieurs notions, ne les présentent pas explicitement en tant qu’objectifs d’apprentissage. D’autres ne retiennent que la liste conventionnelle des compétences méthodologiques. Nous avons donc pris le parti de redéfinir ces objectifs en reprenant, lorsque cela était pertinent, la triade suivante :
+   3. **une dimension formative** : il s’agit d’accompagner la formation continue des professionnels en leur proposant, selon les fiches analysées,  des pistes pour faire évoluer la séquence et une reformulation des objectifs. Cette reformulation peut, dans certains cas, se révéler importante. En effet, certaines fiches, bien qu’orientées vers la construction d’une ou de plusieurs notions, ne les présentent pas explicitement en tant qu’objectifs d’apprentissage. D’autres ne retiennent que la liste conventionnelle des compétences méthodologiques. Nous avons donc pris le parti de redéfinir ces objectifs en reprenant, lorsque cela était pertinent, la triade suivante :
 		- « savoirs pratiques » (T1 : efficacité ; savoir faire ou « capacités »)
 		- « savoirs théoriques » (T2 : intelligibilité ; savoirs ou « connaissances ») 
 		- « savoirs éthiques » (T3 : responsabilité ; savoir être ou « attitudes »)
 
 ###Les publics visés
 
-ID Base s’adresse en premier lieu aux professeurs documentalistes pour lesquels il met  à disposition un outil pratique leur permettant de sélectionner des exemples concrets et expérimentés pour alimenter leur réflexion pédagogique et didactique et construire une culture enseignante commune.
-En tant que proposant un corpus constitué selon des critères définis, ID Base intéresse également les étudiants des master MEEF qui se préparent à entrer dans la profession. Elle leur offre un ensemble constitué de séquences pédagogiques orientées vers la didactisation de l’information-documentation, base d’exemples concrets pour préparer les épreuves d’admission, mais également base de données de terrain à analyser pour les mémoires. 
-ID Base devrait pouvoir servir la recherche en didactique et en Sciences de l’information et de la communication.  Elle offre aux chercheurs une vision synoptique de ce qui s’élabore sur le terrain, permettant ainsi de mieux cerner le périmètre des savoirs scolaires de l’information-documentation et la manière dont ils sont présentés aux élèves selon les niveaux.
-L’institution, enfin, dispose avec ID Base d’un outil cohérent pour appréhender l’expertise pédagogique des professeurs documentalistes et pour réfléchir à la constitution d’un curriculum de l’information-documentation.
+ID Base s’adresse en premier lieu aux **professeurs documentalistes** pour lesquels il met  à disposition un outil pratique leur permettant de sélectionner des exemples concrets et expérimentés pour alimenter leur réflexion pédagogique et didactique et construire une culture enseignante commune.
+En tant que proposant un corpus constitué selon des critères définis, ID Base intéresse également **les étudiants des master MEEF** qui se préparent à entrer dans la profession. Elle leur offre un ensemble constitué de séquences pédagogiques orientées vers la didactisation de l’information-documentation, base d’exemples concrets pour préparer les épreuves d’admission, mais également base de données de terrain à analyser pour les mémoires. 
+ID Base devrait pouvoir servir **la recherche en didactique et en Sciences de l’information et de la communication**.  Elle offre aux chercheurs une vision synoptique de ce qui s’élabore sur le terrain, permettant ainsi de mieux cerner le périmètre des savoirs scolaires de l’information-documentation et la manière dont ils sont présentés aux élèves selon les niveaux.
+**L’institution**, enfin, dispose avec ID Base d’un outil cohérent pour appréhender l’expertise pédagogique des professeurs documentalistes et pour réfléchir à la constitution d’un curriculum de l’information-documentation.
 
 
