@@ -1,6 +1,4 @@
-A PROPOS…
 
-#ID Base
 ##Base de séquences pédagogiques en Information-Documentation
 
 
