@@ -34,17 +34,16 @@ Si les propositions de séquences pédagogiques paraissent nombreuses sur le web
 
 ####Les critères retenus
 Les critères retenus pour la sélection des propositions dans ID Base sont :
-	- une entrée privilégiant les savoirs scolaires de l’information-documentation ;
-	- une perspective pédagogique originale, utilisant une méthode pédagogique particulière et identifiable ;
-	- une situation d’apprentissage centrée sur une tâche bien identifiée, permettant à l’élève un apprentissage par l’activité ;
-	- une fiche pédagogique structurée comportant au moins la liste des objectifs, un déroulement permettant de saisir le scénario sans ambigüité ;
-	- l’accessibilité de la ressource : il est bien évidemment nécessaire que les fiches sélectionnées dans ID Base soient accessibles en ligne. Mais l’obsolescence programmée des ressources, la refonte de certains sites générant des liens brisés constituent des obstacles bien connus et considérables. Si l’actualité doit suivre le renouvellement permanent des outils numériques, elle ne saurait imposer sa logique à la réflexion pédagogique, laquelle n’ obéit aux lois de l’actualité et des impératifs économiques de court terme (innovations techniques, remplacement des matériels, modes). Nous appelons dès lors au maintien de l’accessibilité en ligne des fiches pédagogiques.
+   - une entrée privilégiant les savoirs scolaires de l’information-documentation ;
+   - une perspective pédagogique originale, utilisant une méthode pédagogique particulière et identifiable ;
+   - une situation d’apprentissage centrée sur une tâche bien identifiée, permettant à l’élève un apprentissage par l’activité ;
+   - une fiche pédagogique structurée comportant au moins la liste des objectifs, un déroulement permettant de saisir le scénario sans ambigüité ;
+   - l’accessibilité de la ressource : il est bien évidemment nécessaire que les fiches sélectionnées dans ID Base soient accessibles en ligne. Mais l’obsolescence programmée des ressources, la refonte de certains sites générant des liens brisés constituent des obstacles bien connus et considérables. Si l’actualité doit suivre le renouvellement permanent des outils numériques, elle ne saurait imposer sa logique à la réflexion pédagogique, laquelle n’ obéit aux lois de l’actualité et des impératifs économiques de court terme (innovations techniques, remplacement des matériels, modes). Nous appelons dès lors au maintien de l’accessibilité en ligne des fiches pédagogiques.
 
 ###La fiche d’analyse
 
 #### La présentation de la notice
 Par sa structuration, la notice fait ressortir la stratégie pédagogique de la fiche :
-
 	1. le cadre institutionnel et temporel
 	2. les trois axes de toute situation didactique :
 		- le savoir scolaire visé, ou savoir didactisé
