@@ -59,13 +59,13 @@ Par sa structuration, la notice fait ressortir la stratégie pédagogique de la 
 Comme toute élaboration d’un document secondaire, la notice, qui est une représentation de la fiche pédagogique originelle, est d’abord une reconstruction. Cette reconstruction  revêt trois dimensions :
    1. **une dimension descriptive** : il s’agit de rendre compte au mieux du dispositif pédagogique de la fiche en la recentrant sur ses éléments essentiels (cadre, objectifs, enseignement, apprentissage)
    2. **une dimension normative** : il s’agit de dépasser les fortes disparités de présentation et de dénomination rencontrées dans les fiches pour tendre vers une cohérence et une harmonisation de la réflexion, de la terminologie et des pratiques. Ce travail de normalisation se concentre principalement sur la présentation des objectifs (les savoirs), sur la catégorisation des phases du déroulement de la séquence (l’enseignement), sur la reformulation de la tâche (l’apprentissage) et sur la catégorisation des outils didactiques mis à disposition dans les annexes. Ces derniers, par exemple, sont répartis en trois types :
-		- outils relatifs au savoir : les fiches d’évaluation
-		- outils relatifs à l’enseignement : les supports de cours (diaporama, affiches, cartes conceptuelles, etc.) et les ressources pour l’enseignant
-		- outils relatifs à l’apprentissage : les fiches guides, les fiches d’analyse guidée ou non, les conseils méthodologiques, les guides opératoires, etc.
+      - outils relatifs au savoir : les fiches d’évaluation
+      - outils relatifs à l’enseignement : les supports de cours (diaporama, affiches, cartes conceptuelles, etc.) et les ressources pour l’enseignant
+      - outils relatifs à l’apprentissage : les fiches guides, les fiches d’analyse guidée ou non, les conseils méthodologiques, les guides opératoires, etc.
    3. **une dimension formative** : il s’agit d’accompagner la formation continue des professionnels en leur proposant, selon les fiches analysées,  des pistes pour faire évoluer la séquence et une reformulation des objectifs. Cette reformulation peut, dans certains cas, se révéler importante. En effet, certaines fiches, bien qu’orientées vers la construction d’une ou de plusieurs notions, ne les présentent pas explicitement en tant qu’objectifs d’apprentissage. D’autres ne retiennent que la liste conventionnelle des compétences méthodologiques. Nous avons donc pris le parti de redéfinir ces objectifs en reprenant, lorsque cela était pertinent, la triade suivante :
-		- « savoirs pratiques » (T1 : efficacité ; savoir faire ou « capacités »)
-		- « savoirs théoriques » (T2 : intelligibilité ; savoirs ou « connaissances ») 
-		- « savoirs éthiques » (T3 : responsabilité ; savoir être ou « attitudes »)
+      - « savoirs pratiques » (T1 : efficacité ; savoir faire ou « capacités »)
+      - « savoirs théoriques » (T2 : intelligibilité ; savoirs ou « connaissances ») 
+      - « savoirs éthiques » (T3 : responsabilité ; savoir être ou « attitudes »)
 
 ###Les publics visés
 
