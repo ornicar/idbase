@@ -33,39 +33,37 @@ Si les propositions de séquences pédagogiques paraissent nombreuses sur le web
 
 ####Les critères retenus
 Les critères retenus pour la sélection des propositions dans ID Base sont :
-	- une entrée privilégiant les savoirs scolaires de l’information-documentation ;
-	- une perspective pédagogique originale, utilisant une méthode pédagogique particulière et identifiable ;
-	- une situation d’apprentissage centrée sur une tâche bien identifiée, permettant à l’élève un apprentissage par l’activité ;
-	- une fiche pédagogique structurée comportant au moins la liste des objectifs, un déroulement permettant de saisir le scénario sans ambigüité ;
-	- l’accessibilité de la ressource : il est bien évidemment nécessaire que les fiches sélectionnées dans ID Base soient accessibles en ligne. Mais l’obsolescence programmée des ressources, des outils et formats du web, la refonte de certains sites générant des liens brisés constituent des obstacles bien connus et considérables. Si l’actualité doit suivre le renouvellement permanent des outils numériques, elle ne saurait imposer sa logique à la réflexion pédagogique, laquelle n’obéit pas aux lois de l’actualité et des impératifs économiques du court terme (innovations techniques, remplacement des matériels, modes). Nous appelons dès lors au maintien de l’accessibilité en ligne des fiches pédagogiques. Des sites professionnels, tel *Les trois couronnes*, *Cactus acide* ou *Docpourdocs* sont prêts pour accueillir des fiches pédagogiques de qualité menacées par la refonte d’un site académique.
+   - une entrée privilégiant les savoirs scolaires de l’information-documentation ;
+   - une perspective pédagogique originale, utilisant une méthode pédagogique particulière et identifiable ;
+   - une situation d’apprentissage centrée sur une tâche bien identifiée, permettant à l’élève un apprentissage par l’activité ;
+   - une fiche pédagogique structurée comportant au moins la liste des objectifs, un déroulement permettant de saisir le scénario sans ambigüité ;
+   - l’accessibilité de la ressource : il est bien évidemment nécessaire que les fiches sélectionnées dans ID Base soient accessibles en ligne. Mais l’obsolescence programmée des ressources, des outils et formats du web, la refonte de certains sites générant des liens brisés constituent des obstacles bien connus et considérables. Si l’actualité doit suivre le renouvellement permanent des outils numériques, elle ne saurait imposer sa logique à la réflexion pédagogique, laquelle n’obéit pas aux lois de l’actualité et des impératifs économiques du court terme (innovations techniques, remplacement des matériels, modes). Nous appelons dès lors au maintien de l’accessibilité en ligne des fiches pédagogiques. Des sites professionnels, tels *Les trois couronnes*, *Cactus acide* ou *Docpourdocs* peuvent être sollicités pour accueillir des fiches pédagogiques de qualité menacées par la refonte d’un site académique.
 
 ###La fiche d’analyse
 
 #### La présentation de la notice
 Par sa structuration, la notice fait ressortir la stratégie pédagogique de la fiche :
-
-	1. le cadre institutionnel et temporel
-	2. les trois axes de toute situation didactique :
-		- le savoir scolaire visé, ou savoir didactisé
-		- l’enseignement, ou le dispositif proposé par l’enseignant
-		- l’apprentissage, ou l’activité de l’élève
-	3. les deux entrées suivantes présentent des éléments d’analyse de la fiche et des pistes pour poursuivre la réflexion :
-			. commentaire 
-			. prolongement(s)
-	- la dernière entrée donne la référence complète de la fiche pédagogique qui a fait l’objet de l’analyse.
+   1. le cadre institutionnel et temporel
+   2. les trois axes de toute situation didactique :
+      - le savoir scolaire visé, ou savoir didactisé
+      - l’enseignement, ou le dispositif proposé par l’enseignant
+      - l’apprentissage, ou l’activité de l’élève
+   3. les deux entrées suivantes présentent des éléments d’analyse de la fiche et des pistes pour poursuivre la réflexion :
+      - commentaire 
+      - prolongement(s)
+   4. la dernière entrée donne la référence complète de la fiche pédagogique qui a fait l’objet de l’analyse.
 
 ####Le traitement de la fiche pédagogique
 
 Comme toute élaboration d’un document secondaire, la notice, qui est une représentation de la fiche pédagogique originelle, est d’abord une reconstruction. Cette reconstruction  revêt trois dimensions :
-	1. **une dimension descriptive** : il s’agit de rendre compte au mieux du dispositif pédagogique de la fiche en la recentrant sur ses éléments essentiels (cadre, objectifs, enseignement, apprentissage)
-	2. **une dimension normative** : il s’agit de dépasser les fortes disparités de présentation et de dénomination rencontrées dans les fiches pour tendre vers une cohérence et une harmonisation de la réflexion, de la terminologie et des pratiques. Ce travail de normalisation se concentre principalement sur la présentation des objectifs (les savoirs), sur la catégorisation des phases du déroulement de la séquence (l’enseignement), sur la reformulation de la tâche (l’apprentissage) et sur la catégorisation des outils didactiques mis à disposition dans les annexes. Ces derniers, par exemple, sont répartis en trois types :
-		- outils relatifs au savoir : les fiches d’évaluation
-		- outils relatifs à l’enseignement : les supports de cours (diaporama, affiches, cartes conceptuelles, etc.) et les ressources pour l’enseignant
-		- outils relatifs à l’apprentissage : les fiches guides, les fiches d’analyse guidée ou non, les conseils méthodologiques, les guides opératoires, etc.
-	3. **une dimension formative** : il s’agit d’accompagner la formation continue des professionnels en leur proposant, selon les fiches analysées, des pistes pour faire évoluer la séquence et une reformulation des objectifs. Cette reformulation peut, dans certains cas, se révéler importante. En effet, certaines fiches, bien qu’orientées vers la construction d’une ou de plusieurs notions, ne les présentent pas explicitement en tant qu’objectifs d’apprentissage. D’autres ne retiennent que la liste conventionnelle des compétences méthodologiques. Nous avons donc pris le parti de redéfinir ces objectifs en reprenant, lorsque cela était pertinent, la triade suivante :
-		- « savoirs pratiques » (T1 : efficacité ; savoir faire ou « capacités »)
-		- « savoirs théoriques » (T2 : intelligibilité ; savoirs ou « connaissances ») 
-		- « savoirs éthiques » (T3 : responsabilité ; savoir être ou « attitudes »)
+   1. **une dimension descriptive** : il s’agit de rendre compte au mieux du dispositif pédagogique de la fiche en la recentrant sur ses éléments essentiels (cadre, objectifs, enseignement, apprentissage)
+   2. **une dimension normative** : il s’agit de dépasser les fortes disparités de présentation et de dénomination rencontrées dans les fiches pour tendre vers une cohérence et une harmonisation de la réflexion, de la terminologie et des pratiques. Ce travail de normalisation se concentre principalement sur la présentation des objectifs (les savoirs), sur la catégorisation des phases du déroulement de la séquence (l’enseignement), sur la reformulation de la tâche (l’apprentissage) et sur la catégorisation des outils didactiques mis à disposition dans les annexes. Ces derniers, par exemple, sont répartis en trois types :
+      - outils relatifs au savoir : les fiches d’évaluation
+      - outils relatifs à l’enseignement : les supports de cours (diaporama, affiches, cartes conceptuelles, etc.) et les ressources pour l’enseignant
+      - outils relatifs à l’apprentissage : les fiches guides, les fiches d’analyse guidée ou non, les conseils méthodologiques, les guides opératoires, etc.
+   3. **une dimension formative** : il s’agit d’accompagner la formation continue des professionnels en leur proposant, selon les fiches analysées, des pistes pour faire évoluer la séquence et une reformulation des objectifs. Cette reformulation peut, dans certains cas, se révéler importante. En effet, certaines fiches, bien qu’orientées vers la construction d’une ou de plusieurs notions, ne les présentent pas explicitement en tant qu’objectifs d’apprentissage. D’autres ne retiennent que la liste conventionnelle des compétences méthodologiques. Nous avons donc pris le parti de redéfinir ces objectifs en reprenant, lorsque cela était pertinent, la triade suivante :- « savoirs pratiques » (T1 : efficacité ; savoir faire ou « capacités »)
+      - « savoirs théoriques » (T2 : intelligibilité ; savoirs ou « connaissances ») 
+      - « savoirs éthiques » (T3 : responsabilité ; savoir être ou « attitudes »)
 
 ###Les publics visés
 
