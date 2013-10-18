@@ -18,7 +18,7 @@ object Names {
   val objectifT2 = "Savoirs théoriques"
   val objectifT3 = "Savoirs éthiques"
   val demarche = "Démarche"
-  val deroulement = "Déroulement"
+  val deroulement = "Descriptif"
   val tache = "Tâche"
   val materiau = "Matériau(x)"
   val evaluation = "Évaluation"
