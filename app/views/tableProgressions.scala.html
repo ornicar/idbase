@@ -1,0 +1,45 @@
+@(notions: List[String], niveaux: List[String], docs: List[Doc])(implicit user: Option[User])
+
+@import idbase.Helper._
+@import idbase.{ Names => N }
+
+@main("Table des progressions", "table-progressions") {
+
+<div class="container">
+  <h1 class="lead">Croisez notions et niveaux !</h1>
+  <table class="table table-cross table-bordered">
+    <tbody>
+    @notions.filter(n => docs.exists(_ hasNotionAndNiveau n)).zipWithIndex.map {
+    case (notion, index) => {
+    @if(index % 12 == 0) {
+    <tr>
+      <th></th>
+      @niveaux.map { niveau =>
+      <th class="niveau">@Html(Link.niveau(niveau))</th>
+      }
+    </tr>
+    }
+    <tr>
+      <th class="notion">@Html(Link.notion(notion))</th>
+      @niveaux.map { niveau =>
+      <td>
+        @docs.filter(d => d.notion.contains(notion) && d.niveau.contains(niveau)).distinct.map { doc =>
+        <div class="doc_wrap">
+          <a class="doc" title="@doc.meta.titre" href="@routes.Doc.show(doc.id)"></a>
+          <div class="metas">
+            <p>@N.methodePedagogique: @Link(doc.methodePedagogique, Link.methodePedagogique, sep = " ")</p>
+            @if(doc.interdisciplinarite.nonEmpty) {
+            <p>@N.interdisciplinarite: @Link("Information-documentation" :: doc.interdisciplinarite, Link.interdisciplinarite)</p>
+            }
+          </div>
+        </div>
+        }
+      </td>
+      }
+    </tr>
+    }
+    }
+    </tbody>
+  </table>
+</div>
+}

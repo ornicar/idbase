@@ -20,10 +20,26 @@ $(function() {
     }, 200);
   }
 
+  $('.doc_wrap').each(function() {
+    var $wrap = $(this);
+    var $metas = $wrap.find('.metas');
+    var $a = $wrap.find('>a.doc');
+    $a.popover({
+      trigger: 'hover',
+      content: $metas.html(),
+      placement: 'bottom',
+      html: true,
+      delay: {
+        show: 100,
+        hide: 500
+      }
+    });
+  });
+
   if ($.fn.tagsManager) {
     $("input.tm-input").each(function() {
       var input = $(this);
-      if (input.val() == "") input.val(input.closest('form').find('.prefill-notions').val());
+      if (input.val() === "") input.val(input.closest('form').find('.prefill-notions').val());
       var source = input.closest('form').find('.notions').val().split(',');
       input.tagsManager({
         prefilled: input.val(),
@@ -31,7 +47,7 @@ $(function() {
         typeaheadSource: source,
         typeaheadDelegate: {
           matcher: function(item) {
-            return item.toLowerCase().indexOf(this.query.toLowerCase()) == 0
+            return item.toLowerCase().indexOf(this.query.toLowerCase()) === 0;
           }
         },
         backspace: false

@@ -12,6 +12,7 @@ object Doc extends Controller with OptionalAuthElement with AuthConfigImpl {
 
   private lazy val env = Env.current
   def userRepo = env.userRepo
+  def lists = env.lists
 
   def search = StackAction { implicit req ⇒
     Async {
@@ -64,6 +65,16 @@ object Doc extends Controller with OptionalAuthElement with AuthConfigImpl {
         disciplines ← env.docRepo.disciplines
         docs ← env.docRepo.list
       } yield Ok(html.tableDiscipline(notions, disciplines, docs))
+    }
+  }
+
+  def tableProgressions = StackAction { implicit req ⇒
+    Async {
+      for {
+        notions ← env.docRepo.notions
+        niveaux = env.lists.progressionNiveaux
+        docs ← env.docRepo.list
+      } yield Ok(html.tableProgressions(notions, niveaux, docs))
     }
   }
 

@@ -16,6 +16,9 @@ case class Doc(
 
   def hasNotionAndDiscipline(n: String) =
     interdisciplinarite.nonEmpty && notion.contains(n)
+
+  def hasNotionAndNiveau(n: String) =
+    niveau.nonEmpty && notion.contains(n)
 }
 
 object Doc {

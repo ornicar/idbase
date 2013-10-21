@@ -15,6 +15,7 @@ POST    /notice/:id/supprimer       controllers.DocAdmin.delete(id: String)
 
 GET     /table/methode              controllers.Doc.tableMethode
 GET     /table/discipline           controllers.Doc.tableDiscipline
+GET     /table/progressions         controllers.Doc.tableProgressions
 
 GET     /connexion                  controllers.Application.login
 POST    /connexion                  controllers.Application.authenticate

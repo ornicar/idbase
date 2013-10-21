@@ -98,6 +98,20 @@ table.table-cross a.notice {
   display: inline-block;
 }
 
+.doc_wrap {
+  display: inline;
+}
+.doc_wrap > .metas {
+  display: none;
+}
+.doc_wrap > .doc {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(/assets/img/doc24.png) top left no-repeat;
+  text-decoration: none;
+}
+
 a.label-link:hover {
   text-decoration: none;
 }

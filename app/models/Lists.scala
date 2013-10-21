@@ -15,6 +15,9 @@ final class Lists(config: Config, val notions: List[String] = Nil) {
   val demarche = getList("demarche")
   val evaluation = getList("evaluation")
 
+  val progressionNiveauxExclus = getList("progressionNiveauxExclus ")
+  val progressionNiveaux = niveau filterNot (progressionNiveauxExclus contains _)
+
   def withNotions(ns: List[String]) = new Lists(config, notions = ns)
 
   private def getList(key: String) = config.getStringList(key).toList
