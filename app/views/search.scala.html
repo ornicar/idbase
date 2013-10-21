@@ -60,7 +60,9 @@
   @if(docs.size == 1) {
   Une notice trouvée :
   }
-  @if(docs.size > 1) {
+  @if(docs.size == nb) {
+  @nb notices indexées :
+  } else {
   @docs.size notices trouvées :
   }
   @docs.map { doc =>
