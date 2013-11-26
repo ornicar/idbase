@@ -59,11 +59,12 @@
   }
   @if(docs.size == 1) {
   Une notice trouvée :
-  }
+  } else {
   @if(docs.size == nb) {
   @nb notices indexées :
   } else {
   @docs.size notices trouvées :
+  }
   }
   @docs.map { doc =>
   <section class="doc-found">
