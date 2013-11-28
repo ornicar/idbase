@@ -1,6 +1,5 @@
 #!/bin/sh
 
-PLAY_VERSION="2.1.2"
 PROD_URL="http://idbase.esmeree.fr"
 JVM_OPTIONS="-Dhttp.port=9060 -Dscalac.patmat.analysisBudget=off"
 

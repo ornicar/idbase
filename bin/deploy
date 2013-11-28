@@ -8,7 +8,7 @@ log "Deploy to $REMOTE:$REMOTE_DIR"
 
 APP_NAME=idbase-1.0
 
-bin/play compile stage
+sbt stage
 if [ $? != 0 ]; then
   log "Deploy canceled"
   exit 1
@@ -32,7 +32,8 @@ RSYNC_OPTIONS=" \
   --exclude target/streams";
 
 log "Rsync scripts, binaries and assets"
-rsync_command="rsync $RSYNC_OPTIONS bin target public conf $REMOTE:$REMOTE_DIR"
+stage="target/universal/stage"
+rsync_command="rsync $RSYNC_OPTIONS bin $stage/bin $stage/lib public $REMOTE:$REMOTE_DIR"
 echo "$rsync_command"
 $rsync_command
 
