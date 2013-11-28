@@ -72,6 +72,7 @@
       <a href="@routes.Doc.show(doc.id)">@doc.meta.titre</a>
       <span class="muted">(@doc.annee)</span>
     </h2>
+    <small class="scenario">@Markdown(doc.meta.scenario)</small>
     <table class="table table-doc table-condensed">
       <tbody>
       @rowHtml(N.notion) {

@@ -59,6 +59,9 @@ table.table-doc th {
 table.table-doc tr:first-child th, table.table-doc tr:first-child td {
   border: none;
 }
+table.table-doc.table-condensed th {
+  font-weight: normal;
+}
 .doc-show h3 {
   font-size: 14px;
   line-height: inherit;
