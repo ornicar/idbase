@@ -33,7 +33,7 @@ private[idbase] final class DocRepo(db: DB, val collName: String) {
     distinctProjection("interdisciplinarite")
 
   private def distinctProjection(field: String): Future[List[String]] =
-    coll.find(Json.obj(), Json.obj(field -> true)).cursor[JsValue].toList map { res ⇒
+    coll.find(Json.obj(), Json.obj(field -> true)).cursor[JsValue].collect[List]() map { res ⇒
       (res collect {
         case JsObject(fields) ⇒ (fields collect {
           case (field, v) ⇒ v.asOpt[List[String]]
@@ -58,7 +58,7 @@ private[idbase] final class DocRepo(db: DB, val collName: String) {
   def list: Future[List[Doc]] = find(Json.obj())
 
   def find(query: JsObject): Future[List[Doc]] =
-    coll.find(query).sort(Json.obj("$natural" -> -1)).cursor[Doc].toList
+    coll.find(query).sort(Json.obj("$natural" -> -1)).cursor[Doc].collect[List]()
 }
 
 object DocRepo {

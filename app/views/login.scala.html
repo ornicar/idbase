@@ -1,4 +1,4 @@
-@(form: Form[_])(implicit flash: Flash, lang: Lang, user: Option[User])
+@(form: Form[_])(implicit flash: Flash, lang: Lang)
 
 @main("Connexion", "login") {
 
@@ -27,4 +27,4 @@
 
 </div>
 }
-}
+}(None)

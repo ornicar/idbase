@@ -8,6 +8,7 @@ import play.api.mvc.Results._
 import play.api.Play._
 import play.api.templates._
 import reflect.{ classTag, ClassTag }
+import scala.concurrent.{ Future, ExecutionContext }
 import views._
 
 trait AuthConfigImpl extends AuthConfig {
@@ -24,34 +25,39 @@ trait AuthConfigImpl extends AuthConfig {
 
   val sessionTimeoutInSeconds: Int = 36000000
 
-  def resolveUser(id: Id): Option[User] = userRepo find id
+  def resolveUser(id: Id)(implicit ctx: ExecutionContext): Future[Option[User]] = 
+    Future successful (userRepo find id)
 
   /**
    * Where to redirect the user after logging out
    */
-  def logoutSucceeded(request: RequestHeader): Result = Redirect(routes.Doc.search)
+  def logoutSucceeded(request: RequestHeader)(implicit ctx: ExecutionContext): Future[SimpleResult] =
+    Future successful Redirect(routes.Doc.search)
 
-  def authenticationFailed(request: RequestHeader): Result =
-    Redirect(routes.Application.login).withSession("access_uri" -> request.uri)
+  def authenticationFailed(request: RequestHeader)(implicit ctx: ExecutionContext): Future[SimpleResult] =
+    Future successful Redirect(routes.Application.login).withSession("access_uri" -> request.uri)
 
-  def loginSucceeded(request: RequestHeader): Result = {
+  def loginSucceeded(request: RequestHeader)(implicit ctx: ExecutionContext): Future[SimpleResult] = {
     val uri = request.session.get("access_uri").getOrElse(routes.Doc.search.url.toString)
-    Redirect(uri).withSession(request.session - "access_uri").flashing(
+    Future successful Redirect(uri).withSession(request.session - "access_uri").flashing(
       "success" -> "Connexion réussie"
     )
   }
 
-  def authorizationFailed(request: RequestHeader): Result = Forbidden("no permission")
+  def authorizationFailed(request: RequestHeader)(implicit ctx: ExecutionContext): Future[SimpleResult] =
+    Future successful Forbidden("no permission")
 
   /**
    * A function that determines what `Authority` a user has.
    * You should alter this procedure to suit your application.
    */
-  def authorize(user: User, authority: Authority): Boolean =
-    (user.permission, authority) match {
-      case (Administrator, _)       ⇒ true
-      case (NormalUser, NormalUser) ⇒ true
-      case _                        ⇒ false
+  def authorize(user: User, authority: Authority)(implicit ctx: ExecutionContext): Future[Boolean] =
+    Future successful {
+      (user.permission, authority) match {
+        case (Administrator, _)       ⇒ true
+        case (NormalUser, NormalUser) ⇒ true
+        case _                        ⇒ false
+      }
     }
 
   override lazy val cookieName: String = "IDBASE"

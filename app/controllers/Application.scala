@@ -1,14 +1,16 @@
 package controllers
 
+import idbase._, models._
 import jp.t2v.lab.play2.auth._
 import jp.t2v.lab.play2.stackc.{ RequestWithAttributes, RequestAttributeKey, StackableController }
-import idbase._, models._
 import play.api.data._
 import play.api.data.Forms._
+import play.api.libs.concurrent.Execution.Implicits._
 import play.api.mvc._
 import play.api.mvc.Results._
 import play.api.Play._
 import play.api.templates._
+import scala.concurrent.Future
 import views._
 
 object Application extends Controller with LoginLogout with OptionalAuthElement with AuthConfigImpl {
@@ -17,7 +19,7 @@ object Application extends Controller with LoginLogout with OptionalAuthElement 
 
   def userRepo = env.userRepo
 
-  def about = StackAction { implicit req =>
+  def about = StackAction { implicit req ⇒
     Ok(html.about(env.aboutText))
   }
 
@@ -42,20 +44,13 @@ object Application extends Controller with LoginLogout with OptionalAuthElement 
    *     "success" -> "You've been logged out"
    *   )
    */
-  def logout = Action { implicit request ⇒
-    // do something...
+  def logout = Action.async { implicit request ⇒
     gotoLogoutSucceeded
   }
 
-  /**
-   * Return the `gotoLoginSucceeded` method's result in the login action.
-   *
-   * Since the `gotoLoginSucceeded` returns `Result`,
-   * If you import `jp.t2v.lab.play2.auth._`, you can add a procedure like the `gotoLogoutSucceeded`.
-   */
-  def authenticate = StackAction { implicit request ⇒
+  def authenticate = Action.async { implicit request ⇒
     loginForm.bindFromRequest.fold(
-      formWithErrors ⇒ BadRequest(html.login(formWithErrors)),
+      formWithErrors ⇒ Future successful BadRequest(html.login(formWithErrors)),
       user ⇒ gotoLoginSucceeded(user.get.name)
     )
   }
