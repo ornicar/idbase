@@ -1,7 +1,0 @@
-Base de données et moteur de recherche de fiches pédagogiques
-=============================================================
-
-Simple application providing advanced search over a database.
-Main language is french.
-
-Uses Play 2.1, mongodb, and bootstrap.
