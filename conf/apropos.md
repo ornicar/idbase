@@ -1,6 +1,6 @@
-##Base de séquences pédagogiques en Information-Documentation
+##Base d'analyses de séquences pédagogiques en Information-Documentation
 
-
+par Pascal Duplessis
 
 ###Le projet ID Base
 	
