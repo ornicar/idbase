@@ -44,6 +44,9 @@
           <li class="@{"active".when(page == "about")}">
           <a href="@routes.Application.about">À propos</a>
           </li>
+          <li class="@{"active".when(page == "tools")}">
+          <a href="@routes.Application.tools">Outils</a>
+          </li>
         </ul>
         @user.map { u =>
         <ul class="nav pull-right">
@@ -72,7 +75,7 @@
 <footer class="footer">
   <div class="container">
     <p><a href="@routes.Doc.rss"><i class="icon-signal"></i> Flux RSS</a>
-    <p>ID Base - © 2013 Pascal Duplessis - 
+    <p>ID Base - © 2013 Pascal Duplessis -
     <a href="mailto:pascalDuplessis@@aol.com">pascalDuplessis@@aol.com</a>
     </p>
     <p>

@@ -28,6 +28,12 @@ final class Env(config: Config)(implicit app: Application) {
     val src = scala.io.Source fromFile file
     src.getLines mkString "\n"
   }
+
+  lazy val toolsText = {
+    val file = play.api.Play.getFile("conf/outils.md")
+    val src = scala.io.Source fromFile file
+    src.getLines mkString "\n"
+  }
 }
 
 object Env {
