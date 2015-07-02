@@ -12,7 +12,7 @@ object ApplicationBuild extends Build {
     "org.reactivemongo" %% "play2-reactivemongo" % "0.10.2",
     "org.pegdown" % "pegdown" % "1.4.2",
     "jp.t2v" %% "play2-auth" % "0.11.0",
-    "ssu" %% "ssu" % "0.1-SNAPSHOT"
+    "default" % "ssu_2.10" % "0.1-SNAPSHOT"
   )
 
   val main = play.Project(appName, appVersion, appDependencies).settings(
@@ -25,7 +25,7 @@ object ApplicationBuild extends Build {
     scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature", "-language:_"),
     templatesImport ++= Seq(
       "idbase.models._")
-  // Add your own project settings here      
+  // Add your own project settings here
   )
 
 }

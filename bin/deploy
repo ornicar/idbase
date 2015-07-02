@@ -1,7 +1,7 @@
 #!/bin/sh
 . bin/idbaserc
 
-REMOTE="paul"
+REMOTE="cammy"
 REMOTE_DIR="/home/idbase"
 
 log "Deploy to $REMOTE:$REMOTE_DIR"
@@ -38,7 +38,7 @@ echo "$rsync_command"
 $rsync_command
 
 log "Restart idbase"
-ssh $REMOTE "service idbase restart"
+ssh $REMOTE "chown -R idbase $REMOTE_DIR && service idbase restart"
 
 log "Deploy complete"
 

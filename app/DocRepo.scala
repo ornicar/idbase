@@ -16,11 +16,8 @@ private[idbase] final class DocRepo(db: DB, val collName: String) {
   private val coll: JSONCollection = db.collection[JSONCollection](collName)
 
   def search(terms: String, filter: JsObject): Future[List[Doc]] = {
-    val command = Mongodb.Text(
-      collectionName = collName,
-      terms = terms,
-      filter = filter)
-    db.command(command)
+    coll.find(filter ++ Json.obj("$text" -> Json.obj("$search" -> terms)))
+      .cursor[Doc].collect[List]()
   }
 
   def notions: Future[List[String]] =
