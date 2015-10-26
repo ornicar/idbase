@@ -69,7 +69,7 @@
   @docs.map { doc =>
   <section class="doc-found">
     <h2>
-      <a href="@routes.Doc.show(doc.id)">@doc.meta.titre</a>
+      <a href="@routes.Doc.showSlug(doc.id, doc.slug)">@doc.meta.titre</a>
       <span class="muted">(@doc.annee)</span>
     </h2>
     <small class="scenario">@Markdown(doc.meta.scenario)</small>

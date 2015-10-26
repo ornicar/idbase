@@ -1,6 +1,7 @@
 package idbase
 
 import controllers.routes
+import java.text.Normalizer
 import java.util.Calendar
 
 import play.api.templates.Html
@@ -8,6 +9,13 @@ import play.api.templates.Html
 object Helper {
 
   val version = 18
+
+  def slugify(input: String) = {
+    val nowhitespace = input.trim.replace(" ", "-")
+    val normalized = Normalizer.normalize(nowhitespace, Normalizer.Form.NFD)
+    val slug = """[^\w-]""".r.replaceAllIn(normalized, "")
+    """\s{2,}""".r.replaceAllIn(slug.toLowerCase.replace("-", " ").trim, " ").replace(" ", "-")
+  }
 
   def selectable(seq: Seq[_]): Seq[(String, String)] = {
     val x = seq.map(_.toString)

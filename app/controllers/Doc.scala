@@ -40,8 +40,16 @@ object Doc extends Controller with OptionalAuthElement with AuthConfigImpl {
 
   def show(id: String) = AsyncStack { implicit req ⇒
     env.docRepo byId id map {
-      case Some(doc) ⇒ Ok(html.show(doc))
+      case Some(doc) ⇒ Redirect(routes.Doc.showSlug(doc.id, doc.slug))
       case None      ⇒ NotFound
+    }
+  }
+
+  def showSlug(id: String, slug: String) = AsyncStack { implicit req ⇒
+    env.docRepo byId id map {
+      case Some(doc) if doc.slug == slug ⇒ Ok(html.show(doc))
+      case Some(doc)                     => Redirect(routes.Doc.showSlug(doc.id, doc.slug))
+      case None                          ⇒ NotFound
     }
   }
 
@@ -82,7 +90,7 @@ object Doc extends Controller with OptionalAuthElement with AuthConfigImpl {
               doc.notion mkString ", ",
               doc.methodePedagogique mkString ", ",
               Helper.Markdown(doc.meta.scenario).body),
-              new URL(baseUrl + routes.Doc.show(doc.id)), authorEmail)
+              new URL(baseUrl + routes.Doc.showSlug(doc.id, doc.slug)), authorEmail)
         }
         (RssFeed("ID Base", new URL(baseUrl), "Fiches pédagogiques à l'usage des professeurs documentalistes")
           withWebMaster authorEmail

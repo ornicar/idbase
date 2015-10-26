@@ -19,6 +19,8 @@ case class Doc(
 
   def hasNotionAndNiveau(n: String) =
     niveau.nonEmpty && notion.contains(n)
+
+  def slug = Helper slugify meta.titre
 }
 
 object Doc {

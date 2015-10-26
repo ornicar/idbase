@@ -25,7 +25,7 @@
       <td>
         @docs.filter(d => d.notion.contains(notion) && d.niveau.contains(niveau)).distinct.map { doc =>
         <div class="doc_wrap">
-          <a class="doc" title="@doc.meta.titre" href="@routes.Doc.show(doc.id)"></a>
+          <a class="doc" title="@doc.meta.titre" href="@routes.Doc.showSlug(doc.id, doc.slug)"></a>
           <div class="metas">
             <p>@N.methodePedagogique: @Link(doc.methodePedagogique, Link.methodePedagogique, sep = " ")</p>
             @if(doc.interdisciplinarite.nonEmpty) {

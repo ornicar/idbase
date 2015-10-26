@@ -26,7 +26,7 @@ object DocAdmin extends Controller with AuthElement with AuthConfigImpl {
         BadRequest(html.newForm(err, env.lists withNotions notions))
       },
       setup ⇒ env.docRepo insert setup.toDoc(None) map { doc ⇒
-        Redirect(routes.Doc.show(doc.id)).flashing(
+        Redirect(routes.Doc.showSlug(doc.id, doc.slug)).flashing(
           "success" -> "La notice a été ajoutée"
         )
       }
@@ -53,7 +53,7 @@ object DocAdmin extends Controller with AuthElement with AuthConfigImpl {
             BadRequest(html.editForm(doc, err, env.lists withNotions notions))
           },
           setup ⇒ env.docRepo update setup.toDoc(Some(doc)) map { doc2 ⇒
-            Redirect(routes.Doc.show(doc2.id)).flashing(
+            Redirect(routes.Doc.showSlug(doc2.id, doc2.slug)).flashing(
               "success" -> "La notice a été modifiée"
             )
           }

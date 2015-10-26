@@ -7,6 +7,7 @@ GET     /ajouter                    controllers.DocAdmin.newForm
 POST    /ajouter                    controllers.DocAdmin.create
 
 GET     /notice/:id                 controllers.Doc.show(id: String)
+GET     /notice/:id/:slug           controllers.Doc.showSlug(id: String, slug: String)
 
 GET     /notice/:id/modifier        controllers.DocAdmin.editForm(id: String)
 POST    /notice/:id/modifier        controllers.DocAdmin.update(id: String)
