@@ -15,7 +15,7 @@ final class Search(repo: DocRepo) {
     and: Boolean,
     multi: Boolean)
 
-  def apply(setup: Setup): Future[List[Doc]] = {
+  def apply(setup: Setup, mod: Boolean): Future[List[Doc]] = {
     val parts = List(
       Field("notion", setup.notion, false, true),
       Field("niveau", setup.niveau, false, true),
@@ -29,8 +29,8 @@ final class Search(repo: DocRepo) {
           Json.obj(key -> Json.obj("$in" -> values))
       }
     val req = parts.foldLeft(Json.obj())(_ ++ _)
-    setup.texte.fold(repo find req) { texte ⇒
-      repo.search(texte, req)
+    setup.texte.fold(repo.find(req, mod)) { texte ⇒
+      repo.search(texte, req, mod)
     }
   }
 

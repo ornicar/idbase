@@ -16,20 +16,21 @@ object Doc extends Controller with OptionalAuthElement with AuthConfigImpl {
   private lazy val env = Env.current
   def userRepo = env.userRepo
   def lists = env.lists
+  def mod(implicit req: RequestWithAttributes[_]) = loggedIn.isDefined
 
   def search = AsyncStack { implicit req ⇒
     for {
-      notions ← env.docRepo.notions
-      nb ← env.docRepo.count
+      notions ← env.docRepo.notions(mod)
+      nb ← env.docRepo.count(mod)
       res ← env.search.form.bindFromRequest.fold(
-        err ⇒ env.docRepo.list map { docs ⇒
+        err ⇒ env.docRepo.list(mod) map { docs ⇒
           BadRequest(html.search(
             form = err,
             lists = env.lists withNotions notions,
             nb = nb,
             docs = docs))
         },
-        setup ⇒ env.search(setup) map { docs ⇒
+        setup ⇒ env.search(setup, mod) map { docs ⇒
           Ok(html.search(
             form = env.search.form fill setup,
             lists = env.lists withNotions notions,
@@ -41,41 +42,41 @@ object Doc extends Controller with OptionalAuthElement with AuthConfigImpl {
   }
 
   def show(id: String) = AsyncStack { implicit req ⇒
-    env.docRepo byId id map {
+    env.docRepo.byId(id, mod) map {
       case Some(doc) ⇒ Redirect(routes.Doc.showSlug(doc.id, doc.slug))
       case None      ⇒ NotFound
     }
   }
 
   def showSlug(id: String, slug: String) = AsyncStack { implicit req ⇒
-    env.docRepo byId id map {
+    env.docRepo.byId(id, mod) map {
       case Some(doc) if doc.slug == slug ⇒ Ok(html.show(doc))
       case Some(doc)                     => Redirect(routes.Doc.showSlug(doc.id, doc.slug))
-      case None                          ⇒ NotFound
+      case None                          ⇒ NotFound(html.notFound())
     }
   }
 
   def tableMethode = AsyncStack { implicit req ⇒
     for {
-      notions ← env.docRepo.notions
-      methodes ← env.docRepo.methodePedagogiques
-      docs ← env.docRepo.list
+      notions ← env.docRepo.notions(mod)
+      methodes ← env.docRepo.methodePedagogiques(mod)
+      docs ← env.docRepo.list(mod)
     } yield Ok(html.tableMethode(notions, methodes, docs))
   }
 
   def tableDiscipline = AsyncStack { implicit req ⇒
     for {
-      notions ← env.docRepo.notions
-      disciplines ← env.docRepo.disciplines
-      docs ← env.docRepo.list
+      notions ← env.docRepo.notions(mod)
+      disciplines ← env.docRepo.disciplines(mod)
+      docs ← env.docRepo.list(mod)
     } yield Ok(html.tableDiscipline(notions, disciplines, docs))
   }
 
   def tableProgressions = AsyncStack { implicit req ⇒
     for {
-      notions ← env.docRepo.notions
+      notions ← env.docRepo.notions(mod)
       niveaux = env.lists.progressionNiveaux
-      docs ← env.docRepo.list
+      docs ← env.docRepo.list(mod)
     } yield Ok(html.tableProgressions(notions, niveaux, docs))
   }
 
@@ -84,7 +85,7 @@ object Doc extends Controller with OptionalAuthElement with AuthConfigImpl {
     import com.tlorrain.ssu.rss._
     val baseUrl = "http://idbase.esmeree.fr/"
     val authorEmail = "pascalDuplessis@aol.com"
-    env.docRepo.list map { docs ⇒
+    env.docRepo.list(false) map { docs ⇒
       Ok {
         val items = docs map { doc ⇒
           (doc.meta.titre,

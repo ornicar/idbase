@@ -12,7 +12,8 @@ case class Doc(
     dispositifEducatif: Option[Markdown],
     source: String,
     production: Option[Markdown],
-    meta: Meta) {
+    meta: Meta,
+    public: Boolean) {
 
   def hasNotionAndDiscipline(n: String) =
     interdisciplinarite.nonEmpty && notion.contains(n)

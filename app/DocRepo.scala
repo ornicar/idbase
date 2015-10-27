@@ -16,22 +16,26 @@ private[idbase] final class DocRepo(db: DB, val collName: String) {
 
   private val coll: JSONCollection = db.collection[JSONCollection](collName)
 
-  def search(terms: String, filter: JsObject): Future[List[Doc]] = {
-    coll.find(filter ++ Json.obj("$text" -> Json.obj("$search" -> terms)))
-      .cursor[Doc]().collect[List]()
+  private def selectMod(mod: Boolean) =
+    if (mod) Json.obj() else Json.obj("public" -> true)
+
+  def search(terms: String, filter: JsObject, mod: Boolean): Future[List[Doc]] = {
+    coll.find(filter ++ selectMod(mod) ++ Json.obj(
+      "$text" -> Json.obj("$search" -> terms)
+    )).cursor[Doc]().collect[List]()
   }
 
-  def notions: Future[List[String]] =
-    distinctProjection("notion")
+  def notions(mod: Boolean): Future[List[String]] =
+    distinctProjection("notion", mod)
 
-  def methodePedagogiques: Future[List[String]] =
-    distinctProjection("methodePedagogique")
+  def methodePedagogiques(mod: Boolean): Future[List[String]] =
+    distinctProjection("methodePedagogique", mod)
 
-  def disciplines: Future[List[String]] =
-    distinctProjection("interdisciplinarite")
+  def disciplines(mod: Boolean): Future[List[String]] =
+    distinctProjection("interdisciplinarite", mod)
 
-  private def distinctProjection(field: String): Future[List[String]] =
-    coll.find(Json.obj(), Json.obj("_id" -> false, field -> true)).cursor[JsValue]().collect[List]() map { res ⇒
+  private def distinctProjection(field: String, mod: Boolean): Future[List[String]] =
+    coll.find(selectMod(mod), Json.obj("_id" -> false, field -> true)).cursor[JsValue]().collect[List]() map { res ⇒
       (res collect {
         case JsObject(fields) ⇒ (fields collect {
           case (field, v) ⇒ v.asOpt[List[String]]
@@ -39,7 +43,7 @@ private[idbase] final class DocRepo(db: DB, val collName: String) {
       }).flatten.flatten.distinct.sorted
     }
 
-  def count: Future[Int] = db.command(Count(collName))
+  def count(mod: Boolean): Future[Int] = coll count Some(selectMod(mod))
 
   def insert(doc: Doc): Future[Doc] =
     coll insert doc map (_ ⇒ doc)
@@ -50,13 +54,13 @@ private[idbase] final class DocRepo(db: DB, val collName: String) {
   def delete(doc: Doc): Future[Unit] =
     coll.remove(Json.obj("_id" -> doc.id)) map (_ ⇒ ())
 
-  def byId(id: String): Future[Option[Doc]] =
-    coll.find(Json.obj("_id" -> id)).one[Doc]
+  def byId(id: String, mod: Boolean): Future[Option[Doc]] =
+    coll.find(Json.obj("_id" -> id) ++ selectMod(mod)).one[Doc]
 
-  def list: Future[List[Doc]] = find(Json.obj())
+  def list(mod: Boolean): Future[List[Doc]] = find(Json.obj(), mod)
 
-  def find(query: JsObject): Future[List[Doc]] =
-    coll.find(query).sort(Json.obj("$natural" -> -1)).cursor[Doc]().collect[List]()
+  def find(query: JsObject, mod: Boolean): Future[List[Doc]] =
+    coll.find(query ++ selectMod(mod)).sort(Json.obj("$natural" -> -1)).cursor[Doc]().collect[List]()
 }
 
 object DocRepo {

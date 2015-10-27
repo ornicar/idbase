@@ -24,6 +24,7 @@ object Forms {
       "dispositifEducatif" -> optional(nonEmptyText),
       "source" -> nonEmptyText,
       "production" -> optional(nonEmptyText),
+      "public" -> boolean,
       "meta" -> metaMapping
     )(DocSetup.apply _)(DocSetup.unapply _))
 
@@ -60,6 +61,7 @@ object Forms {
       dispositifEducatif: Option[Markdown],
       source: String,
       production: Option[Markdown],
+      public: Boolean,
       meta: MetaSetup) {
 
     def toDoc(doc: Option[Doc]) = Doc(
@@ -73,21 +75,23 @@ object Forms {
       dispositifEducatif = dispositifEducatif,
       source = source,
       production = production,
+      public = public,
       meta = meta.toMeta)
   }
 
   def DocToSetup(doc: Doc) = DocSetup(
-      notion = doc.notion mkString ",",
-      `hidden-notion` = "",
-      niveau = doc.niveau,
-      methodePedagogique = doc.methodePedagogique,
-      annee = doc.annee,
-      interdisciplinarite = doc.interdisciplinarite,
-      dispositifPedagogique = doc.dispositifPedagogique,
-      dispositifEducatif = doc.dispositifEducatif,
-      source = doc.source,
-      production = doc.production,
-      meta = MetaToSetup(doc.meta))
+    notion = doc.notion mkString ",",
+    `hidden-notion` = "",
+    niveau = doc.niveau,
+    methodePedagogique = doc.methodePedagogique,
+    annee = doc.annee,
+    interdisciplinarite = doc.interdisciplinarite,
+    dispositifPedagogique = doc.dispositifPedagogique,
+    dispositifEducatif = doc.dispositifEducatif,
+    source = doc.source,
+    production = doc.production,
+    public = doc.public,
+    meta = MetaToSetup(doc.meta))
 
   case class MetaSetup(
       titre: String,
@@ -133,23 +137,23 @@ object Forms {
   }
 
   def MetaToSetup(meta: Meta) = MetaSetup(
-      titre = meta.titre,
-      reference = meta.reference,
-      url = meta.url,
-      scenario = meta.scenario,
-      objectifT1 = meta.objectifT1,
-      objectifT2 = meta.objectifT2,
-      objectifT3 = meta.objectifT3,
-      demarche = meta.demarche,
-      deroulement = meta.deroulement,
-      tache = meta.tache,
-      materiau = meta.materiau,
-      evaluation = meta.evaluation,
-      outilEvaluation = meta.outilEvaluation,
-      outilDidactique = meta.outilDidactique,
-      ficheEleve = meta.ficheEleve,
-      duree = meta.duree,
-      commentaire = meta.commentaire,
-      retour = meta.retour,
-      ressource = meta.ressource)
+    titre = meta.titre,
+    reference = meta.reference,
+    url = meta.url,
+    scenario = meta.scenario,
+    objectifT1 = meta.objectifT1,
+    objectifT2 = meta.objectifT2,
+    objectifT3 = meta.objectifT3,
+    demarche = meta.demarche,
+    deroulement = meta.deroulement,
+    tache = meta.tache,
+    materiau = meta.materiau,
+    evaluation = meta.evaluation,
+    outilEvaluation = meta.outilEvaluation,
+    outilDidactique = meta.outilDidactique,
+    ficheEleve = meta.ficheEleve,
+    duree = meta.duree,
+    commentaire = meta.commentaire,
+    retour = meta.retour,
+    ressource = meta.ressource)
 }
