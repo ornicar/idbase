@@ -63,7 +63,7 @@
 
 <textarea class="notions" style="display:none">@Html(lists.notions.mkString(","))</textarea>
 <textarea class="prefill-notions" style="display:none">@form("hidden-notion").value</textarea>
-@inputText(form("notion"), 
+@inputText(form("notion"),
 '_label -> N.notion,
 '_help -> "Requis",
 'autocomplete -> "off",
@@ -156,7 +156,8 @@
 
 @textarea(form("meta")("retour"),
 '_label -> N.retour,
-'class -> "input-wide markdown-long")
+'class -> "input-wide markdown-long",
+'_help -> "")
 }
 
 @group(N.ressource) {
