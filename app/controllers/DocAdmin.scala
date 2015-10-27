@@ -5,6 +5,8 @@ import jp.t2v.lab.play2.stackc.{ RequestWithAttributes, RequestAttributeKey, Sta
 import play.api._, mvc._
 import play.api.libs.concurrent.Execution.Implicits._
 import scala.concurrent.Future
+import play.api.Play.current
+import play.api.i18n.Messages.Implicits._
 
 import idbase._, models._
 import views._

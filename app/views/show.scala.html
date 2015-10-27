@@ -73,8 +73,10 @@
   @row(N.ficheEleve, Markdown(o))
   }
   }
+  @doc.meta.retour.map { r =>
   @group(N.commentaire) {
-  @Markdown(doc.meta.commentaire)
+  @Markdown(r)
+  }
   }
   @doc.meta.ressource.map { o =>
   @group(N.ressource) {

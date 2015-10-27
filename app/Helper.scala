@@ -4,7 +4,7 @@ import controllers.routes
 import java.text.Normalizer
 import java.util.Calendar
 
-import play.api.templates.Html
+import play.twirl.api.Html
 
 object Helper {
 

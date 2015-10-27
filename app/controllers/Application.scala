@@ -5,6 +5,7 @@ import jp.t2v.lab.play2.auth._
 import jp.t2v.lab.play2.stackc.{ RequestWithAttributes, RequestAttributeKey, StackableController }
 import play.api.data._
 import play.api.data.Forms._
+import play.api.i18n.Messages.Implicits._
 import play.api.libs.concurrent.Execution.Implicits._
 import play.api.mvc._
 import play.api.mvc.Results._

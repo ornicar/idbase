@@ -6,7 +6,7 @@ import jp.t2v.lab.play2.stackc.{ RequestWithAttributes, RequestAttributeKey, Sta
 import play.api.mvc._
 import play.api.mvc.Results._
 import play.api.Play._
-import play.api.templates._
+import play.twirl.api._
 import reflect.{ classTag, ClassTag }
 import scala.concurrent.{ Future, ExecutionContext }
 import views._
@@ -25,27 +25,28 @@ trait AuthConfigImpl extends AuthConfig {
 
   val sessionTimeoutInSeconds: Int = 36000000
 
-  def resolveUser(id: Id)(implicit ctx: ExecutionContext): Future[Option[User]] = 
+  def resolveUser(id: Id)(implicit ctx: ExecutionContext): Future[Option[User]] =
     Future successful (userRepo find id)
 
   /**
    * Where to redirect the user after logging out
    */
-  def logoutSucceeded(request: RequestHeader)(implicit ctx: ExecutionContext): Future[SimpleResult] =
+  def logoutSucceeded(request: RequestHeader)(implicit ctx: ExecutionContext): Future[Result] =
     Future successful Redirect(routes.Doc.search)
 
-  def authenticationFailed(request: RequestHeader)(implicit ctx: ExecutionContext): Future[SimpleResult] =
+  def authenticationFailed(request: RequestHeader)(implicit ctx: ExecutionContext): Future[Result] =
     Future successful Redirect(routes.Application.login).withSession("access_uri" -> request.uri)
 
-  def loginSucceeded(request: RequestHeader)(implicit ctx: ExecutionContext): Future[SimpleResult] = {
+  def loginSucceeded(request: RequestHeader)(implicit ctx: ExecutionContext): Future[Result] = {
     val uri = request.session.get("access_uri").getOrElse(routes.Doc.search.url.toString)
     Future successful Redirect(uri).withSession(request.session - "access_uri").flashing(
       "success" -> "Connexion réussie"
     )
   }
 
-  def authorizationFailed(request: RequestHeader)(implicit ctx: ExecutionContext): Future[SimpleResult] =
-    Future successful Forbidden("no permission")
+  override def authorizationFailed(request: RequestHeader, user: User, authority: Option[Authority])(implicit context: ExecutionContext): Future[Result] = {
+    Future.successful(Forbidden("no permission"))
+  }
 
   /**
    * A function that determines what `Authority` a user has.
@@ -59,8 +60,4 @@ trait AuthConfigImpl extends AuthConfig {
         case _                        ⇒ false
       }
     }
-
-  override lazy val cookieName: String = "IDBASE"
-
-  override lazy val cookieSecureOption: Boolean = false
 }

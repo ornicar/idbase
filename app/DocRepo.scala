@@ -4,6 +4,7 @@ import models._
 import play.api.libs.concurrent.Execution.Implicits._
 import play.api.libs.json._
 import play.modules.reactivemongo._
+import play.modules.reactivemongo.json._
 import play.modules.reactivemongo.json.collection.JSONCollection
 import reactivemongo.api._
 import reactivemongo.core.commands.Count
@@ -17,7 +18,7 @@ private[idbase] final class DocRepo(db: DB, val collName: String) {
 
   def search(terms: String, filter: JsObject): Future[List[Doc]] = {
     coll.find(filter ++ Json.obj("$text" -> Json.obj("$search" -> terms)))
-      .cursor[Doc].collect[List]()
+      .cursor[Doc]().collect[List]()
   }
 
   def notions: Future[List[String]] =
@@ -30,7 +31,7 @@ private[idbase] final class DocRepo(db: DB, val collName: String) {
     distinctProjection("interdisciplinarite")
 
   private def distinctProjection(field: String): Future[List[String]] =
-    coll.find(Json.obj(), Json.obj("_id" -> false, field -> true)).cursor[JsValue].collect[List]() map { res ⇒
+    coll.find(Json.obj(), Json.obj("_id" -> false, field -> true)).cursor[JsValue]().collect[List]() map { res ⇒
       (res collect {
         case JsObject(fields) ⇒ (fields collect {
           case (field, v) ⇒ v.asOpt[List[String]]
@@ -55,7 +56,7 @@ private[idbase] final class DocRepo(db: DB, val collName: String) {
   def list: Future[List[Doc]] = find(Json.obj())
 
   def find(query: JsObject): Future[List[Doc]] =
-    coll.find(query).sort(Json.obj("$natural" -> -1)).cursor[Doc].collect[List]()
+    coll.find(query).sort(Json.obj("$natural" -> -1)).cursor[Doc]().collect[List]()
 }
 
 object DocRepo {

@@ -1,4 +1,4 @@
-@(form: Form[_], lists: Lists)(implicit lang: Lang)
+@(form: Form[_], lists: Lists)(implicit lang: Lang, messages: Messages)
 
 @import idbase.Helper._
 @import idbase.{ Names => N }
@@ -149,6 +149,13 @@
 
 @textarea(form("meta")("commentaire"),
 '_label -> N.commentaire,
+'class -> "input-wide markdown-long")
+}
+
+@group(N.retour) {
+
+@textarea(form("meta")("retour"),
+'_label -> N.retour,
 'class -> "input-wide markdown-long")
 }
 

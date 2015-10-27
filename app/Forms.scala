@@ -45,6 +45,7 @@ object Forms {
     "ficheEleve" -> optional(nonEmptyText),
     "duree" -> nonEmptyText,
     "commentaire" -> nonEmptyText,
+    "retour" -> optional(nonEmptyText),
     "ressource" -> optional(nonEmptyText)
   )(MetaSetup.apply _)(MetaSetup.unapply _)
 
@@ -106,6 +107,7 @@ object Forms {
       ficheEleve: Option[Markdown],
       duree: String,
       commentaire: Markdown,
+      retour: Option[Markdown],
       ressource: Option[Markdown]) {
 
     def toMeta = Meta(
@@ -126,6 +128,7 @@ object Forms {
       ficheEleve = ficheEleve,
       duree = duree,
       commentaire = commentaire,
+      retour = retour,
       ressource = ressource)
   }
 
@@ -147,5 +150,6 @@ object Forms {
       ficheEleve = meta.ficheEleve,
       duree = meta.duree,
       commentaire = meta.commentaire,
+      retour = meta.retour,
       ressource = meta.ressource)
 }

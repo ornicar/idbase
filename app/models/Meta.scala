@@ -19,6 +19,7 @@ case class Meta(
     ficheEleve: Option[Markdown],
     duree: String,
     commentaire: Markdown,
+    retour: Option[Markdown],
     ressource: Option[Markdown]) {
 }
 

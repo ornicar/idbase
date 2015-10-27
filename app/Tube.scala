@@ -75,7 +75,7 @@ object Tube {
     ) andThen (__ \ from).json.prune
 
     def readDate(field: Symbol) =
-      (__ \ field).json.update(of[JsObject] map (_ \ "$date"))
+      (__ \ field).json.update(of[JsObject].map(o => o.\("$date").toOption.get))
 
     def readDateOpt(field: Symbol) = readDate(field) orElse json.reader
 
