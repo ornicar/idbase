@@ -60,4 +60,9 @@ trait AuthConfigImpl extends AuthConfig {
         case _                        ⇒ false
       }
     }
+
+  override lazy val tokenAccessor = new CookieTokenAccessor(
+    cookieSecureOption = false,
+    cookieMaxAge = Some(sessionTimeoutInSeconds)
+  )
 }

@@ -1,0 +1,9 @@
+@(text: String)(implicit user: Option[User])
+
+@import idbase.Helper._
+
+@main("Outils", "tools") {
+<div class="container">
+  @Markdown(text)
+</div>
+}

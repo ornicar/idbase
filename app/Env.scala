@@ -3,7 +3,6 @@ package idbase
 import com.typesafe.config.Config
 import play.api.{ Application, Play }
 import play.modules.reactivemongo.json.collection.JSONCollection
-import play.modules.reactivemongo.ReactiveMongoPlugin
 import reactivemongo.api._
 import scala.collection.JavaConversions._
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -36,8 +35,8 @@ final class Env(config: Config)(implicit app: Application) {
     }
   }
 
-  private def lifecycle = 
-    Play.maybeApplication map { 
+  private def lifecycle =
+    Play.maybeApplication map {
       _.injector.instanceOf[play.api.inject.ApplicationLifecycle]
     } getOrElse sys.error("Play application is not started!")
 
@@ -53,6 +52,12 @@ final class Env(config: Config)(implicit app: Application) {
 
   lazy val aboutText = {
     val file = play.api.Play.getFile("conf/apropos.md")
+    val src = scala.io.Source fromFile file
+    src.getLines mkString "\n"
+  }
+
+  lazy val toolsText = {
+    val file = play.api.Play.getFile("conf/outils.md")
     val src = scala.io.Source fromFile file
     src.getLines mkString "\n"
   }

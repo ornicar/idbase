@@ -41,6 +41,9 @@
           <li class="@{"active".when(page == "table-progressions")}">
           <a href="@routes.Doc.tableProgressions">Progressions</a>
           </li>
+          <li class="@{"active".when(page == "tools")}">
+          <a href="@routes.Application.tools">Outils</a>
+          </li>
           <li class="@{"active".when(page == "about")}">
           <a href="@routes.Application.about">À propos</a>
           </li>
@@ -54,6 +57,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a href="@routes.DocAdmin.newForm"><i class="icon-file"></i> Ajouter une notice</a></li>
+            <li><a href="https://github.com/ornicar/idbase/edit/master/conf/outils.md"><i class="icon-pencil"></i> Outils</a></li>
             <li><a href="https://github.com/ornicar/idbase/edit/master/conf/apropos.md"><i class="icon-pencil"></i> À propos</a></li>
             <li><a href="https://github.com/ornicar/idbase/edit/master/conf/idbase.conf"><i class="icon-wrench"></i> Configuration</a></li>
             <li><a href="@routes.Application.logout"><i class="icon-off"></i> Déconnexion</a></li>

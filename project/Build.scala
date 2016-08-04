@@ -12,15 +12,15 @@ object ApplicationBuild extends Build {
 
   val appDependencies = Seq(
     cache,
-    "org.reactivemongo" %% "reactivemongo" % "0.11.6",
-    "org.reactivemongo" %% "play2-reactivemongo" % "0.11.7.play24",
-    "org.pegdown" % "pegdown" % "1.4.2",
+    "org.reactivemongo" %% "reactivemongo" % "0.11.14",
+    "org.reactivemongo" %% "play2-reactivemongo" % s"0.11.14-play24",
+    "org.pegdown" % "pegdown" % "1.6.0",
     "jp.t2v" %% "play2-auth" % "0.14.1",
     "default" % "ssu_2.10" % "0.1-SNAPSHOT"
   )
 
   val main = Project(appName, file(".")) enablePlugins _root_.play.sbt.PlayScala settings (
-    scalaVersion := "2.11.7",
+    scalaVersion := "2.11.8",
     resolvers ++= Seq(
       "Sonatype Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots/",
       "iliaz.com" at "http://scala.iliaz.com/"
