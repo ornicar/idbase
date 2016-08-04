@@ -7,6 +7,7 @@ import play.api.data._
 import play.api.data.Forms._
 import play.api.i18n.Messages.Implicits._
 import play.api.libs.concurrent.Execution.Implicits._
+import play.api.libs.ws._
 import play.api.mvc._
 import play.api.mvc.Results._
 import play.api.Play._
@@ -14,18 +15,28 @@ import play.api.templates._
 import scala.concurrent.Future
 import views._
 
-object Application extends Controller with LoginLogout with OptionalAuthElement with AuthConfigImpl {
+import javax.inject.Inject
+import play.api.cache._
+import play.api.mvc._
+
+class Application @Inject() (cache: CacheApi, ws: WSClient) extends Controller with LoginLogout with OptionalAuthElement with AuthConfigImpl {
 
   private lazy val env = Env.current
 
+  private val fetch = new idbase.TextFetch(cache, ws)
+
   def userRepo = env.userRepo
 
-  def about = StackAction { implicit req ⇒
-    Ok(html.about(env.aboutText))
+  def about = AsyncStack { implicit req ⇒
+    fetch("apropos") map { text =>
+      Ok(html.about(text))
+    }
   }
 
-  def tools = StackAction { implicit req ⇒
-    Ok(html.tools(env.toolsText))
+  def tools = AsyncStack { implicit req ⇒
+    fetch("outils") map { text =>
+      Ok(html.about(text))
+    }
   }
 
   /** Your application's login form.  Alter it to fit your application */

@@ -11,7 +11,7 @@ import play.api.i18n.Messages.Implicits._
 import idbase._
 import views._
 
-object Doc extends Controller with OptionalAuthElement with AuthConfigImpl {
+class Doc extends Controller with OptionalAuthElement with AuthConfigImpl {
 
   private lazy val env = Env.current
   def userRepo = env.userRepo

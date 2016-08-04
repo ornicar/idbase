@@ -11,7 +11,7 @@ import play.api.i18n.Messages.Implicits._
 import idbase._, models._
 import views._
 
-object DocAdmin extends Controller with AuthElement with AuthConfigImpl {
+class DocAdmin extends Controller with AuthElement with AuthConfigImpl {
 
   private lazy val env = Env.current
   def userRepo = env.userRepo

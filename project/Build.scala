@@ -1,6 +1,7 @@
 import com.typesafe.sbt.web.SbtWeb.autoImport._
 import play.Play.autoImport._
 import play.sbt.PlayImport._
+import play.sbt.routes.RoutesKeys._
 import play.twirl.sbt.Import._
 import PlayKeys._
 import sbt._, Keys._
@@ -12,6 +13,7 @@ object ApplicationBuild extends Build {
 
   val appDependencies = Seq(
     cache,
+    ws,
     "org.reactivemongo" %% "reactivemongo" % "0.11.14",
     "org.reactivemongo" %% "play2-reactivemongo" % s"0.11.14-play24",
     "org.pegdown" % "pegdown" % "1.6.0",
@@ -28,7 +30,8 @@ object ApplicationBuild extends Build {
       libraryDependencies ++= appDependencies,
       sources in doc in Compile := List(),
       scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature", "-language:_"),
-      TwirlKeys.templateImports ++= Seq("idbase.models._")
+      TwirlKeys.templateImports ++= Seq("idbase.models._"),
+      routesGenerator := InjectedRoutesGenerator
   )
 
 }
