@@ -30,7 +30,7 @@ object ApplicationBuild extends Build {
       libraryDependencies ++= appDependencies,
       sources in doc in Compile := List(),
       scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature", "-language:_"),
-      TwirlKeys.templateImports ++= Seq("idbase.models._"),
+      TwirlKeys.templateImports ++= Seq("idbase.models.{Doc => D,_}"),
       routesGenerator := InjectedRoutesGenerator
   )
 

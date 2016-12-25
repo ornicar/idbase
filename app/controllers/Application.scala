@@ -35,7 +35,7 @@ class Application @Inject() (cache: CacheApi, ws: WSClient) extends Controller w
 
   def tools = AsyncStack { implicit req ⇒
     fetch("outils") map { text =>
-      Ok(html.about(text))
+      Ok(html.tools(text))
     }
   }
 
