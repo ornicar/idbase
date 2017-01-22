@@ -9,15 +9,19 @@
 - 1.3. Les objectifs généraux de l'Information-Documentation
 - 1.4. Typologie des objectifs mobilisés dans les fiches de préparation
 
-
 **2. Les savoirs à enseigner**
 
-- 2.1. Actualisation de la liste des notions du Wikinotions
-- 2.2. Les 10 domaines d'enseignement de l'Information-Documentation
-- 2.3. Les notions essentielles de l'Information-Documentation
-- 2.4. Descrition d'une notion
-- 2.5. Le niveau de formulation d'une notion
-- 2.6. Méthodologie du processus de transposition didactique des savoirs info-documentaires
+- 2.1. Les notions essentielles de l'Information-Documentation
+- 2.2. Actualisation de la liste des notions du Wikinotions
+- 2.3. Les 10 domaines d'enseignement de l'Information-Documentation
+- 2.4. 
+- 2.4. Notion / Concept / savoir scolaire
+- 2.5. Description d'une notion
+- 2.6. Le niveau de formulation d'une notion
+- 2.7. Méthodologie du processus de transposition didactique des savoirs info-documentaires
+- 2.8. Eléments pour une épistémologie des savoirs info-documentaires 
+- 2.9. Le référentiel E.M.I. au regard de l'Information-Documentation
+- 2.10. Les savoirs info-documentaires dans les programmes scolaires
 
 **3. La préparation d'une séance**
 
@@ -52,11 +56,13 @@
      - 5.2.5. Evaluation formatrice (méthodologie)
      - 5.2.6. Evaluation sommative sanctionnante
      - 5.2.7. Evaluation sommative structurante
-- 5.3. L'évaluation des apprentissages déclaratifs : modalités
-- 5.4. Typologie de Bloom et modalités de l'évaluation sommative
+- 5.3. L'évaluation diagnostique pour connaître les conceptions des élèves (base de données)
+- 5.4. L'évaluation des apprentissages déclaratifs : modalités
+- 5.5. Typologie de Bloom et modalités de l'évaluation sommative
 
 **6. Bibliographie**
 
 - 6.1. Les contenus d'enseignement de l'Information-Documentation
+- 6.2. Les notions info-documentaires : littératures scientifique, professionnelle et didactique
 
      
