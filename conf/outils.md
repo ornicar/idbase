@@ -10,24 +10,24 @@
 - 1.4. Typologie des objectifs mobilisés dans les fiches de préparation
 
 
-#### 2. Les savoirs à enseigner
+**2. Les savoirs à enseigner**
 
-- **2.1. Actualisation de la liste des notions du Wikinotions**
-- **2.2. Les 10 domaines d'enseignement de l'Information-Documentation**
-- **2.3. Les notions essentielles de l'Information-Documentation**
-- **2.4. Descrition d'une notion**
-- **2.5. Le niveau de formulation d'une notion**
-- **2.6. Méthodologie du processus de transposition didactique des savoirs info-documentaires**
+- 2.1. Actualisation de la liste des notions du Wikinotions
+- 2.2. Les 10 domaines d'enseignement de l'Information-Documentation
+- 2.3. Les notions essentielles de l'Information-Documentation
+- 2.4. Descrition d'une notion
+- 2.5. Le niveau de formulation d'une notion
+- 2.6. Méthodologie du processus de transposition didactique des savoirs info-documentaires
 
-#### 3. La préparation d'une séance
+**3. La préparation d'une séance**
 
-- **3.1. Préparer une séance**
-- **3.2. L'alignement pédagogique**
-- **3.3. La fiche pédagogique en Information-Documentation** 
-- **3.4. Grille de vérification des fiches pédagogiques**
-- **3.5. La progression : éléments de définition**
-- **3.6. Progression pédagogique annuelle : plan de séquence**
-- **3.7. Les invariants de la fiche élève**
+- 3.1. Préparer une séance
+- 3.2. L'alignement pédagogique
+- 3.3. La fiche pédagogique en Information-Documentation
+- 3.4. Grille de vérification des fiches pédagogiques
+- 3.5. La progression : éléments de définition
+- 3.6. Progression pédagogique annuelle : plan de séquence
+- 3.7. Les invariants de la fiche élève
 
 **4. Les constituants d'une séance**
 
@@ -48,4 +48,15 @@
      - 5.2.1. Evaluation diagnostique (année)
      - 5.2.2. Evaluation diagnostique (séquence)
      - 5.2.3. Evaluation formative critériée co-évaluée
-     - 
+     - 5.2.4. Evaluation formative critériée simple
+     - 5.2.5. Evaluation formatrice (méthodologie)
+     - 5.2.6. Evaluation sommative sanctionnante
+     - 5.2.7. Evaluation sommative structurante
+- 5.3. L'évaluation des apprentissages déclaratifs : modalités
+- 5.4. Typologie de Bloom et modalités de l'évaluation sommative
+
+**6. Bibliographie**
+
+- 6.1. Les contenus d'enseignement de l'Information-Documentation
+
+     
