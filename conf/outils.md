@@ -14,7 +14,7 @@
 - 2.1. Les notions essentielles de l'Information-Documentation
 - 2.2. Actualisation de la liste des notions du Wikinotions
 - 2.3. Les 10 domaines d'enseignement de l'Information-Documentation
-   - 2.3.1. Média de masse
+   - 2.3.1. [Média de masse](http://lestroiscouronnes.esmeree.fr/didactique-information/media-de-masse-domaine-d-enseignement-de-l-information-documentation)
    - 2.3.2. Identité numérique
    - 2.3.3. Evaluation de l'information
    - 2.3.4. Recherche d'information
