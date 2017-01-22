@@ -14,7 +14,16 @@
 - 2.1. Les notions essentielles de l'Information-Documentation
 - 2.2. Actualisation de la liste des notions du Wikinotions
 - 2.3. Les 10 domaines d'enseignement de l'Information-Documentation
-- 2.4. 
+   - 2.3.1. Média de masse
+   - 2.3.2. Identité numérique
+   - 2.3.3. Evaluation de l'information
+   - 2.3.4. Recherche d'information
+   - 2.3.5. Veille
+   - 2.3.6. Internet et Web
+   - 2.3.7. Document
+   - 2.3.8. Publication
+   - 2.3.9. Moteur de recherche
+   - 2.3.10. Centre de ressources
 - 2.4. Notion / Concept / savoir scolaire
 - 2.5. Description d'une notion
 - 2.6. Le niveau de formulation d'une notion
