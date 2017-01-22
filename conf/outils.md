@@ -14,16 +14,16 @@
 - 2.1. Les notions essentielles de l'Information-Documentation
 - 2.2. Actualisation de la liste des notions du Wikinotions
 - 2.3. [Les 10 domaines d'enseignement de l'Information-Documentation](http://lestroiscouronnes.esmeree.fr/didactique-information/l-information-documentation-en-dix-tableaux)
-   - 2.3.1. [Média de masse](http://lestroiscouronnes.esmeree.fr/didactique-information/media-de-masse-domaine-d-enseignement-de-l-information-documentation)
-   - 2.3.2. Identité numérique
-   - 2.3.3. Evaluation de l'information
-   - 2.3.4. Recherche d'information
-   - 2.3.5. Veille
-   - 2.3.6. Internet et Web
-   - 2.3.7. Document
-   - 2.3.8. Publication
-   - 2.3.9. Moteur de recherche
-   - 2.3.10. Centre de ressources
+     - 2.3.1. [Média de masse](http://lestroiscouronnes.esmeree.fr/didactique-information/media-de-masse-domaine-d-enseignement-de-l-information-documentation)
+     - 2.3.2. Identité numérique
+     - 2.3.3. Evaluation de l'information
+     - 2.3.4. Recherche d'information
+     - 2.3.5. Veille
+     - 2.3.6. Internet et Web
+     - 2.3.7. Document
+     - 2.3.8. Publication
+     - 2.3.9. Moteur de recherche
+    - 2.3.10. Centre de ressources
 - 2.4. [Notion / Concept / savoir scolaire](http://lestroiscouronnes.esmeree.fr/outils/concept-notion-savoir-scolaire)
 - 2.5. Description d'une notion
 - 2.6. [La fiche-concept](http://lestroiscouronnes.esmeree.fr/outils/la-fiche-concept) 
@@ -48,13 +48,13 @@
 - 4.1. La situation d'enseignement-aprentissage
 - 4.2. La tâche au centre de la situation d'apprentissage
 - 4.3. [La tâche et l'intention didactique](http://lestroiscouronnes.esmeree.fr/outils/la-tache-et-l-intention-didactique)
-- 4.3. Les phases de la séance pédagogique
-- 4.4. Articulation tâche / phases dans la fiche de préparation
-- 4.5. Déroulement d'une séance (méthode active)
-- 4.6. La phase de mise en commun
-- 4.7. La phase de structuration des connaissances
-- 4.8. [Les méthodes pédagogiques en Information-Documentation](http://lestroiscouronnes.esmeree.fr/outils/les-methodes-pedagogiques-en-information-documentation)
-- 4.9. [Typologie fonctionnelle des outils didactiques](http://lestroiscouronnes.esmeree.fr/outils/fiche-eleve-fiche-pedagogique-en-information-documentation) 
+- 4.4. Les phases de la séance pédagogique
+- 4.5. Articulation tâche / phases dans la fiche de préparation
+- 4.6. Déroulement d'une séance (méthode active)
+- 4.7. La phase de mise en commun
+- 4.8. La phase de structuration des connaissances
+- 4.9. [Les méthodes pédagogiques en Information-Documentation](http://lestroiscouronnes.esmeree.fr/outils/les-methodes-pedagogiques-en-information-documentation)
+- 4.10. [Typologie fonctionnelle des outils didactiques](http://lestroiscouronnes.esmeree.fr/outils/fiche-eleve-fiche-pedagogique-en-information-documentation) 
 
 **5. L'évaluation des apprentissages**
 
