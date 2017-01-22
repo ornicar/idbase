@@ -14,7 +14,7 @@ D'une manière générale, ce projet de mise à disposition d'un matériel didac
 
 Notre didactique n'en est encore qu'à ses prémices. Elle ne peut progresser que par la mutualisation des travaux, par un effort de rationalisation des pratiques professionnelles et par le dialogue constant entre la recherche et l'expérimentation. Je voudrais que ces quelques outils, pour imparfaits qu'ils soient, deviennent autant de leviers pour développer l'expertise des professeurs documentalistes et l'entreprise didactique de l'Information-Documentation. 
 
-N.B. : *Les fiches seront publiées régulièrement et, dans la meusre du possible, selon l'ordre indiqué ci-dessous.*
+N.B. : *Les fiches seront publiées régulièrement et, dans la mesure du possible, selon l'ordre indiqué ci-dessous.*
 
  -------------------------
  
