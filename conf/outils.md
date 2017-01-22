@@ -13,7 +13,7 @@
 
 - 2.1. Les notions essentielles de l'Information-Documentation
 - 2.2. Actualisation de la liste des notions du Wikinotions
-- 2.3. Les 10 domaines d'enseignement de l'Information-Documentation
+- 2.3. [Les 10 domaines d'enseignement de l'Information-Documentation](http://lestroiscouronnes.esmeree.fr/didactique-information/l-information-documentation-en-dix-tableaux)
    - 2.3.1. [Média de masse](http://lestroiscouronnes.esmeree.fr/didactique-information/media-de-masse-domaine-d-enseignement-de-l-information-documentation)
    - 2.3.2. Identité numérique
    - 2.3.3. Evaluation de l'information
@@ -24,19 +24,20 @@
    - 2.3.8. Publication
    - 2.3.9. Moteur de recherche
    - 2.3.10. Centre de ressources
-- 2.4. Notion / Concept / savoir scolaire
+- 2.4. [Notion / Concept / savoir scolaire](http://lestroiscouronnes.esmeree.fr/outils/concept-notion-savoir-scolaire)
 - 2.5. Description d'une notion
-- 2.6. Le niveau de formulation d'une notion
-- 2.7. Méthodologie du processus de transposition didactique des savoirs info-documentaires
-- 2.8. Eléments pour une épistémologie des savoirs info-documentaires 
-- 2.9. Le référentiel E.M.I. au regard de l'Information-Documentation
-- 2.10. Les savoirs info-documentaires dans les programmes scolaires
+- 2.6. [La fiche-concept](http://lestroiscouronnes.esmeree.fr/outils/la-fiche-concept) 
+- 2.7. Le niveau de formulation d'une notion
+- 2.8. Méthodologie du processus de transposition didactique des savoirs info-documentaires
+- 2.9. Eléments pour une épistémologie des savoirs info-documentaires 
+- 2.10. Le référentiel E.M.I. au regard de l'Information-Documentation
+- 2.11. Les savoirs info-documentaires dans les programmes scolaires
 
 **3. La préparation d'une séance**
 
 - 3.1. Préparer une séance
 - 3.2. L'alignement pédagogique
-- 3.3. La fiche pédagogique en Information-Documentation
+- 3.3. [La fiche pédagogique en Information-Documentation](http://lestroiscouronnes.esmeree.fr/outils/la-fiche-pedagogique-en-information-documentation)
 - 3.4. Grille de vérification des fiches pédagogiques
 - 3.5. La progression : éléments de définition
 - 3.6. Progression pédagogique annuelle : plan de séquence
@@ -46,13 +47,14 @@
 
 - 4.1. La situation d'enseignement-aprentissage
 - 4.2. La tâche au centre de la situation d'apprentissage
+- 4.3. [La tâche et l'intention didactique](http://lestroiscouronnes.esmeree.fr/outils/la-tache-et-l-intention-didactique)
 - 4.3. Les phases de la séance pédagogique
 - 4.4. Articulation tâche / phases dans la fiche de préparation
 - 4.5. Déroulement d'une séance (méthode active)
 - 4.6. La phase de mise en commun
 - 4.7. La phase de structuration des connaissances
-- 4.8. Les méthodes pédagogiques en Information-Documentation
-- 4.9. Typologie fonctionnelle des outils didactiques 
+- 4.8. [Les méthodes pédagogiques en Information-Documentation](http://lestroiscouronnes.esmeree.fr/outils/les-methodes-pedagogiques-en-information-documentation)
+- 4.9. [Typologie fonctionnelle des outils didactiques](http://lestroiscouronnes.esmeree.fr/outils/fiche-eleve-fiche-pedagogique-en-information-documentation) 
 
 **5. L'évaluation des apprentissages**
 
