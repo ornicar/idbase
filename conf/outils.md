@@ -1,6 +1,18 @@
 ### Outils didactiques
 
+Sont mises à disposition ici un ensemble de fiches et de courts articles relatifs à la didactique de l'information-documentation.
 
+Ils ont été constitués ces dernières années au fil d'interventions en formation initiale et continue, dans le but de clarifier des concepts didactiques ou de forger des outils pour aider le professeur documentaliste dans son activité pédagogique : identifier et formuler des objectifs pédagogiques, cerner et approfondir les notions info-documentaires, préparer une séance pédagogique et définir une progression, mieux comprendre les phases qui constituent une séance, savoir quel type d'évaluation utiliser et à quel moment...
+
+Elles s'adressent ainsi, du moins je l'espère, autant aux collègues confirmés qu'aux candidats préparant les CAPES Documentation.
+
+Les fiches sont régulièrement mises à jour, tenant compte des besoins exprimés par les stagiaires, de leurs réactions et des avancées du chantier didactique. Certaines sont livrées brutes, présentant un simple schéma ou tableau, le temps de leur mûrissement. D'autres, plus abouties, sont livrées avec un texte de présentation, qui n'exclut pas la possiblité d'une actualisation toujours possible. Ces documents, on le pressent, accompagnent une réflexion en cours, tâtonnante et fragile, mais toujours motivée par la recherche de clarification, de propositions concrètes et de compréhension. Elle invitent en tout cas le lecteur à y prendre part, à s'emparer de l'outil pour le faire sien et pour le faire évoluer. 
+
+Les outils rassemblés ici ont également pour but d'expliciter certains termes ou concepts utilisés dans les analyses d'ID Base, permettant aux collègues intéressés d'approfondir certains aspects de la séance étudiée.
+
+D'une manière générale, ce projet de mise à disposition d'un matériel didactique de formation se veut à la fois un partage avec les collègues et un appel pour inscrire la réflexion didactique dans une posture professionnelle plus experte et plus consciente de la mission d'enseignement du professeur documentaliste.
+
+Notre didactique n'en est encore qu'à ses prémices. Elle ne peut progresser que par la mutualisation des travaux, par un effort de rationalisation des pratiques professionnelles et par le dialogue constant entre la recherche et l'expérimentation. Je voudrais que ces quelques outils, pour imparfaits qu'ils soient, deviennent autant de leviers pour développer l'expertise des professeurs documentalistes et l'entreprise didactique de l'Information-Documentation. 
 
 **1. Les enjeux**
 
