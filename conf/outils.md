@@ -12,9 +12,9 @@ Les outils rassemblés ici ont également pour but d'expliciter certains termes 
 
 D'une manière générale, ce projet de mise à disposition d'un matériel didactique de formation se veut à la fois un partage avec les collègues et un appel pour inscrire la réflexion didactique dans une posture professionnelle plus experte et plus consciente de la mission d'enseignement du professeur documentaliste.
 
-Notre didactique n'en est encore qu'à ses prémices. Elle ne peut progresser que par la mutualisation des travaux, par un effort de rationalisation des pratiques professionnelles et par le dialogue constant entre la recherche et l'expérimentation. Je voudrais que ces quelques outils, pour imparfaits qu'ils soient, deviennent autant de leviers pour accroître l'expertise des professeurs documentalistes et développer l'entreprise didactique de l'Information-Documentation. 
+Notre didactique n'en est encore qu'à ses prémices. Elle ne peut progresser que par la mutualisation des travaux, par un effort de rationalisation des pratiques professionnelles et par le dialogue constant entre la recherche et l'expérimentation. Je souhaite que ces quelques outils, pour imparfaits qu'ils soient, deviennent autant de leviers pour accroître l'expertise des professeurs documentalistes et développer l'entreprise didactique de l'Information-Documentation. 
 
-N.B. : *Les fiches seront publiées régulièrement et, dans la mesure du possible, selon l'ordre indiqué ci-dessous.*
+N.B. : *Les fiches sont publiées régulièrement et, dans la mesure du possible, selon l'ordre indiqué ci-dessous.*
 
  -------------------------
  
