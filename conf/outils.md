@@ -20,7 +20,7 @@ N.B. : *Les fiches sont publiées régulièrement et, dans la mesure du possible
  
 **1. Les objectifs**
 
-- 1.1. Des finalités de l'Ecole aux buts de l'Information-Documentation
+- 1.1. [Des finalités de l'Ecole aux buts de l'Information-Documentation](http://lestroiscouronnes.esmeree.fr/outils/des-finalites-de-l-ecole-aux-buts-de-l-information-documentation)
 - 1.2. Matrices disciplinaires de l'Information-Documentation
 - 1.3. Les objectifs généraux de l'Information-Documentation
 - 1.4. Typologie des objectifs mobilisés dans les fiches de préparation
