@@ -18,9 +18,9 @@ N.B. : *Les fiches sont publiées régulièrement et, dans la mesure du possible
 
  -------------------------
  
-**1. Les enjeux**
+**1. Les objectifs**
 
-- 1.1. Les enjeux de l'Information-Documentation articulés aux finalités du système éducatif
+- 1.1. Des finalités de l'Ecole aux buts de l'Information-Documentation
 - 1.2. Matrices disciplinaires de l'Information-Documentation
 - 1.3. Les objectifs généraux de l'Information-Documentation
 - 1.4. Typologie des objectifs mobilisés dans les fiches de préparation
