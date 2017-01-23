@@ -2,11 +2,11 @@
 
 par Pascal Duplessis
 
-###Le projet ID Base
+##Le projet ID Base
 	
 Le projet ID Base est né de la volonté de contribuer à la didactique de l’information-documentation en mettant en lumière un axe peu sollicité, celui des séquences pédagogiques expérimentées sur le terrain par les professeurs documentalistes. La construction des savoirs scolaires de l’information-documentation résulte de l’articulation d’une triple transposition didactique : les savoirs scientifiques (SIC et sciences de l’éducation), les savoirs de référence (documentation, journalisme) et les savoirs professionnels (enseignement). Il semble que les chercheurs et les institutionnels s’intéressent peu à cette dernière dimension. De leur côté, les professeurs  documentalistes ne cessent de roder leurs gestes professionnels et travaillent la matière scolaire  : information, Internet, veille informationnelle, identité numérique, information journalistique, source, auteur, évaluation de l’information ne sont que quelques-unes des nombreuses notions info-documentaires enseignées dans les collèges et les lycées,  rendues accessibles par l'approche choisie en fonction du niveau des élèves. Ces enseignants cherchent, expérimentent, publient, échangent, si bien qu’aujourd’hui, plus d’un millier de fiches pédagogiques, témoins de ces travaux mutualisés depuis plus de 15 ans, sont disponibles en ligne ou ont déjà été englouties dans les oubliettes du web. Cette matière pédagogique, disparate dans sa forme comme dans son contenu, reste trop peu estimée hors de la sphère professionnelle. Le projet d’ID Base est d’en rendre l’accès plus efficace et plus lisible pour chacun, de permettre aux professeurs documentalistes d’en tirer profit plus facilement, de contribuer à l’amélioration des séquences pédagogiques, de l’utiliser pour tracer les contours concrets d’un programme d’enseignement et de la valoriser aux yeux de nos partenaires chercheurs et institutionnels.
 
-###Pourquoi ID Base ?
+##Pourquoi ID Base ?
 
 Du point de vue des professeurs documentalistes, **ID Base peut être perçu comme un complément ou une alternative à [Edu’Base Documentation]( http://eduscol.education.fr/bd/urtic/documentation/)** que gèrent différents IATICE Documentation. Cependant, sa finalité est toute autre. Si Edu’base a pour mission première « *d’accompagner le développement des usages des TICE, en relation avec les programmes des collèges et lycées* », ID Base vise le développement de la didactique de l’information-documentation et de la pédagogie documentaire. Il se veut un outil au service des professeurs  documentalistes qui souhaitent améliorer leurs pratiques pédagogiques et permettre aux élèves du secondaire de développer leur culture informationnelle. Les notices analytiques proposées et le formulaire de requête qui en permet l’accès sont organisés autour des trois dimensions de toute situation didactique : les savoirs, l’enseignement et les apprentissages. Ainsi sont mises au premier plan les notions à enseigner/apprendre, les méthodes pédagogiques et les activités d’apprentissage. 
 
@@ -14,11 +14,11 @@ Pour ne prendre que le seul exemple des savoirs, un rapide examen d’Edu’base
 		 
 Le point de vue proposé par ID Base est, on le voit, bien distinct : la perspective s’y affirme didactique et disciplinaire, insistant sur la spécificité des savoirs plutôt que sur leur transversalité. L’expertise pédagogique y est partout et toujours valorisée, centrée sur la recherche des meilleures modalités de l’enseignement et de l’apprentissage. La formation continue des professeurs documentalistes, enfin, est un objectif auquel ID Base souhaite contribuer en présentant des fiches d’analyse structurées à partir d’éléments pédagogiques et didactiques essentiels.
 
-###L’enjeu didactique
+##L’enjeu didactique
 
 Poser la question des savoirs scolaires qui devraient être enseignés dans le secondaire est important, mais il reste à connaître les conditions de cette réalisation sur le terrain. L’entrée par les pratiques professionnelles, qui permet de savoir ce qui est véritablement enseigné et comment, constitue une approche complémentaire indispensable. ID Base, en explorant le domaine des réalisations didactiques que représentent les publications de séquences pédagogiques et en rendant compte de manière analytique et prospective de ces travaux, peut offrir la matière d’un corpus des savoirs effectivement enseignés dans les établissements du secondaire. On pourra y lire comment y sont définies ces notions, comment elles sont présentées aux classes selon leur niveau et quelles tâches sont proposées aux élèves pour les construire.
 
-###L’enjeu pédagogique
+##L’enjeu pédagogique
 
 Une « pédagogie documentaire » est souvent évoquée pour dénommer la manière dont sont enseignés les savoirs de l’information-documentation. Ce terme générique désigne avant tout ce qui favorise et caractérise la médiation documentaire, à savoir l’utilisation du document pour rencontrer et construire des savoirs disciplinaires. De ce fait, la « pédagogie documentaire » n’est pas l’apanage du professeur documentaliste mais participe d’un choix de méthodes à disposition de tout enseignant. 
 Mais dès lors qu’il s’agit d’autre chose que de former à une méthode par la pratique, **l’appellation « pédagogie documentaire » est à re-questionner**. L’enseignement des savoirs info-documentaires, qu’il faut bien décliner en savoirs théoriques, savoirs pratiques et savoirs éthiques, requiert des enseignants documentalistes la maîtrise d’une gamme de méthodes pédagogiques semblable à celle qu’utilisent les autres enseignants dans leurs disciplines respectives : l’exposition et l’application, les méthodes actives, la réfutation ou le recours aux situations-problèmes, pour ne citer que ces quelques possibilités. Ainsi, et devant l’examen de la réalité, il n’est plus possible d’attribuer à l’enseignant documentaliste la seule « pédagogie documentaire » mais il est plus réaliste de lui reconnaître que, pour chaque savoir à enseigner et pour telle classe, il dispose librement, comme tout enseignant, d’un ensemble de méthodes qu’il arrange et combine pour faire cours.
@@ -26,12 +26,12 @@ ID Base ambitionne de mettre à disposition un observatoire des méthodes pédag
 Les fiches d’analyse d’ID Base sont structurées de manière à pouvoir réfléchir sur l’application de ces méthodes. Ainsi, dans le volet « Enseignement », le scénario est accompagné du déroulement détaillé de la séquence, de l’indication de la méthode employée et des outils didactiques servant à appuyer le cours. Dans le volet « Apprentissage » sont également distingués et précisés ce qui relève de la démarche intellectuelle requise pour apprendre, la tâche, les matériaux sur lesquels cette tâche s’applique, la production visée par l’activité et les fiches élèves. 
 Afin de pouvoir confronter les séquences pédagogiques entre elles et voir comment elles mettent en œuvre ces méthodes, il fallait **disposer d’un vocabulaire commun** permettant de nommer et de catégoriser  leurs éléments constitutifs. C’est ainsi que les objectifs d’apprentissage ont dû être pour la plupart reformulés et que les différentes phases composant une séquence ont été titrées de manière à coordonner les présentations  des séances. Tous les éléments constitutifs de la situation didactique sont ainsi harmonisés, jusque dans la nomenclature des fiches outils, pour permettre une saisie plus objective des fiches pédagogiques. En ce sens, **ID Base peut contribuer à la formation continue et à l’acculturation professionnelle enseignante des professeurs documentalistes**.
 
-###La méthodologie
+##La méthodologie
 
-####La sélection des séquences
+###La sélection des séquences
 Si les propositions de séquences pédagogiques paraissent nombreuses sur le web, peu sont en réalité véritablement exploitables. D’un point de vue formel, celles manquant de précision pour pouvoir être comprises et utilisées (déroulement trop succinct, tâche peu explicite, publication des seules fiches élèves, *etc.*) ne peuvent être sélectionnées. Une attention particulière aux contenus  détermine également ce choix. Ainsi les propositions uniquement orientées vers la méthodologie documentaire, ou bien s’appliquant à des domaines ne relevant pas de l’information-documentation à proprement parler, tels que la promotion de la lecture, les animations culturelles, l’éducation à l’orientation ou encore les simples exécutions des programmes disciplinaires,  ne seront pas choisies. 
 
-####Les critères retenus
+###Les critères retenus
 Les critères retenus pour la sélection des propositions dans ID Base sont :
    - une entrée privilégiant les savoirs scolaires de l’information-documentation ;
    - une perspective pédagogique originale, utilisant une méthode pédagogique particulière et identifiable ;
@@ -39,9 +39,9 @@ Les critères retenus pour la sélection des propositions dans ID Base sont :
    - une fiche pédagogique structurée comportant au moins la liste des objectifs, un déroulement permettant de saisir le scénario sans ambigüité ;
    - l’accessibilité de la ressource : il est bien évidemment nécessaire que les fiches sélectionnées dans ID Base soient accessibles en ligne. Mais l’obsolescence programmée des ressources, des outils et formats du web, la refonte de certains sites générant des liens brisés constituent des obstacles bien connus et considérables. Si l’actualité doit suivre le renouvellement permanent des outils numériques, elle ne saurait imposer sa logique à la réflexion pédagogique, laquelle n’obéit pas aux lois de l’actualité et des impératifs économiques du court terme (innovations techniques, remplacement des matériels, modes). Nous appelons dès lors au maintien de l’accessibilité en ligne des fiches pédagogiques. Des sites professionnels, tels *Les trois couronnes*, *Cactus acide* ou *Docpourdocs* peuvent être sollicités pour accueillir des fiches pédagogiques de qualité menacées par la refonte d’un site académique.
 
-###La fiche d’analyse
+##La fiche d’analyse
 
-#### La présentation de la notice
+### La présentation de la notice
 Par sa structuration, la notice fait ressortir la stratégie pédagogique de la fiche :
    1. le cadre institutionnel et temporel
    2. les trois axes de toute situation didactique :
@@ -53,7 +53,7 @@ Par sa structuration, la notice fait ressortir la stratégie pédagogique de la 
       - prolongement(s)
    4. la dernière entrée donne la référence complète de la fiche pédagogique qui a fait l’objet de l’analyse.
 
-####Le traitement de la fiche pédagogique
+###Le traitement de la fiche pédagogique
 
 Comme toute élaboration d’un document secondaire, la notice, qui est une représentation de la fiche pédagogique originelle, est d’abord une reconstruction. Cette reconstruction  revêt trois dimensions :
    1. **une dimension descriptive** : il s’agit de rendre compte au mieux du dispositif pédagogique de la fiche en la recentrant sur ses éléments essentiels (cadre, objectifs, enseignement, apprentissage)
@@ -64,9 +64,9 @@ Comme toute élaboration d’un document secondaire, la notice, qui est une repr
    3. **une dimension formative** : il s’agit d’accompagner la formation continue des professionnels en leur proposant, selon les fiches analysées, des pistes pour faire évoluer la séquence et une reformulation des objectifs. Cette reformulation peut, dans certains cas, se révéler importante. En effet, certaines fiches, bien qu’orientées vers la construction d’une ou de plusieurs notions, ne les présentent pas explicitement en tant qu’objectifs d’apprentissage. D’autres ne retiennent que la liste conventionnelle des compétences méthodologiques. Nous avons donc pris le parti de redéfinir ces objectifs en reprenant, lorsque cela était pertinent, la triade suivante :
       - « savoirs pratiques » (T1 : efficacité ; savoir faire ou « capacités »)
       - « savoirs théoriques » (T2 : intelligibilité ; savoirs ou « connaissances ») 
-      - « savoirs éthiques » (T3 : responsabilité ; savoir être ou « attitudes »)
+      - « savoirs normatifs » (T3 : responsabilité ; savoir être ou « attitudes »)
 
-###Les publics visés
+##Les publics visés
 
 ID Base s’adresse en premier lieu aux **professeurs documentalistes** pour lesquels il met  à disposition un outil pratique leur permettant de sélectionner des exemples concrets et expérimentés pour alimenter leur réflexion pédagogique et didactique et construire une culture enseignante commune.
 Proposant un corpus constitué selon des critères définis, ID Base intéresse également les **étudiants des master MEEF** qui se préparent à entrer dans la profession. Elle leur offre un ensemble constitué de séquences pédagogiques orientées vers la didactisation de l’information-documentation, base d’exemples concrets pour préparer les épreuves d’admission, mais également base de données de terrain à analyser pour les mémoires. 
