@@ -48,6 +48,7 @@ N.B. : *Les fiches sont publiées régulièrement et, dans la mesure du possible
 - 2.9. Eléments pour une épistémologie des savoirs info-documentaires 
 - 2.10. Le référentiel E.M.I. au regard de l'Information-Documentation
 - 2.11. Les savoirs info-documentaires dans les programmes scolaires
+- 2.12. L'Information-Documentation en interdisciplinarité
 
 **3. La préparation d'une séance**
 
