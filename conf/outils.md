@@ -58,7 +58,7 @@ N.B. : *Les fiches sont publiées régulièrement et, dans la mesure du possible
 - 3.4. Grille de vérification des fiches pédagogiques
 - 3.5. La progression : éléments de définition
 - 3.6. Progression pédagogique annuelle : plan de séquence
-- 3.7. Les invariants de la fiche élève
+- 3.7. [Les invariants de la fiche d'activité(s)](http://lestroiscouronnes.esmeree.fr/outils/les-invariants-de-la-fiche-d-activite-s)
 
 **4. Les constituants d'une séance**
 
