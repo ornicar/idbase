@@ -1,4 +1,4 @@
-![Les outils de l'info-doc](http://i.imgur.com/14hYm6j.jpg)
+![Les outils de l'info-doc](http://i.imgur.com/AmGSHNN.jpg)
 
 ### Outils didactiques
 
