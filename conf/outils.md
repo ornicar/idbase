@@ -1,3 +1,5 @@
+![Les outils de l'info-doc](http://i.imgur.com/14hYm6j.jpg)
+
 ### Outils didactiques
 
 Sont mises à disposition ici un ensemble de fiches et de courts articles relatifs à la didactique de l'Information-Documentation.
