@@ -16,7 +16,6 @@ D'une manière générale, ce projet de mise à disposition d'un matériel didac
 
 Notre didactique n'en est encore qu'à ses prémices. Elle ne peut progresser que par la mutualisation des travaux, par un effort de rationalisation des pratiques professionnelles et par le dialogue constant entre la recherche et l'expérimentation. Je souhaite que ces quelques outils, pour imparfaits qu'ils soient, deviennent autant de leviers pour accroître l'expertise des professeurs documentalistes et développer l'entreprise didactique de l'Information-Documentation. 
 
-N.B. : *Les fiches sont publiées régulièrement et, dans la mesure du possible, selon l'ordre indiqué ci-dessous.*
 
  -------------------------
  
@@ -25,7 +24,8 @@ N.B. : *Les fiches sont publiées régulièrement et, dans la mesure du possible
 - 1.1. [Des finalités de l'Ecole aux buts de l'Information-Documentation](http://lestroiscouronnes.esmeree.fr/outils/des-finalites-de-l-ecole-aux-buts-de-l-information-documentation)
 - 1.2. [Matrices disciplinaires de l'Information-Documentation](http://lestroiscouronnes.esmeree.fr/didactique-information/les-trois-matrices-disciplinaires-de-l-information-documentation)
 - 1.3. [Des buts aux objectifs en Information-Documentation](http://lestroiscouronnes.esmeree.fr/outils/des-buts-aux-objectifs-en-information-documentation)
-- 1.4. Typologie des objectifs mobilisés dans les fiches de préparation
+- 1.4. [Les types de connaissance : table de correspondance des terminologies](http://lestroiscouronnes.esmeree.fr/outils/les-types-de-connaissance-table-de-correspondance-des-terminologies)
+1-5. Typologie des objectifs mobilisés dans les fiches de préparation
 
 **2. Les savoirs à enseigner**
 
