@@ -29,28 +29,27 @@ Notre didactique n'en est encore qu'à ses prémices. Elle ne peut progresser qu
 
 **2. Les savoirs à enseigner**
 
-- 2.1. Les notions essentielles de l'Information-Documentation
-- 2.2. Actualisation de la liste des notions du Wikinotions
-- 2.3. [Les 10 domaines d'enseignement de l'Information-Documentation](http://lestroiscouronnes.esmeree.fr/didactique-information/l-information-documentation-en-dix-tableaux)
-     - 2.3.1. [Média de masse](http://lestroiscouronnes.esmeree.fr/didactique-information/media-de-masse-domaine-d-enseignement-de-l-information-documentation)
-     - 2.3.2. Identité numérique
-     - 2.3.3. Evaluation de l'information
-     - 2.3.4. Recherche d'information
-     - 2.3.5. Veille
-     - 2.3.6. Internet et Web
-     - 2.3.7. Document
-     - 2.3.8. Publication
-     - 2.3.9. Moteur de recherche
-    - 2.3.10. Centre de ressources
-- 2.4. [Notion / Concept / savoir scolaire](http://lestroiscouronnes.esmeree.fr/outils/concept-notion-savoir-scolaire)
-- 2.5. Description d'une notion
-- 2.6. [La fiche-concept](http://lestroiscouronnes.esmeree.fr/outils/la-fiche-concept) 
-- 2.7. Le niveau de formulation d'une notion
-- 2.8. Méthodologie du processus de transposition didactique des savoirs info-documentaires
-- 2.9. Eléments pour une épistémologie des savoirs info-documentaires 
-- 2.10. Le référentiel E.M.I. au regard de l'Information-Documentation
-- 2.11. Les savoirs info-documentaires dans les programmes scolaires
-- 2.12. L'Information-Documentation en interdisciplinarité
+- 2.1. [Les notions essentielles de l'Information-Documentation](http://lestroiscouronnes.esmeree.fr/outils/les-notions-essentielles-de-l-information-documentation)
+- 2.2. [Les 10 domaines d'enseignement de l'Information-Documentation](http://lestroiscouronnes.esmeree.fr/didactique-information/l-information-documentation-en-dix-tableaux)
+     - 2.2.1. [Média de masse](http://lestroiscouronnes.esmeree.fr/didactique-information/media-de-masse-domaine-d-enseignement-de-l-information-documentation)
+     - 2.2.2. Identité numérique
+     - 2.2.3. Evaluation de l'information
+     - 2.2.4. Recherche d'information
+     - 2.2.5. Veille
+     - 2.2.6. Internet et Web
+     - 2.2.7. Document
+     - 2.2.8. Publication
+     - 2.2.9. Moteur de recherche
+     - 2.2.10. Centre de ressources
+- 2.3. [Notion / Concept / savoir scolaire](http://lestroiscouronnes.esmeree.fr/outils/concept-notion-savoir-scolaire)
+- 2.4. Description d'une notion
+- 2.5. [La fiche-concept](http://lestroiscouronnes.esmeree.fr/outils/la-fiche-concept) 
+- 2.6. Le niveau de formulation d'une notion
+- 2.7. Méthodologie du processus de transposition didactique des savoirs info-documentaires
+- 2.8. Eléments pour une épistémologie des savoirs info-documentaires 
+- 2.9. Le référentiel E.M.I. au regard de l'Information-Documentation
+- 2.10. Les savoirs info-documentaires dans les programmes scolaires
+- 2.11. L'Information-Documentation en interdisciplinarité
 
 **3. La préparation d'une séance**
 
