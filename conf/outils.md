@@ -72,6 +72,7 @@ Notre didactique n'en est encore qu'à ses prémices. Elle ne peut progresser qu
 - 4.7. La phase de mise en commun
 - 4.8. La phase de structuration des connaissances
 - 4.9. [Les méthodes pédagogiques en Information-Documentation](http://lestroiscouronnes.esmeree.fr/outils/les-methodes-pedagogiques-en-information-documentation)
+     - [La démarche de réfutation](http://lestroiscouronnes.esmeree.fr/outils/la-demarche-de-refutation)
 - 4.10. [Typologie fonctionnelle des outils didactiques](http://lestroiscouronnes.esmeree.fr/outils/fiche-eleve-fiche-pedagogique-en-information-documentation) 
 
 **5. L'évaluation des apprentissages**
