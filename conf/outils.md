@@ -24,12 +24,12 @@ Notre didactique n'en est encore qu'à ses prémices. Elle ne peut progresser qu
 - 1.1. [Des finalités de l'Ecole aux buts de l'Information-Documentation](http://lestroiscouronnes.esmeree.fr/outils/des-finalites-de-l-ecole-aux-buts-de-l-information-documentation)
 - 1.2. [Matrices disciplinaires de l'Information-Documentation](http://lestroiscouronnes.esmeree.fr/didactique-information/les-trois-matrices-disciplinaires-de-l-information-documentation)
 - 1.3. [Des buts aux objectifs en Information-Documentation](http://lestroiscouronnes.esmeree.fr/outils/des-buts-aux-objectifs-en-information-documentation)
-- 1.4. [Les types de connaissance : table de correspondance des terminologies](http://lestroiscouronnes.esmeree.fr/outils/les-types-de-connaissance-table-de-correspondance-des-terminologies)
-- 1-5. [Typologie des objectifs mobilisés dans les fiches de préparation](http://lestroiscouronnes.esmeree.fr/outils/typologie-des-objectifs-mobilises-dans-les-fiches-de-preparation)
+- 1.4. Les types de connaissance : table de correspondance des terminologies
+- 1-5. Typologie des objectifs mobilisés dans les fiches de préparation
 
 **2. Les savoirs à enseigner**
 
-- 2.1. [Les notions essentielles de l'Information-Documentation](http://lestroiscouronnes.esmeree.fr/outils/les-notions-essentielles-de-l-information-documentation)
+- 2.1. Les notions essentielles de l'Information-Documentation
 - 2.2. [Les 10 domaines d'enseignement de l'Information-Documentation](http://lestroiscouronnes.esmeree.fr/didactique-information/l-information-documentation-en-dix-tableaux)
      - 2.2.1. [Média de masse](http://lestroiscouronnes.esmeree.fr/didactique-information/media-de-masse-domaine-d-enseignement-de-l-information-documentation)
      - 2.2.2. Identité numérique
