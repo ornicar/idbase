@@ -21,11 +21,12 @@ Notre didactique n'en est encore qu'à ses prémices. Elle ne peut progresser qu
  
 **1. Les objectifs**
 
-- 1.1. [Des finalités de l'Ecole aux buts de l'Information-Documentation](http://lestroiscouronnes.esmeree.fr/outils/des-finalites-de-l-ecole-aux-buts-de-l-information-documentation)
-- 1.2. [Matrices disciplinaires de l'Information-Documentation](http://lestroiscouronnes.esmeree.fr/didactique-information/les-trois-matrices-disciplinaires-de-l-information-documentation)
+- 1.1. [Matrices disciplinaires de l'Information-Documentation](http://lestroiscouronnes.esmeree.fr/didactique-information/les-trois-matrices-disciplinaires-de-l-information-documentation)
+- 1.2. [Des finalités de l'Ecole aux buts de l'Information-Documentation](http://lestroiscouronnes.esmeree.fr/outils/des-finalites-de-l-ecole-aux-buts-de-l-information-documentation)
 - 1.3. [Des buts aux objectifs en Information-Documentation](http://lestroiscouronnes.esmeree.fr/outils/des-buts-aux-objectifs-en-information-documentation)
-- 1.4. [Les types de connaissance : table de correspondance des terminologies](http://lestroiscouronnes.esmeree.fr/outils/les-types-de-connaissance-table-de-correspondance-des-terminologies)
-- 1-5. Typologie des objectifs mobilisés dans les fiches de préparation
+- 1.4. Taxonomie des objectifs en Information-Documentation
+- 1.5. [Les types de connaissance : table de correspondance des terminologies](http://lestroiscouronnes.esmeree.fr/outils/les-types-de-connaissance-table-de-correspondance-des-terminologies)
+- 1.6. Typologie des objectifs mobilisés dans les fiches de préparation
 
 **2. Les savoirs à enseigner**
 
@@ -93,7 +94,8 @@ Notre didactique n'en est encore qu'à ses prémices. Elle ne peut progresser qu
 
 **6. Bibliographie**
 
-- 6.1. Les contenus d'enseignement de l'Information-Documentation
-- 6.2. Les notions info-documentaires : littératures scientifique, professionnelle et didactique
+- 6.1. Les contenus d'enseignement de l'Information-Documentation (niveau 1)
+- 6.2. Les contenus d'enseignement de l'Information-Documentation (niveau 2)
+- 6.3. Les notions info-documentaires : littératures scientifique, professionnelle et didactique
 
      
