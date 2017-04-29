@@ -24,7 +24,7 @@ Notre didactique n'en est encore qu'à ses prémices. Elle ne peut progresser qu
 - 1.1. [Des finalités de l'Ecole aux buts de l'Information-Documentation](http://lestroiscouronnes.esmeree.fr/outils/des-finalites-de-l-ecole-aux-buts-de-l-information-documentation)
 - 1.2. [Matrices disciplinaires de l'Information-Documentation](http://lestroiscouronnes.esmeree.fr/didactique-information/les-trois-matrices-disciplinaires-de-l-information-documentation)
 - 1.3. [Des buts aux objectifs en Information-Documentation](http://lestroiscouronnes.esmeree.fr/outils/des-buts-aux-objectifs-en-information-documentation)
-- 1.4. Les types de connaissance : table de correspondance des terminologies
+- 1.4. [Les types de connaissance : table de correspondance des terminologies](http://lestroiscouronnes.esmeree.fr/outils/les-types-de-connaissance-table-de-correspondance-des-terminologies)
 - 1-5. Typologie des objectifs mobilisés dans les fiches de préparation
 
 **2. Les savoirs à enseigner**
@@ -79,13 +79,14 @@ Notre didactique n'en est encore qu'à ses prémices. Elle ne peut progresser qu
 
 - 5.1. Typologie fonctionnelle de l'évaluation 
 - 5.2. Exemples de fiches d'évaluation
-     - 5.2.1. Evaluation diagnostique (année)
-     - 5.2.2. Evaluation diagnostique (séquence)
-     - 5.2.3. Evaluation formative critériée co-évaluée
-     - 5.2.4. Evaluation formative critériée simple
-     - 5.2.5. Evaluation formatrice (méthodologie)
-     - 5.2.6. Evaluation sommative sanctionnante
-     - 5.2.7. Evaluation sommative structurante
+     - 5.2.1. Evaluation diagnostique (générale)
+     - 5.2.2. Evaluation diagnostique (intermédiaire)
+     - 5.2.3. Evaluation diagnostique (spécifique)
+     - 5.2.4. Evaluation formative critériée co-évaluée
+     - 5.2.5. Evaluation formative critériée simple
+     - 5.2.6. Evaluation formatrice (méthodologie)
+     - 5.2.7. Evaluation sommative sanctionnante
+     - 5.2.8. Evaluation sommative structurante
 - 5.3. L'évaluation diagnostique pour connaître les conceptions des élèves (base de données)
 - 5.4. L'évaluation des apprentissages déclaratifs : modalités
 - 5.5. Typologie de Bloom et modalités de l'évaluation sommative
