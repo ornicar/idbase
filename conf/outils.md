@@ -30,7 +30,7 @@ Notre didactique n'en est encore qu'à ses prémices. Elle ne peut progresser qu
 
 **2. Les savoirs à enseigner**
 
-- 2.1. Les notions essentielles de l'Information-Documentation
+- 2.1. [Les notions essentielles de l'Information-Documentation](http://lestroiscouronnes.esmeree.fr/outils/les-notions-essentielles-de-l-information-documentation)
 - 2.2. [Les 10 domaines d'enseignement de l'Information-Documentation](http://lestroiscouronnes.esmeree.fr/didactique-information/l-information-documentation-en-dix-tableaux)
      - 2.2.1. [Média de masse](http://lestroiscouronnes.esmeree.fr/didactique-information/media-de-masse-domaine-d-enseignement-de-l-information-documentation)
      - 2.2.2. Identité numérique
