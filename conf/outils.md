@@ -26,7 +26,7 @@ Notre didactique n'en est encore qu'à ses prémices. Elle ne peut progresser qu
 - 1.3. [Des buts aux objectifs en Information-Documentation](http://lestroiscouronnes.esmeree.fr/outils/des-buts-aux-objectifs-en-information-documentation)
 - 1.4. Taxonomie des objectifs en Information-Documentation
 - 1.5. [Les types de connaissance : table de correspondance des terminologies](http://lestroiscouronnes.esmeree.fr/outils/les-types-de-connaissance-table-de-correspondance-des-terminologies)
-- 1.6. Typologie des objectifs mobilisés dans les fiches de préparation
+- 1.6. [Typologie des objectifs mobilisés dans les fiches de préparation](http://lestroiscouronnes.esmeree.fr/outils/typologie-des-objectifs-mobilises-dans-les-fiches-de-preparation)
 
 **2. Les savoirs à enseigner**
 
