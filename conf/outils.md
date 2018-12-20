@@ -50,6 +50,11 @@ Notre didactique n'en est encore qu'à ses prémices. Elle ne peut progresser qu
 - 2.8. Eléments pour une épistémologie des savoirs info-documentaires 
 - 2.9. Le référentiel E.M.I. au regard de l'Information-Documentation
 - 2.10. Les savoirs info-documentaires dans les programmes scolaires
+      - Au cycle 3
+      - Au cycle 4
+      - En LGT
+      - [En lycée professionnel](http://lestroiscouronnes.esmeree.fr/didactique-information/emprise-de-l-information-documentation-dans-les-programmes-d-enseignement-general-du-lycee-professionnel)
+      
 - 2.11. L'Information-Documentation en interdisciplinarité
 
 **3. La préparation d'une séance**
