@@ -46,7 +46,7 @@ Notre didactique n'en est encore qu'à ses prémices. Elle ne peut progresser qu
 - 2.4. [Notion / Concept / savoir scolaire](http://lestroiscouronnes.esmeree.fr/outils/concept-notion-savoir-scolaire)
 - 2.5. Description d'une notion
 - 2.6. [La fiche-concept](http://lestroiscouronnes.esmeree.fr/outils/la-fiche-concept) 
-- 2.7. Le niveau de formulation d'une notion
+- 2.7. [Le niveau de formulation d'une notion](http://lestroiscouronnes.esmeree.fr/outils/le-niveau-de-formulation-d-une-notion)
 - 2.8. Méthodologie du processus de transposition didactique des savoirs info-documentaires
 - 2.9. Eléments pour une épistémologie des savoirs info-documentaires 
 - 2.10. Le référentiel E.M.I. au regard de l'Information-Documentation
