@@ -56,13 +56,13 @@ Notre didactique n'en est encore qu'à ses prémices. Elle ne peut progresser qu
       - En LGT
       - [En lycée professionnel (2009-2010)](http://lestroiscouronnes.esmeree.fr/didactique-information/emprise-de-l-information-documentation-dans-les-programmes-d-enseignement-general-du-lycee-professionnel)
       
-- 2.12. L'Information-Documentation en interdisciplinarité
+- 2.12. [L'Information-documentation en interdisciplinarité](http://lestroiscouronnes.esmeree.fr/didactique-information/construire-l-interdisciplinarite-en-information-documentation)
 
 **3. La préparation d'une séance**
 
 - 3.1. Préparer une séance
 - 3.2. L'alignement pédagogique
-- 3.3. [La fiche pédagogique en Information-Documentation](http://lestroiscouronnes.esmeree.fr/outils/la-fiche-pedagogique-en-information-documentation)
+- 3.3. [La fiche pédagogique en Information-documentation](http://lestroiscouronnes.esmeree.fr/outils/la-fiche-pedagogique-en-information-documentation)
 - 3.4. Grille de vérification des fiches pédagogiques
 - 3.5. La progression : éléments de définition
 - 3.6. Progression pédagogique annuelle : plan de séquence
